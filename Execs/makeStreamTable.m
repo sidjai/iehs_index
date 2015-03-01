@@ -48,11 +48,11 @@ for sr=1:length(s)
         
         stmTable{rr,6}=rund(B(sr,1));
         stmTable{rr,7}=rund(B(sr,2));
-        stmTable{rr,8}=t.unitUUval{B(sr,3),1};
-        stmTable{rr,9}=t.unitUUval{B(sr,3),2};
-        stmTable{rr,10}=rund(t.unitUUval{B(sr,3),3});
+        stmTable{rr,8}=t.unitUUval{1,B(sr,3)};
+        stmTable{rr,9}=t.unitUUval{2,B(sr,3)};
+        stmTable{rr,10}=rund(t.unitUUval{3,B(sr,3)});
         for pi = 12: (length(p)+11)
-            stmTable{rr,pi} = rund(t.UUs(pi-11));
+            stmTable{rr,pi} = rund(t.UUavgdev(pi-11));
         end
     elseif t.to==999
         stmTable{rr,6}='Excluded cause it is a product flow';

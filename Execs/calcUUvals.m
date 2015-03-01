@@ -11,110 +11,132 @@ devVars ={'T','P','F'};
 gword = [1 ;-1];
 gmean = {'More','Less'};
 untLen=size(u,1);
-parLen=size(u(1).IntVal,1);
- k=1;
-    n=s(sind).to;
-    for vind = 1:length(devVars)
-        for gind = 1:length(gword)
-            if k ~= 1
-                uup = struct();
+parLen=length(p);
+k=1;
+upsetTotTime = 15;
+
+for vind = 1:length(devVars)
+    for gind = 1:length(gword)
+        if k ~= 1
+            uup = struct();
+        end
+        upsetTime = upsetTotTime; %min
+        uup = u(:,1);
+        
+        upsetSet = [];
+        upsetSetRes = [];
+        orgRes = [];
+        perSet = [];
+        
+        while upsetTime>0
+%             if upsetTime<15
+%                 upsetTime = upsetTime;
+%             end
+            if upsetTime==upsetTotTime
+                sdev = s(sind);
+            else
+%                 sdev = badUnit2badStream(u(badU),u);
+                sdev = s(u(badU).out(1));
+                
             end
-            [uBlock, percent] = makeUpset(u,s,sind,devVars{vind},gword(gind));
-            uup = u(:,1);
+            
+            badU = sdev.to;
+            
+            %break if the upsets made a loop to the same unit
+            %break if you hit a product flow cause there isn't a unit to
+            %upset
+            if (ismember(badU,upsetSet)) || badU==999
+                break;
+            end
+            
+            upsetSet = [upsetSet badU];
+            
+            indvUpsetTime = min(u(badU).tau,upsetTime);
+            
+            [uBlock, percent] = makeUpset(uup,sdev,...
+                devVars{vind},gword(gind),indvUpsetTime);
+            perSet = [perSet percent];
+            
             if ((length(fields(uBlock)))-(length(fields(u(1)))) ~=0)
                 disp('Upset added fields, abandon ship')
             end
-            uup(n) = uBlock;
-%             for uind = 1:untLen
-%                 if uind ==n
-%                     uup(n,1)=uBlock;
-%                 else
-%                     uup(uind,1)=u(uind); 
-%                 end
-%                 
-%             end
             
+            uup(badU) = uBlock;
             
+            [uup, junk] = calcIntVal(uup,chem,badU,1,p,j);
+            [out, junk] = aggregate('quick',uup,badU,p);
+            upsetSetRes = [upsetSetRes out{3}(:,1)];
+            orgRes = [orgRes u(badU).cdp(:,1)];
             
-            [uup, junk] = calcIntVal(uup,chem,n,1,p,j);
+            upsetTime = upsetTime - indvUpsetTime;
             
-            [out, junk] = aggregate('quick',uup,n,p);
-            
-%             worind=sumup{3,1}; %the mean value ind
-            %log of the percent change between the cdps of the upset and
-            %normal cases. 
-            %percent change between the upset and the original
-            change = abs(out{3}(:,1)-u(n).cdp(:,1))./abs(u(n).cdp(:,1));
-%             change=abs(cdpup{worind})./abs(u(n).cdp{worind});
-            
-            
-            
-            %-ones(parLen,1);
-            temp= (change);
-            for t=1:length(temp)
-                if ~isnan(temp(t))
-                    we=sort([-1 temp(t) 1]);
-                else
-                    we=[0 0 0];
-                end
-                temp(t)=we(2);
-            end
-            
-            s(sind).UUval{k,1}=temp;
-            para= nonzeros(s(sind).UUval{k});
-            if isempty(para)
-                s(sind).UUavgp(k,1)=0;
-                s(sind).UUstdp(k,1)=0;
-            else
-                s(sind).UUavgp(k,1)=mean(para);
-                s(sind).UUstdp(k,1)=std(para);
-            end
-            
-            s(sind).unitUUval{k,1}= gmean{gind};
-            s(sind).unitUUval{k,2}= devVars{vind};
-            s(sind).unitUUval{k,3}= percent;
-            k=k+1;
         end
+
+        
+        for bi = upsetSet
+            
+        end
+
+        
+
+        %percent change between the upset and the original
+        change = abs(upsetSetRes-orgRes)./orgRes;
+%         change = abs(out{3}(:,1)-u(n).cdp(:,1))./abs(u(n).cdp(:,1));
+
+        
+        change = chVal(change);
+        
+        %Add up all the different units that were effected
+        %Use sum cause this represents the total effect of 1 upset
+        %(para x units) -> (para x 1)
+        allUCh = sum(change,2);
+
+        s(sind).UUval{1,k} = change;
+        s(sind).UUsummult(:,k) = allUCh;
+
+        s(sind).unitUUval{1,k} = gmean{gind};
+        s(sind).unitUUval{2,k} = devVars{vind};
+        s(sind).unitUUval{3,k} = perSet;
+        s(sind).unitUUval{4,k} = upsetSet;
+        k=k+1;
     end
-    UVlen=k-1;
-    %Get the average of all the parameters for each of the deviations
+end
+
+UUmat = s(sind).UUsummult;
+
+%Get the average of all the parameters for each of the deviations
+%dim(1 x deviations)
+for di = 1:size(UUmat,2)
+    s(sind).UUavgp(1,di) = mean(nonZo(UUmat(:,di)));
+    s(sind).UUstdp(1,di) = std(nonZo(UUmat(:,di)),0,1);
     [B,I]=sort(s(sind).UUavgp);
     s(sind).UUwor=[B(end),s(sind).UUstdp(I(end)),I(end)];
-    
-    %Get the average of all the deviations for each of the parameters
-    for p=1:parLen
-        temp=0;
-        num=UVlen;
-        for uv=1:UVlen
-            add=chVal(s(sind).UUval{uv}(p),1);
-            if add ==0 || isnan(add)
-                num=num-1;
-            else
-                temp= temp + add;
-            end
-        end
-        if num==0
-            s(sind).UUs(p,1) = 0; 
-        else
-            s(sind).UUs(p,1) = temp./num;
-        end
-    end
+end
+
+%Get the average of all the deviations for each of the parameters
+%dim(para x1)
+for pi = 1:parLen
+    s(sind).UUavgdev(pi,1) = mean(nonZo(UUmat(pi,:)));
+    s(sind).UUstddev(pi,1) = std(nonZo(UUmat(pi,:)),0,2);
+end
+
 end
 
 function val =chVal (varargin)
 if length(varargin)>1
-    flag=1;
+    lowThres = -1;
+    lowVal = lowThres;
 else
-    flag=0;
+    lowThres = 0;
+    lowVal = 10^-10; 
 end
 
-in=real(varargin{1});
-if flag
-    temp = sort([-1,in,1]);
-    val= temp(2);
-else
-    temp = sort([10^-10,in,1]);
-    val= temp(2);
-    
-end
+val=real(varargin{1});
+nutsSet = ~isfinite(val);
+overSet = (val>1);
+underSet = (val < lowThres);
+val(nutsSet) = 0;
+val(overSet) = 1;
+val(underSet) = lowVal;
+
 end

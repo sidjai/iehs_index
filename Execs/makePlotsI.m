@@ -21,7 +21,7 @@ for ue=1:untLen
     temp=zeros(paraLen,1);
     for oni=u(ue).out
         if ~isempty(find(eligible == oni,1))
-            temp=temp + s(oni).UUs;
+            temp=temp + s(oni).UUavgdev;
         end
     end
     u(ue).UUstressout = temp;
@@ -29,7 +29,7 @@ for ue=1:untLen
     temp=zeros(paraLen,1);
     for ono=u(ue).in
         if ~isempty(find(eligible == ono,1))
-            temp= temp + s(ono).UUs;
+            temp= temp + s(ono).UUavgdev;
         end
     end
     u(ue).UUstressin = temp;
@@ -43,26 +43,26 @@ xs=zeros(2*untLen+1,paraLen);
 ys=xs;
 xms=zeros(2*untLen+1,1);
 yms=xms;
-reMean = @(x)(mean(nonzeros(x)));
+
 for ur=1:untLen
     if ur==1
         ys(ind,:) = (u(1).UUstressin)';
-        yms(ind,1) = reMean(ys(ind,:));
+        yms(ind,1) = mean(nonZo(ys(ind,:)));
         ind=ind+1;
     end
         
     
     xs(ind,:) = xs(ind-1,:)+(u(ur).IntValRaw)';
-    xms(ind,1) = reMean(xs(ind,:));
+    xms(ind,1) = mean(nonZo(xs(ind,:)));
     ys(ind,:) = ys(ind-1,:)+(u(ur).fateRaw)'+(u(ur).mix)'+(u(ur).Vessel)';
-    yms(ind,1) = reMean(ys(ind,:));
+    yms(ind,1) = mean(nonZo(ys(ind,:)));
     ind=ind+1;
     
     if ur~=untLen
         ys(ind,:)=ys(ind-1,:)+(u(ur).UUstressout)';
         xs(ind,:)=xs(ind-1,:);
-        xms(ind,1) = reMean(xs(ind,:));
-        yms(ind,1) = reMean(ys(ind,:));
+        xms(ind,1) = mean(nonZo(xs(ind,:)));
+        yms(ind,1) = mean(nonZo(ys(ind,:)));
         ind=ind+1;
         ad=3;
     else

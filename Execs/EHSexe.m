@@ -129,7 +129,7 @@ end
 
 fin.idp = out;
 fin.unitsum = sum;
-fin.avgUUs = mean([s.UUs],2);
+fin.avgUUs = mean([s.UUavgdev],2);
 
 disp('wooooooooooooooooooooooo')
 

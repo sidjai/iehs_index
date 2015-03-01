@@ -389,12 +389,18 @@ else
 end
 sot=u(n).out;
 
+totFin = [0;0;0];
+
+for in=sin
+    totFin=totFin+s(in).F;
+end
+
 switch u(n).classFunc
 case 1
     %mixers , tanks
-    u(n).tau = 0.25; %15 min residence time
+    u(n).tau = 15; %15 min residence time
 
-    tempA = (u(n).F*u(n).tau);
+    tempA = (totFin*u(n).tau/60);
 
 
 
@@ -426,10 +432,9 @@ case 2
     end
 
     u(n).Amount=u(n).rho.*(u(n).V*1000)*1000;
+    
+    u(n).tau = u(n).V/totFin(3);
 
-%             u(nc).Amount =[50;500]; %DO THIS
-%             u(nc).V = [1000]; %DO THIS
-%             u(nc).Vvapor= 1000; %Do this
 case 3
     %Heaters / compressors
 
@@ -449,7 +454,7 @@ case 3
         %pipe W is around 7.5*L
         u(n).V = 1000*(pi*(7.5/4)*(u(n).SurArea/(pi*7.5))^(1.5));
         u(n).Vvapor= 0;
-        u(n).tau=(u(n).V/u(n).F(3))/60;
+        u(n).tau=(u(n).V/u(n).F(3));
 
 
         u(n).Amount(2)= u(n).V*u(n).rho(1);
@@ -457,9 +462,9 @@ case 3
     else
         %Compressor
         
-        u(n).tau = 5/36000; %5 seconds
+        u(n).tau = 5/60; %5 seconds -> minutes
 
-        tempA = (u(n).F*u(n).tau);
+        tempA = (totFin*u(n).tau);
         u(n).Vvapor=(tempA(1)/u(n).rho(1))*.25; % L
         u(n).V = (tempA(1)/u(n).rho(1)) + u(n).Vvapor; %add vapor space in sizing
 
@@ -541,14 +546,14 @@ case 4
     u(n).Vvapor=u(n).Phase(1) * u(n).V;
     u(n).Amount(2)=u(n).V*u(n).rho(1);
     u(n).Amount(1)=u(n).Amount(2)*u(n).MW(1);
-    
+    u(n).tau = u(n).V*totFin(3);
     
 
 case 5
     %Transport
-    u(n).tau = 1/3600; %1 second
+    u(n).tau = 1/60; %1 second
 
-    tempA = (u(n).F*u(n).tau);
+    tempA = (totFin*u(n).tau);
 
 
 

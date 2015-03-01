@@ -1,4 +1,4 @@
-function [ newB, val ] = makeUpset( u,s, stream, var, g)
+function [ newB, val ] = makeUpset( u,oldS, var, g,time)
 %makeUpset from plant data simulates a 15 min upset in the given stream
 %with the given variable under the guideword g.
 %   Uses mass balances and heat balances for mixing of the old unit and the
@@ -10,8 +10,9 @@ function [ newB, val ] = makeUpset( u,s, stream, var, g)
 
 findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 
+timehr = time/60;
 
-oldS=s(stream);
+% oldS=s(stream);
 
 oldB=u(oldS.to);
 
@@ -23,14 +24,13 @@ dev=zeros(length(devVars),1);
 % g
 % dev=[0;1;1]
 if oldS.from ~= 0
-    temp=u(oldS.from).Vessel;
-    val=sum(temp);
-    nzer = length(find(temp));
+    
+    val=mean(nonZo(u(oldS.from).Vessel));
     
    
     %dev(ind)= (g*.5*(mean(u(oldS.from).Vessel)+1));
     
-    vex = sort([-.9,.9,(g*val/nzer)]);
+    vex = sort([-.9,.9,(g*val)]);
     dev(ind)=vex(2);
    
 else
@@ -42,14 +42,14 @@ val=dev(ind);
 % g={1;-1};
 
 % dev
-addMole = (oldS.F(1))*dev(3)*.25; %kmol
-addMass = (oldS.F(2))*dev(3)*.25; %kg
-addVol = (oldS.F(3))*dev(3)*.25*60; %L
+addMole = (oldS.F(1))*dev(3)*timehr; %kmol
+addMass = (oldS.F(2))*dev(3)*timehr; %kg
+addVol = (oldS.F(3))*dev(3)*timehr*60; %L
 
-%tsMole = (oldS.F(1))*(1+dev(3))*.25; %kmol
-%tsMass = (oldS.F(2))*(1+dev(3))*.25; %kg
-%tsVol = (oldS.F(3))*(1+dev(3))*.25*60; %L
-%  = oldS.F{1}*dev(1)*.25;
+%tsMole = (oldS.F(1))*(1+dev(3))*timehr; %kmol
+%tsMass = (oldS.F(2))*(1+dev(3))*timehr; %kg
+%tsVol = (oldS.F(3))*(1+dev(3))*timehr*60; %L
+%  = oldS.F{1}*dev(1)*timehr;
 addStuff{1}=[addMole; oldB.Amount(1)];
 addStuff{2}=[addMass; oldB.Amount(2)];
 addXmole = oldS.x(1,:);
@@ -57,7 +57,7 @@ addXmass = oldS.x(2,:); % later add the composition deviation var
 comp{1} = [addXmole; oldS.x(1,:)];
 comp{2} = [addXmass; oldS.x(2,:)];
 Q=(oldS.CP(1) *(oldS.T(1)*dev(1))); %J/kmol
-Qi=Q*(addMole + oldS.F(1)*.25); %J
+Qi=Q*(addMole + oldS.F(1)*timehr); %J
 if ~isempty(strfind(oldB.unitH{1},'cal'))
     Q=Q/4184; %j-cals then kg- gm
 end

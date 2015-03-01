@@ -37,7 +37,6 @@ head={'Mean','std','Median','Lowest','Highest'};
 paraLen = length(u(1).IntVal);
 unitLen = size(u,1);
 
-nonZo =@(v)v(logical(v));
 
 %1)SecEff add, EDP; 2)Agro chems, EDPAchems; 3)Mix add, MDP
 %4)Vessel add, CDP; 6)Agro units, CDPAunits; 7)UUs add, IDP
@@ -102,18 +101,11 @@ else
         
     else
         %unit aggregation
-        UUs = [s.UUs];
+        UUs = [s.UUavgdev];
+        
         for pi=1:paraLen
-            
             vec = UUs(pi,:);
-            t=mean(nonZo(vec));
-            if isnan(t)
-                t=0;
-            end
-%             t= sort([mean(nonZo(vec)),0]);
-            mUUs(pi,1) =t;
-            
-            
+            mUUs(pi,1) = mean(nonZo(vec));
         end
         
         
