@@ -73,14 +73,9 @@ for vind = 1:length(devVars)
         end
 
         
-        for bi = upsetSet
-            
-        end
-
-        
 
         %percent change between the upset and the original
-        change = abs(upsetSetRes-orgRes)./orgRes;
+        change = (upsetSetRes-orgRes);
 %         change = abs(out{3}(:,1)-u(n).cdp(:,1))./abs(u(n).cdp(:,1));
 
         
