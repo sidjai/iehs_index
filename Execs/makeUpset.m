@@ -23,28 +23,45 @@ ind= findLine(devVars,var);
 dev=zeros(length(devVars),1);
 % g
 % dev=[0;1;1]
-if oldS.from ~= 0
-    
-    val=mean(nonZo(u(oldS.from).Vessel));
-    
-   
-    %dev(ind)= (g*.5*(mean(u(oldS.from).Vessel)+1));
-    
-    vex = sort([-.9,.9,(g*val)]);
-    dev(ind)=vex(2);
-   
+if ~isstruct(g)
+    if oldS.from ~= 0
+
+        val=mean(nonZo(u(oldS.from).Vessel));
+
+
+        %dev(ind)= (g*.5*(mean(u(oldS.from).Vessel)+1));
+
+        vex = sort([-.9,.9,(g*val)]);
+        dev(ind)=vex(2);
+
+    else
+    %     g
+        dev(ind)= g*0.05; %feed fluctuation
+    end
+
+    val=dev(ind);
+
+    % dev
+    addMole = (oldS.F(1))*dev(3)*timehr; %kmol
+    addMass = (oldS.F(2))*dev(3)*timehr; %kg
+    addVol = (oldS.F(3))*dev(3)*timehr*60; %L
+    addXmole = oldS.x(1,:); %mole frac
+    addXmass = oldS.x(2,:); %mass frac
+    delT = oldS.T(1)*dev(1);
+    sdevH = zeros(length(oldS.H));
 else
-%     g
-    dev(ind)= g*0.05; %feed fluctuation
+    %subsequent upset that needs to flow from the already upsetted upstream
+    %unit. g is that changed stream to meet the flow.
+    
+    addMole = (g.F(1)-oldS.F(1))*timehr; %kmol
+    addMass = (g.F(2)-oldS.F(2))*timehr; %kg
+    addVol = (g.F(3)-oldS.F(3))*timehr*60; %L
+    addXmole = g.x(1,:); %mole frac
+    addXmass = g.x(2,:); %mass frac
+    delT = g.T(1);
+    sdevH = g.H;
+    val = .9999;
 end
-
-val=dev(ind);
-% g={1;-1};
-
-% dev
-addMole = (oldS.F(1))*dev(3)*timehr; %kmol
-addMass = (oldS.F(2))*dev(3)*timehr; %kg
-addVol = (oldS.F(3))*dev(3)*timehr*60; %L
 
 %tsMole = (oldS.F(1))*(1+dev(3))*timehr; %kmol
 %tsMass = (oldS.F(2))*(1+dev(3))*timehr; %kg
@@ -52,11 +69,10 @@ addVol = (oldS.F(3))*dev(3)*timehr*60; %L
 %  = oldS.F{1}*dev(1)*timehr;
 addStuff{1}=[addMole; oldB.Amount(1)];
 addStuff{2}=[addMass; oldB.Amount(2)];
-addXmole = oldS.x(1,:);
-addXmass = oldS.x(2,:); % later add the composition deviation var
+
 comp{1} = [addXmole; oldS.x(1,:)];
 comp{2} = [addXmass; oldS.x(2,:)];
-Q=(oldS.CP(1) *(oldS.T(1)*dev(1))); %J/kmol
+Q=(oldS.CP(1) *(delT)); %J/kmol
 Qi=Q*(addMole + oldS.F(1)*timehr); %J
 if ~isempty(strfind(oldB.unitH{1},'cal'))
     Q=Q/4184; %j-cals then kg- gm
@@ -64,7 +80,7 @@ end
 
 Qs=[Q*oldS.MW, Q, Q* (oldS.F(2)/3.6) ];
 
-delHi = (Qi/4.184)+ addMass*oldS.H(2)*1000; %cal
+delHi = (Qi/4.184)+ addMass*oldS.H(2)*1000 + sdevH(2)*timehr; %cal
 % addEnth(1) = oldS.H(1)*addMass*1000 + Qi;
 % addEnth(2) = oldS.H(2)*addMass*1000 + Qi;
 % addEnth(3) = oldS.H(3)*addMass*1000 + Qi;
@@ -90,10 +106,10 @@ newB.H(1) = (delHi+oldB.H(1)*oldB.Amount(1)*1000)/(newB.Amount(1)*1000);
 newB.H(2) = (delHi+oldB.H(1)*oldB.Amount(1)*1000)/(newB.Amount(2)*1000);
 newB.H(3) = newB.H(2)*(newB.F(2)/3.6);
 
+%sum the added amount and the orginal amount using matrix multiplication
 for type=1:2
     fl = (addStuff{type}'*comp{type});
     newB.x(type,:) = fl./newB.Amount(type);
-%     newB.x(2,:) = fl(2,:)./newB.Amount(2);
 end
 
 %Assign special properties

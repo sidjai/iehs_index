@@ -8,7 +8,7 @@ function [ s ] = calcUUvals ( u, chem, s, sind, p , j )
 %   the unit.
 
 devVars ={'T','P','F'};
-gword = [1 ;-1];
+gword = [1; -1];
 gmean = {'More','Less'};
 untLen=size(u,1);
 parLen=length(p);
@@ -34,9 +34,12 @@ for vind = 1:length(devVars)
 %             end
             if upsetTime==upsetTotTime
                 sdev = s(sind);
+                upType = gword(gind);
             else
-%                 sdev = badUnit2badStream(u(badU),u);
                 sdev = s(u(badU).out(1));
+                upType = badUnit2badStream(u(badU), sdev);
+                
+%                 sdev = s(u(badU).out(1));
                 
             end
             
@@ -54,7 +57,7 @@ for vind = 1:length(devVars)
             indvUpsetTime = min(u(badU).tau,upsetTime);
             
             [uBlock, percent] = makeUpset(uup,sdev,...
-                devVars{vind},gword(gind),indvUpsetTime);
+                devVars{vind},upType,indvUpsetTime);
             perSet = [perSet percent];
             
             if ((length(fields(uBlock)))-(length(fields(u(1)))) ~=0)
@@ -116,7 +119,17 @@ for pi = 1:parLen
 end
 
 end
+function sout = badUnit2badStream(uin, sorg)
 
+sout = sorg;
+
+chFields = {'CP','T','rho','x','H','P'};
+
+for hf = 1:length(chFields)
+    sout.(chFields{hf}) = uin.(chFields{hf});
+end
+end
+               
 function val =chVal (varargin)
 if length(varargin)>1
     lowThres = -1;
