@@ -58,10 +58,10 @@ for hi=1:6
             
             %do the labels to the side of the vals
             sheet{hi}{1,col}=['Unit ' mat2str(uind)];
-            sheet{hi}{4,col}=u(uind).name;
-            sheet{hi}{5,col}=u(uind).type;
-            sheet{hi}{6,col}=u(uind).Indes;
-            sheet{hi}{7,col}=u(uind).Outdes;
+            sheet{hi}{4,col}= u(uind).name;
+            sheet{hi}{5,col}= u(uind).type;
+            sheet{hi}{6,col}= strrep(u(uind).Indes,',',';');
+            sheet{hi}{7,col}= strrep(u(uind).Outdes,',',';');
         else
             sheet{hi}{1,col}='All Units';
         end
