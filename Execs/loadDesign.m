@@ -3,52 +3,55 @@ function [u , s ] = loadDesign(cfg )
 %   u = unit info in struc array format
 %   s = stream info in struc array format
 %   p = summary of overall plant connectivity
-%Things to do:
-%Write a function to read excel file with the input variables
-%Assign reactive groups
-%Get all the variables and put them in the right place
+
 %xlsname = [cfg.AspenStreams];
-%blocksName = [cfg.AspenBlocksName];
+%cfg.AspenBlocksName = [cfg.AspenBlocksName];
 % clear all;
-xlsname = cfg.AspenStreams;
-blocksName = cfg.AspenBlocksName;
-modelDes = cfg.ClassDesName;
+
+
 totdivMean = {'T','P','x','Phase','loc','time'};
 divMean = {{'T','rho','CP'},{'P'},{'xd','Activity','rho'},'','','',''};
 possChg = {'T','rho','CP','P','xd','Activity'};
 startLine = [2;4;2;2;3;2;3];
-[num txt raw]= xlsread(xlsname,1);
 
-txt=strtrim(txt);
-% txt=deblank(txt);
-num = [zeros(1,size(num,2));num];
+
+% [junk junk rawMat] = xlsread(cfg.AspenStreams,1);
+
 findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 %the variables that we want to extract from the xcel sheet Stream
 careVars={'Temperature','Pressure','Frac','Flow','Enthalpy', 'Density', 'MW','CP','GAMMA','FIGMX','TBUB','TDEW','DGMX','MUMX'};
 fields={'T','P','x','F','H','rho','MW','CP','Activity','fugacity','Tbub','Tdew','dGmix','viscous','Phase'};
 % labels{:,1}=txt{:,1};
 getVind = @(str) (findLine(careVars,str));
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Stream table
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%----------------------------------------------------------------
+%----------------------------------------------------------------
+%Stream table
+%----------------------------------------------------------------
+%----------------------------------------------------------------\
+
+rawStm = xlsReadPretty(cfg.AspenStreams,1,'trim');
 %load up margins with the text on the left and headings for the top stuff
-margin = txt(:,1);
-headLen = find(cellfun('length', margin),1);
-strmLen = size(txt,2)-1;
+rawStm = rawStm{1};
+margin = rawStm(:,1);
+headLen = find(cellfun('length', margin)>1,1);
+stmLen = size(rawStm,2)-1;
 margin = margin(headLen+1:end);
+valTable = rawStm(headLen+1:end,2:end);
 
 %load up the headings for the streams
-headings = txt(1:headLen,2:strmLen+1);
-for col= 2: (strmLen+1)
-    s(col-1).name = txt{1,col};
-    s(col-1).labels  = txt(1:headLen,col); 
+headings = rawStm(1:headLen,2:stmLen+1);
+for col= 2: (stmLen+1)
+    s(col-1).name = rawStm{1,col};
+    s(col-1).labels  = rawStm(1:headLen,col); 
 end
 careRef = zeros(length(margin),1);
 unitAsp = cell(length(margin),1);
-valuAsp = cell(length(margin),strmLen);
+valuAsp = cell(length(margin),stmLen);
 
+%----------------------------------------------------------------
 %Figure out what the margins are refering to in terms of fields
+%----------------------------------------------------------------
 for j = 1:length(margin)
     temp = cellfun(@(x) strfind(margin{j},x),careVars,'UniformOutput',0);
     ind = find(cellfun('length',temp),1);
@@ -96,8 +99,17 @@ for dw = vertSet
     ele = dw+1;
     %get the chemicals by their being no lowercase letters
     while isempty(regexp(margin{ele},'[a-z]', 'once'))
-        for w = 1:strmLen
-            valuAsp{dw,w}(1,ele-dw) = num(ele,w);
+        for w = 1:stmLen
+            temp = valTable{ele,w};
+            if isempty(temp)
+                if ~isempty(strfind(margin{dw},'GAMMA'))
+                    temp = 1;
+                else
+                    temp = 0;
+                end
+            end
+                
+            valuAsp{dw,w}(1,ele-dw) = temp;
         end
         ele = ele+1;
     end
@@ -114,19 +126,21 @@ end
 
 %get the values for the other entries
 for rw = union(horzSet, phaseSet)
-    for w = 1:strmLen
-        valuAsp{rw,w} = num(rw,w);
+    for w = 1:stmLen
+        valuAsp{rw,w} = valTable{rw,w};
     end
 end
 
 %set everything into their places in the structure
-
-for w = 1:strmLen
+filledSet = cellfun(@(x)~isempty(x),valuAsp(allSet,:));
+for w = 1:stmLen
     pCnt = zeros(length(fields),1);
-    for asp = allSet
+    
+    for asp = allSet(filledSet(:,w))
         id = careRef(asp);
         ref = fields{id};
         pCnt(id) = pCnt(id) +1;
+        
         s(w).(ref)(pCnt(id),:) =  valuAsp{asp,w};
         if pCnt(id) == 1
             s(w).(['unit' ref ]) = unitAsp{asp};
@@ -145,23 +159,18 @@ end
 
 %Change the CP units to whatever we see fit
 cpunits = {s.unitCP};
-chset = findLine(cpunits,'kg');
-for del = chset
+filled = cpunits(cellfun(@(x)~isempty(x),cpunits));
+chSet = findLine(filled,'kg');
+for del = filled(chSet)
     s(del).CP=s(del).CP .* s(del).MW(1);
     for ei=1:length(s(del).unitCP)
         s(del).unitCP{ei}=strrep(s(del).unitCP{ei},'kg','kmol');
     end
 end
 
-for w = 1:strmLen
+for w = 1:stmLen
     s(w).compList = find(s(w).x(1,:) > 10^-8);
     s(w).numComp = length(s(w).compList);
-    
-    vec = find(isnan(s(w).Activity));
-    for v = vec
-        s(w).Activity(v) = 1;
-    end
-    
     
     labels{w,1} = s(w).name;
     
@@ -175,15 +184,15 @@ for w = 1:strmLen
     
 end
     
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------
+%----------------------------------------------------------------
 %assign the unit parameters (BLOCKS) TXT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------
+%----------------------------------------------------------------
 
 
 
-
-fid = fopen(blocksName);
+fid = fopen(cfg.AspenBlocksName);
 C= textscan(fid, '%s', 'Delimiter', '\n');
 fclose(fid);
 
@@ -192,9 +201,21 @@ report=strtrim(C{1});
 last=length(report);
 
 %open the class designation xcel sheet that assigns the models to classes
-[junk models junk] = xlsread(modelDes,1,'A1:A50');
-[cls] = xlsread(modelDes,1);
-[failMat]= xlsread(modelDes,2);
+rawDes = xlsReadPretty(cfg.ClassDesName,1);
+strow = findLine(rawDes{1}(1:end,1),'Model')+1;
+vesSet = strow:size(rawDes{1},1);
+
+vesInfo = struct;
+
+for vs = vesSet
+    dat = cell2mat(rawDes{1}(vs,[3,5:end]));
+    modelType = rawDes{1}{vs,1};
+    vesInfo.(modelType) = {dat(1),dat(2),dat(3:end)};
+end
+    
+% [junk models junk] = xlsread(cfg.ClassDesName,1,'A1:A50');
+% [cls] = xlsread(cfg.ClassDesName,1);
+% [failMat]= xlsread(cfg.ClassDesName,2);
 
 %define the boudaries for the units and parse identifying info
 begi=findLine(report,'BLOCK');
@@ -211,12 +232,10 @@ for ww=beg'
     u(k,1).type=parse{2}{1};
     
     %asign models
-    cInd=findLine(models,parse{2}{1})-1;
-    u(k,1).classFunc=cls(cInd,1);
-    temp = find(cls(cInd,:)>0,1,'last');
-    u(k,1).classVar=cls(cInd,2:temp);
-    u(k,1).failbase = failMat(cInd,1);
-    
+    infoCell = vesInfo.(u(k,1).type);
+    u(k,1).failbase = infoCell{1};
+    u(k,1).classFunc = infoCell{2};
+    u(k,1).classVar = infoCell{3}(~isnan(infoCell{3}));
     
     
     %get the report to the next line
@@ -559,7 +578,7 @@ for n=1:untLen
 
         for pi=1:length(IO{io})
             if pi<length(IO{io})
-                IOval{io}=[IOval{io} s(IO{io}(pi)).name ', '];
+                IOval{io}=[IOval{io} s(IO{io}(pi)).name '; '];
             else
                 IOval{io}=[IOval{io} s(IO{io}(pi)).name];
             end
@@ -735,6 +754,12 @@ end
 
 end
 
+function [ s ] = loadAspenStreams(fullfile)
+
+
+
+
+end
 function [val] = delLine(pot,lines,st,flag)
 
 exclude=findLine({pot{lines}},st);

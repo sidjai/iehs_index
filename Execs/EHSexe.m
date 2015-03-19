@@ -138,14 +138,14 @@ disp('wooooooooooooooooooooooo')
 %Output results
 if cfg.xsFlag
     [sheet names] = makeXlsSheets(u,chem,s,fin,cfg);
-    
-    for fe= 1: length(sheet)
-        if fe<4
-            xlswrite(cfg.outName,sheet{fe},fe)
-        else
-            xlswrite(cfg.outName,sheet{fe},names{fe})
-        end
-    end
+    junk = xlsWritePretty(sheet,names,cfg.outName);
+%     for fe= 1: length(sheet)
+%         if fe<4
+%             xlswrite(cfg.outName,sheet{fe},fe)
+%         else
+%             xlswrite(cfg.outName,sheet{fe},names{fe})
+%         end
+%     end
 end
 end
 toc
