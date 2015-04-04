@@ -1,0 +1,13 @@
+#	ID	Exp_Value:-Log10(mol/kg)	Pred_Value:-Log10(mol/kg)	Exp_Value:mg/kg	Pred_Value:mg/kg
+1	Butanol	1.97	1.87	790.77	1002.93
+2	CO	N/A	N/A	N/A	N/A
+3	CO2	N/A	N/A	N/A	N/A
+4	DME	N/A	1.89	N/A	596.49
+5	Ethane	N/A	2.45	N/A	105.83
+6	Hydrogen	N/A	N/A	N/A	N/A
+7	Methane	N/A	N/A	N/A	N/A
+8	Methanol	0.76	2.27	5634.15	170.83
+9	Nitrogen	N/A	N/A	N/A	N/A
+10	Oxygen	N/A	N/A	N/A	N/A
+11	Propane	N/A	1.83	N/A	646.08
+12	Water	N/A	N/A	N/A	N/A

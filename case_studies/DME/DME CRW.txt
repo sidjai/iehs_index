@@ -1,0 +1,1245 @@
+PREDICTED HAZARDS REPORT
+--------------------------------------------------
+Chemicals and Reactive Groups in this Mixture:
+  CARBON DIOXIDE
+  CARBON MONOXIDE
+  DIMETHYL ETHER
+  ETHANE
+  HYDROGEN
+  METHANE
+  METHANOL
+  N-BUTYL ALCOHOL
+  NITROGEN
+  OXYGEN
+  PROPANE
+  WATER
+--------------------------------------------------
+
+CARBON DIOXIDE mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+CARBON MONOXIDE mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+CARBON MONOXIDE mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+May be hazardous but unknown
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+DIMETHYL ETHER mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+DIMETHYL ETHER mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+Reaction products may be explosive or sensitive to shock or friction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+DIMETHYL ETHER mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+ETHANE mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+ETHANE mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+ETHANE mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+ETHANE mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+HYDROGEN mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+May be hazardous but unknown
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+Reaction products may be explosive or sensitive to shock or friction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+May be hazardous but unknown
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+METHANE mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+METHANOL mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+POTENTIAL GASES:  
+Hydrocarbons
+Hydrogen
+Hydrogen Chloride
+Sulfur Dioxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+POTENTIAL GASES:  
+Hydrocarbons
+Hydrogen
+Hydrogen Chloride
+Sulfur Dioxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with METHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+N-BUTYL ALCOHOL mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+POTENTIAL GASES:  
+Hydrocarbons
+Hydrogen
+Hydrogen Chloride
+Sulfur Dioxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+POTENTIAL GASES:  
+Hydrocarbons
+Hydrogen
+Hydrogen Chloride
+Sulfur Dioxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with METHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with METHANOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+NITROGEN mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with METHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with METHANOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with N-BUTYL ALCOHOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+OXYGEN mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be explosive or sensitive to shock or friction
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Carbon Dioxide
+Chlorine
+Chlorine Dioxide
+Halogen Gas
+Nitrogen Oxides
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be explosive or sensitive to shock or friction
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Halogen Oxides
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with ETHANE - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Carbon Dioxide
+Carbon Monoxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be explosive or sensitive to shock or friction
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Carbon Dioxide
+Chlorine
+Chlorine Dioxide
+Halogen Gas
+Nitrogen Oxides
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with METHANE - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Carbon Dioxide
+Carbon Monoxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with METHANOL - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be corrosive
+Reaction products may be explosive or sensitive to shock or friction
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Bromine
+Carbon Dioxide
+Carbon Monoxide
+Chlorine
+Chlorine Dioxide
+Hydrogen
+Hydrogen Bromide
+Hydrogen Chloride
+Hydrogen Fluoride
+Hydrogen Halide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with N-BUTYL ALCOHOL - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be corrosive
+Reaction products may be explosive or sensitive to shock or friction
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Bromine
+Carbon Dioxide
+Carbon Monoxide
+Chlorine
+Chlorine Dioxide
+Hydrogen
+Hydrogen Bromide
+Hydrogen Chloride
+Hydrogen Fluoride
+Hydrogen Halide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with NITROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+May be hazardous but unknown
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+PROPANE mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with METHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with METHANOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with N-BUTYL ALCOHOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with NITROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with OXYGEN - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction may be particularly intense, violent, or explosive
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Carbon Dioxide
+Carbon Monoxide
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+WATER mixed with CARBON DIOXIDE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with CARBON MONOXIDE - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction products may be corrosive
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Acid Fumes
+Hydrogen
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with DIMETHYL ETHER - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with ETHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with HYDROGEN - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction products may be corrosive
+Reaction products may be flammable
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Acid Fumes
+Hydrogen
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with METHANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with METHANOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with N-BUTYL ALCOHOL - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with NITROGEN - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with OXYGEN - 
+PREDICTED HAZARDS:  
+Exothermic reaction at ambient temperatures (releases heat)
+Reaction liberates gaseous products and may cause pressurization
+Reaction products may be corrosive
+Reaction products may be toxic 
+POTENTIAL GASES:  
+Acid Fumes
+Chlorine
+Hydrogen Halide
+Nitrogen Oxides
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with PROPANE - 
+PREDICTED HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS MIXTURE PAIR ---
+
+WATER mixed with itself - 
+INTRINSIC REACTIVE HAZARDS:  
+No known hazardous reaction
+POTENTIAL GASES:  
+No gases predicted
+--- END OF HAZARDS FOR THIS ITEM ---
+
+DOCUMENTATION REPORT
+--------------------------------------------------
+Chemicals and Reactive Groups in this Mixture:
+  CARBON DIOXIDE
+  CARBON MONOXIDE
+  DIMETHYL ETHER
+  ETHANE
+  HYDROGEN
+  METHANE
+  METHANOL
+  N-BUTYL ALCOHOL
+  NITROGEN
+  OXYGEN
+  PROPANE
+  WATER
+--------------------------------------------------
+
+CARBON DIOXIDE by itself - 
+Not Chemically Reactive WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+CARBON MONOXIDE mixed with CARBON DIOXIDE - 
+Reducing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+CARBON MONOXIDE by itself - 
+Reducing Agents WITH Reducing Agents:
+Due to the highly reactive nature of members of this group, we cannot state with certainty that hazardous reactions between members of this group will not occur. Powerful reducing agents may in fact react with less powerful reducing agents. Caution should be used before proceeding. Further research of comparable examples in the literature or very small scale, carefully controlled experiments may be needed to fully assess compatibility.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+DIMETHYL ETHER mixed with CARBON DIOXIDE - 
+Ethers WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+DIMETHYL ETHER mixed with CARBON MONOXIDE - 
+Ethers WITH Reducing Agents:
+Ethers, including dioxane, form impact-sensitive mixtures with decaborane (MCA Safety Datasheet 84, Manufacturing Chemists’ Association, Washington, 1961; Shore, G. 1986. Chemical Abstracts 105:202122.).
+Peroxidized diethyl ether forms an explosive mixture with sulfur (Taylor, H.F. 1955. Journal of the Royal Institute of Chemistry 79:43.). Ether peroxide formation accident histories, safe handling, storage, and disposal can be found in the following papers: Jackson, H. L., at al., J. Chem. Educ., 1970, 47, A175; Davies, A. G., J. R. Inst. Chem., 1956, 80, 386-389; Dasler, W. A., et al., Ind. Eng. Chem.., 1946, 18, 52; Hazardous Chemicals: Information and Disposal Guide, 1984, 87, 91, 98, 265.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+DIMETHYL ETHER by itself - 
+Ethers WITH Ethers:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+ETHANE mixed with CARBON DIOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+ETHANE mixed with CARBON MONOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+ETHANE mixed with DIMETHYL ETHER - 
+Ethers WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+ETHANE by itself - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+HYDROGEN mixed with CARBON DIOXIDE - 
+Reducing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with CARBON MONOXIDE - 
+Reducing Agents WITH Reducing Agents:
+Due to the highly reactive nature of members of this group, we cannot state with certainty that hazardous reactions between members of this group will not occur. Powerful reducing agents may in fact react with less powerful reducing agents. Caution should be used before proceeding. Further research of comparable examples in the literature or very small scale, carefully controlled experiments may be needed to fully assess compatibility.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with DIMETHYL ETHER - 
+Ethers WITH Reducing Agents:
+Ethers, including dioxane, form impact-sensitive mixtures with decaborane (MCA Safety Datasheet 84, Manufacturing Chemists’ Association, Washington, 1961; Shore, G. 1986. Chemical Abstracts 105:202122.).
+Peroxidized diethyl ether forms an explosive mixture with sulfur (Taylor, H.F. 1955. Journal of the Royal Institute of Chemistry 79:43.). Ether peroxide formation accident histories, safe handling, storage, and disposal can be found in the following papers: Jackson, H. L., at al., J. Chem. Educ., 1970, 47, A175; Davies, A. G., J. R. Inst. Chem., 1956, 80, 386-389; Dasler, W. A., et al., Ind. Eng. Chem.., 1946, 18, 52; Hazardous Chemicals: Information and Disposal Guide, 1984, 87, 91, 98, 265.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+HYDROGEN mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+HYDROGEN by itself - 
+Reducing Agents WITH Reducing Agents:
+Due to the highly reactive nature of members of this group, we cannot state with certainty that hazardous reactions between members of this group will not occur. Powerful reducing agents may in fact react with less powerful reducing agents. Caution should be used before proceeding. Further research of comparable examples in the literature or very small scale, carefully controlled experiments may be needed to fully assess compatibility.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+METHANE mixed with CARBON DIOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with CARBON MONOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with DIMETHYL ETHER - 
+Ethers WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANE mixed with HYDROGEN - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANE by itself - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+METHANOL mixed with CARBON DIOXIDE - 
+Alcohols and Polyols WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with CARBON MONOXIDE - 
+Alcohols and Polyols WITH Reducing Agents:
+The hydroxyl proton of an alcohol is easily extracted by strong reducing agents to yield flammable hydrogen gas.  In many cases ignition occurs, and sometimes explosions also occur.  (Rich, G. A., 1993, Dangerous Chemical Reactions, Gulf Publishing Co., Houston, TX, p. 256)
+Inorganic reductants may reduce alcohols and aldehydes to hydrocarbons, those with C < 5 being largely flammable gases (Predicted, citation needed).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with DIMETHYL ETHER - 
+Alcohols and Polyols WITH Ethers:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with ETHANE - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with HYDROGEN - 
+Alcohols and Polyols WITH Reducing Agents:
+The hydroxyl proton of an alcohol is easily extracted by strong reducing agents to yield flammable hydrogen gas.  In many cases ignition occurs, and sometimes explosions also occur.  (Rich, G. A., 1993, Dangerous Chemical Reactions, Gulf Publishing Co., Houston, TX, p. 256)
+Inorganic reductants may reduce alcohols and aldehydes to hydrocarbons, those with C < 5 being largely flammable gases (Predicted, citation needed).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL mixed with METHANE - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+METHANOL by itself - 
+Alcohols and Polyols WITH Alcohols and Polyols:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+N-BUTYL ALCOHOL mixed with CARBON DIOXIDE - 
+Alcohols and Polyols WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with CARBON MONOXIDE - 
+Alcohols and Polyols WITH Reducing Agents:
+The hydroxyl proton of an alcohol is easily extracted by strong reducing agents to yield flammable hydrogen gas.  In many cases ignition occurs, and sometimes explosions also occur.  (Rich, G. A., 1993, Dangerous Chemical Reactions, Gulf Publishing Co., Houston, TX, p. 256)
+Inorganic reductants may reduce alcohols and aldehydes to hydrocarbons, those with C < 5 being largely flammable gases (Predicted, citation needed).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with DIMETHYL ETHER - 
+Alcohols and Polyols WITH Ethers:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with ETHANE - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with HYDROGEN - 
+Alcohols and Polyols WITH Reducing Agents:
+The hydroxyl proton of an alcohol is easily extracted by strong reducing agents to yield flammable hydrogen gas.  In many cases ignition occurs, and sometimes explosions also occur.  (Rich, G. A., 1993, Dangerous Chemical Reactions, Gulf Publishing Co., Houston, TX, p. 256)
+Inorganic reductants may reduce alcohols and aldehydes to hydrocarbons, those with C < 5 being largely flammable gases (Predicted, citation needed).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with METHANE - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL mixed with METHANOL - 
+Alcohols and Polyols WITH Alcohols and Polyols:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+N-BUTYL ALCOHOL by itself - 
+Alcohols and Polyols WITH Alcohols and Polyols:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+NITROGEN mixed with CARBON DIOXIDE - 
+Not Chemically Reactive WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with CARBON MONOXIDE - 
+Reducing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with DIMETHYL ETHER - 
+Ethers WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with HYDROGEN - 
+Reducing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with METHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with METHANOL - 
+Alcohols and Polyols WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN mixed with N-BUTYL ALCOHOL - 
+Alcohols and Polyols WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+NITROGEN by itself - 
+Not Chemically Reactive WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+OXYGEN mixed with CARBON DIOXIDE - 
+Oxidizing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with CARBON MONOXIDE - 
+Oxidizing Agents WITH Reducing Agents:
+NaClO3 reacts exothermically with ammonium thiosulfate, releasing toxic CO2 and NOx gases (MCA Case History No. 2019, Case Histories of Accidents in the Chemical Industry, Manufacturing Chemists’ Association, Washington.).
+Carbon can ignite or explode in contact with oxygen, metal oxides, peroxides, metal oxosalts, halogens, interhalogens, and other oxidants (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 125.).
+H2 ignites on contact with BrF5 (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 172. Longmans, Green and Co Ltd.).
+Mixtures of hydrogen and fluorine can explode under ambient conditions if fluorine is in excess (A. D. Kirshenbaum, 1956, Final Report on Fundamental Studies of New Explosive Reactions, Philadelphia, Research Institute of Temple University, pp. 46.).
+Sulfur, phosphorus, selenium, and tellurium ignite on contact with F2 at ambient temperature (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11, 12. Longmans, Green and Co Ltd.; 1956. Volume 2, Supplemental 1. pp. 60; 1946. Volume 5. pp. 785, 822; 1940. Volume 6. pp. 161; 1939. Volume 9. pp. 34, 1943. Volume 11. pp. 26.).
+Mixtures of CrO3 and sulfur can ignite if warmed (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 234. Longmans, Green and Co Ltd.).
+Carbon ignites if heated with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 1, p. 319-323. Longmans, Green and Co Ltd.).
+Antimony or arsenic can ignite or explode if ground with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 12, p. 322. Longmans, Green and Co Ltd.).
+Mixtures of KClO4 and sulfur are pyrotechnic explosives, and are impact-sensitive (J. C. Schumacher. 1960. Perchlorates, their Properties, Manufacture and Uses. ACS 146, New York, Reinhold, pp. 211-212).
+NaClO3 forms flammable/explosive mixtures with phosphorus, silicon, and sulfur (MCA Safety Datasheet 42, Manufacturing Chemists’ Association, Washington, 1952).
+Mixtures of sodium thiosulfate and sodium nitrate are explosive if heated (Mellor, J.W. 1941. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 820. Longmans, Green and Co Ltd.) or allowed to dry (Stevens, H.P. 1946. J. Proc. R. Inst. Chem. 285.).
+H2 forms explosive mixtures with bromine (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 707. Longmans, Green and Co Ltd.). 
+Mixtures of H2 and Cl2 are explosive, and can be initiated by several means, including sparks and heat (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, pp. 373-375. Longmans, Green and Co Ltd.).
+Phosphorus or sulfur form friction-and-heat sensitive explosive mixtures with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 1, p. 319-323. Longmans, Green and Co Ltd.). 
+Potassium nitrate forms explosive mixture (black powder) with sulfur and carbon (Mellor, J.W. 1941. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, pp. 820, 825. Longmans, Green and Co Ltd.; 1963. Volume 2, Supplemental 2.2. pp. 1939.).
+KNO3 forms potentially explosive mixtures with arsenic (Mellor, J.W. 1939. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 9, p. 35. Longmans, Green and Co Ltd.) or reductants such as sodium phosphinate or sodium thiosulfate (Mellor. 1941. Volume 2. pp. 820.).
+KNO3 reacts violently with red phosphorus if heated (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 8, p. 788. Longmans, Green and Co Ltd.).
+Reaction of CrO3 and selenium is violent (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 233. Longmans, Green and Co Ltd.).
+Sodium chlorate may react with sulfur dioxide to liberate toxic and flammable ClO2 and toxic Cl2 gases (Masschelein, W. J. Chlorine Dioxide. Ann Arbor, MI: Ann Arbor Science Publishers Inc., 1979, pp. 114).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with DIMETHYL ETHER - 
+Ethers WITH Oxidizing Agents:
+1) Diethyl ether evolves a gas with nitrosyl perchlorate, then explodes (Hoffman, K.A. et al. 1909. Berichte. 42:2031.).
+2) Diethyl ether explodes on contact with fluorine nitrate (Handbook of Preparative Inorganic Chemistry, Brauer, G., (Translation Ed. Riley, R.F.), London, Academic Press, Vol. 1, 1963. pp. 189.)
+3) Diethyl ether explodes on contact with sodium peroxide (Fire and Explosion Risks, von Schwartz, E., London, Griffin, 1918, p. 328.)
+4) Diethyl ether explodes on contact with trithioazyl perchlorate (Ergebnisse und Probleme der Chemie der Schwefelstickstoff-verbindung, Scientia Chemica, Vol. 9, Goehring, M., Berlin, Akademie Verlag, 1957, pp. 74.)
+5) Mixtures of diethyl ether and I2O7 can explosively decompose (Mishra, H.C. et al. 1962. Journal of the Chemical Society pp. 1195-1196.).
+6) CrO3 and ethers, including diethyl ether, methyldioxane, and dimethyldioxane, ignite on contact. (Fawcett, H.H. 1959. Industrial and Engineering Chemistry Research, 51(4):90A; Mikhailov, V. 1960. Chemical Abstracts 54:23331f; Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 235. Longmans, Green and Co Ltd.).
+7) Diethyl ether also ignites on contact with chromyl chloride (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 396. Longmans, Green and Co Ltd.), or with chlorine if light is present (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 1298.).
+8) Diethyl ether forms an impact and friction-sensitive mixture with liquid air (Danckwort, P.W. 1927. Angew Chem. 40:1317.) or silver perchlorate (Heim, F. 1957. Agnew Chem. 69:274.)
+9) Diethyl ether forms an explosive salt with uranyl nitrate (Muller, A. 1916. Chem. Ztg. 40:38; Muller, A. 1917. Chem. Ztg. 41:439), and forms explosive peroxides with H2O2 (Bruhl, J.W. 1895. Berichte. 28:2856-2857.).
+10) THF forms explosive products with KO2 (Lewis, R.J., Sr. 1992. Sax's Dangerous Properties of Industrial Materials, 8th Edition. New York: Van Nostrand Reinhold. pp. 3227.).
+11) Tetrahydrofuran (reaction may be light-promoted) (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 114.) and diethyl ether react violently with bromine (Urben 110); if the bromine is impure, diethyl ether may ignite (University Safety Association. 1989. Safety Digest 34:14.).
+12) Diethyl ether reacts vigorously with CrO3, Ca(OCl)2, or ClNO2 (Lewis, R.J., Sr. 1992. Sax's Dangerous Properties of Industrial Materials, 8th Edition. New York: Van Nostrand Reinhold. pp. 1614.); and dioxane reacts violently with silver perchlorate (Lewis 1449).
+13) Ethers may release toxic chlorine dioxide gas upon treatment with nitrosyl perchlorate (Predicted by comparison to similar reactions, citation needed.) 
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Oxidizing Agents:
+Methane will ignite or explode on contact with BrF5 (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 172. Longmans, Green and Co Ltd.).
+Methane will explode on contact with F2O2, or F2O2/F2O4 mixtures, at cryogenic temperatures (Streng, A.G. 1963. Chemical Reviews 63:615.).
+Methane or ethane will explode on contact with dioxygenyl tetrafluoroborate at low temperatures (Goetschel, C.T. et al. 1969. Journal of the American Chemical Society 91: 4706.).
+Hydrocarbons explode on contact with ClF3 at or below ambient temperatures (Brower, K.R. 1986. Journal of Fluorine Chemistry 31:333-349.).
+Hydrocarbons ignite or explode on contact with fluorine, even at cryogenic temperatures (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11. Longmans, Green and Co Ltd.; 1956. Volume 2, Supplemental 1. pp. 198; The Chemical Elements and their Compounds, Sidgwick, N.V., Oxford, Oxford University Press, 1950, pp. 1117).
+Low molecular weight hydrocarbons will ignite on contact with IF7 (Booth, H.S. et al. 1947. Chemical Reviews 41:428.).
+Cycloalkanes can produce nitroperoxonitrates with N2O4 at low temperatures; these compounds are unstable at ambient temperatures (Lachowicz, D.R. et al. 1971. U.S. Patent 3621050.).
+Inorganic oxidants may liberate flammable and toxic aldehyde and inert CO2 gas upon exposure to saturated aliphatic compounds (Predicted, citation needed).
+Vanadyl Perchlorate: a powerful oxidant which may explode above 80°C, and which ignites organic solvents on contact.  (Schmeisser, M., Angew. Chem., 1955, 67, 499)
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with HYDROGEN - 
+Oxidizing Agents WITH Reducing Agents:
+NaClO3 reacts exothermically with ammonium thiosulfate, releasing toxic CO2 and NOx gases (MCA Case History No. 2019, Case Histories of Accidents in the Chemical Industry, Manufacturing Chemists’ Association, Washington.).
+Carbon can ignite or explode in contact with oxygen, metal oxides, peroxides, metal oxosalts, halogens, interhalogens, and other oxidants (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 125.).
+H2 ignites on contact with BrF5 (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 172. Longmans, Green and Co Ltd.).
+Mixtures of hydrogen and fluorine can explode under ambient conditions if fluorine is in excess (A. D. Kirshenbaum, 1956, Final Report on Fundamental Studies of New Explosive Reactions, Philadelphia, Research Institute of Temple University, pp. 46.).
+Sulfur, phosphorus, selenium, and tellurium ignite on contact with F2 at ambient temperature (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11, 12. Longmans, Green and Co Ltd.; 1956. Volume 2, Supplemental 1. pp. 60; 1946. Volume 5. pp. 785, 822; 1940. Volume 6. pp. 161; 1939. Volume 9. pp. 34, 1943. Volume 11. pp. 26.).
+Mixtures of CrO3 and sulfur can ignite if warmed (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 234. Longmans, Green and Co Ltd.).
+Carbon ignites if heated with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 1, p. 319-323. Longmans, Green and Co Ltd.).
+Antimony or arsenic can ignite or explode if ground with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 12, p. 322. Longmans, Green and Co Ltd.).
+Mixtures of KClO4 and sulfur are pyrotechnic explosives, and are impact-sensitive (J. C. Schumacher. 1960. Perchlorates, their Properties, Manufacture and Uses. ACS 146, New York, Reinhold, pp. 211-212).
+NaClO3 forms flammable/explosive mixtures with phosphorus, silicon, and sulfur (MCA Safety Datasheet 42, Manufacturing Chemists’ Association, Washington, 1952).
+Mixtures of sodium thiosulfate and sodium nitrate are explosive if heated (Mellor, J.W. 1941. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 820. Longmans, Green and Co Ltd.) or allowed to dry (Stevens, H.P. 1946. J. Proc. R. Inst. Chem. 285.).
+H2 forms explosive mixtures with bromine (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 707. Longmans, Green and Co Ltd.). 
+Mixtures of H2 and Cl2 are explosive, and can be initiated by several means, including sparks and heat (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, pp. 373-375. Longmans, Green and Co Ltd.).
+Phosphorus or sulfur form friction-and-heat sensitive explosive mixtures with KMnO4 (Mellor, J.W. 1942. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 1, p. 319-323. Longmans, Green and Co Ltd.). 
+Potassium nitrate forms explosive mixture (black powder) with sulfur and carbon (Mellor, J.W. 1941. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, pp. 820, 825. Longmans, Green and Co Ltd.; 1963. Volume 2, Supplemental 2.2. pp. 1939.).
+KNO3 forms potentially explosive mixtures with arsenic (Mellor, J.W. 1939. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 9, p. 35. Longmans, Green and Co Ltd.) or reductants such as sodium phosphinate or sodium thiosulfate (Mellor. 1941. Volume 2. pp. 820.).
+KNO3 reacts violently with red phosphorus if heated (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 8, p. 788. Longmans, Green and Co Ltd.).
+Reaction of CrO3 and selenium is violent (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 233. Longmans, Green and Co Ltd.).
+Sodium chlorate may react with sulfur dioxide to liberate toxic and flammable ClO2 and toxic Cl2 gases (Masschelein, W. J. Chlorine Dioxide. Ann Arbor, MI: Ann Arbor Science Publishers Inc., 1979, pp. 114).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with METHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Oxidizing Agents:
+Methane will ignite or explode on contact with BrF5 (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 172. Longmans, Green and Co Ltd.).
+Methane will explode on contact with F2O2, or F2O2/F2O4 mixtures, at cryogenic temperatures (Streng, A.G. 1963. Chemical Reviews 63:615.).
+Methane or ethane will explode on contact with dioxygenyl tetrafluoroborate at low temperatures (Goetschel, C.T. et al. 1969. Journal of the American Chemical Society 91: 4706.).
+Hydrocarbons explode on contact with ClF3 at or below ambient temperatures (Brower, K.R. 1986. Journal of Fluorine Chemistry 31:333-349.).
+Hydrocarbons ignite or explode on contact with fluorine, even at cryogenic temperatures (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11. Longmans, Green and Co Ltd.; 1956. Volume 2, Supplemental 1. pp. 198; The Chemical Elements and their Compounds, Sidgwick, N.V., Oxford, Oxford University Press, 1950, pp. 1117).
+Low molecular weight hydrocarbons will ignite on contact with IF7 (Booth, H.S. et al. 1947. Chemical Reviews 41:428.).
+Cycloalkanes can produce nitroperoxonitrates with N2O4 at low temperatures; these compounds are unstable at ambient temperatures (Lachowicz, D.R. et al. 1971. U.S. Patent 3621050.).
+Inorganic oxidants may liberate flammable and toxic aldehyde and inert CO2 gas upon exposure to saturated aliphatic compounds (Predicted, citation needed).
+Vanadyl Perchlorate: a powerful oxidant which may explode above 80°C, and which ignites organic solvents on contact.  (Schmeisser, M., Angew. Chem., 1955, 67, 499)
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with METHANOL - 
+Alcohols and Polyols WITH Oxidizing Agents:
+Potassium superoxide reacts violently and exothermically with ethanol, causing gas evolution and potentially producing a fire hazard (Health and Safety Information. 1967. U.S. Army Environmental Command, Washington. pp. 251.).
+Calcium hypochlorite may ignite, cause an explosion, or form explosive compounds with alcohols, including glycerol, monomethyl diethylene glycol, polyethylene glycol, ethanol, and methanol (Fawcett, H.H. 1959. Industrial and Engineering Chemistry Research 51(4):90A.), possibly with production of flammable gases (Kirkbride, K.P. et al. 1991. Journal of Forensic Science 36620(3):902.).
+Many organic solvents, including some alcohols, explode on contact with permanganic acid (Fire and Explosion Risks, von Schwartz, E., London, Griffin, 1918, p. 327.). 
+Ethanol explodes in contact with F2O2 even at cryogenic temperatures (Streng, A.B. 1963. Chemical Reviews 63:615.). 
+Ethanol explodes on contact with FNO3 (Handbook of Preparative Inorganic Chemistry, Brauer, G., (Translation Ed. Riley, R.F.), London, Academic Press, Vol. 1, 1963. pp. 189.). 
+CrO3 vigorously oxidizes and ignites C1-C6 alcohols (Newth, F.H. et al. 1964. Chemistry and Industry 1482.). 
+Alcohols are exothermically oxidized by Na2O2, possibly causing fire or explosion (Fire and Explosion Hazards of Peroxy Compounds, Special Publication No. 394, Castrantas, H. M., Banerjee, D.K., Noller, D. C., Philadelphia, ASTM, 1965, p. 4.). 
+Reaction of isopropanol or ethanol with acidified sodium dichromate is highly exothermic, potentially explosive, and may pose a fire hazard (Annable, E.H. 1951. School Science Review 32(117):249; Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. Vol. 1, pp. 1385.). 
+Ethanol ignites and explodes on contact with nitrosyl perchlorate (Hoffmak, K.A. et al. 1909. Berichte. 42:2031.). 
+Ethylene glycol is hypergolic with CrO3, KMnO4, and Na2O2 (Oouchi, H. et al. 1982. Chemical Abstracts 97:8605.). 
+Glycerol ignites in contact with KMnO4 (British Chemical Industrial Safety Council. 1974. Quarterly Safety Summary 45:11-122.). 
+Glycerol and chlorine can explode at slightly elevated temperatures (Statesir, W.A. 1973. Chemical Engineering Progress 69(4):54.). 
+Reaction of BrF5 and ethanol may cause fire or explosion (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1. p. 172. Longmans, Green and Co Ltd.).
+Ethanol ignites in contact with chromyl chloride (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 396. Longmans, Green and Co Ltd.). 
+Reaction of C1-C3 alcohols and barium perchlorate yield highly explosive alkyl perchlorates (Kirk-Othmer Encyclopedia of Chemical Technology. John Wiley & Sons, Inc. 1964. Volume 5. pp. 75.). 
+Alcohols can form explosive mixtures with H2O2 (MCA Safety Datasheet 53. Safety Datasheets, Manufacturing Chemists’ Association, Washington. 1969.). 
+NaBrO3 and KBrO3 can produce explosive compounds with ethylene glycol (Oouchi, H. et al. 1982. Chemical Abstracts 97:8605.). 
+Methanol and lead perchlorate may form explosive methyl perchlorate (Willard, H.H. et al. 1930. Journal of the American Chemical Society 52:2396.). 
+Methanol can form explosive methyl hypochlorite in contact with sodium hypochlorite (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 1283.). 
+Ethanol can form explosive ethyl perchlorate with uranyl perchlorate (Eramesta, O. 1942. Suomen Kemist 15B:1.), KClO4 (Burton, H. et al. 1955. Analyst 80:16.), or magnesium perchlorate (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 1320.). 
+Reaction of ethanol with AgNO3 can form explosive silver fulminate and ethyl nitrate (Luchs, J.K. 1966. Photog. Sci. Eng. 10:334.).
+Reaction of sodium hypochlorite and ethylene glycol can be violent after a short induction period (Bickerton, J. 1991. Chemistry in Britain 27(6):504.). 
+P4O6 reacts violently with methanol (Thorpe, T.E. et al. 1890. Journal of the Chemical Society 57:569-573.). 
+Disulfuryl difluoride and ethanol react violently (Hayek, E. 1951. Monatshefte für Chemie. 82:942.). 
+Bromine and ethanol react vigorously with heat generation (Muir, G.D. 1972. Chemistry in Britain 8:6.). 
+EtOH reacts with hypohalites to form haloforms, but is the only primary alcohol that can undergo this type of reaction (Logsdon, J.E. 2004. Ethanol. In Kirk-Othmer Encyclopedia of Chemical Technology. John Wiley & Sons, Inc. (Online)).
+Methyl and ethyl alcohol may be oxidized to toxic and low-BP formaldehyde and acetaldehyde respectively by strong oxidizing agents such as K2Cr2O7 and KMnO4 (Morrison, R. T. and Boyd, R. N. Organic Chemistry, Allyn and Bacon, Inc, Boston: 1973, pp. 528).
+Oxidation of methanol may proceed to CO2 (Rodd, E. H, ed. Chemistry of Carbon Compounds, Elsevier Publishing Company, Amsterdam, 1951, vol. 1a, pp. 298).
+The reaction of ethyl alcohol and calcium hypochlorite yields chloroform, and by extension may also yield fluoroform with calcium hypofluorite (Rodd, E. H, ed. Chemistry of Carbon Compounds, Elsevier Publishing Company, Amsterdam, 1951, vol. 1a, pp. 304). 
+The reaction between the [ClO3]- ion and methanol may yield chlorine gas, carbon dioxide and chlorine dioxide gases (Masschelein, W. J. Chlorine Dioxide. Ann Arbor Science Publishers Inc, Ann Arbor, MI: 1979. pp. 120).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with N-BUTYL ALCOHOL - 
+Alcohols and Polyols WITH Oxidizing Agents:
+Potassium superoxide reacts violently and exothermically with ethanol, causing gas evolution and potentially producing a fire hazard (Health and Safety Information. 1967. U.S. Army Environmental Command, Washington. pp. 251.).
+Calcium hypochlorite may ignite, cause an explosion, or form explosive compounds with alcohols, including glycerol, monomethyl diethylene glycol, polyethylene glycol, ethanol, and methanol (Fawcett, H.H. 1959. Industrial and Engineering Chemistry Research 51(4):90A.), possibly with production of flammable gases (Kirkbride, K.P. et al. 1991. Journal of Forensic Science 36620(3):902.).
+Many organic solvents, including some alcohols, explode on contact with permanganic acid (Fire and Explosion Risks, von Schwartz, E., London, Griffin, 1918, p. 327.). 
+Ethanol explodes in contact with F2O2 even at cryogenic temperatures (Streng, A.B. 1963. Chemical Reviews 63:615.). 
+Ethanol explodes on contact with FNO3 (Handbook of Preparative Inorganic Chemistry, Brauer, G., (Translation Ed. Riley, R.F.), London, Academic Press, Vol. 1, 1963. pp. 189.). 
+CrO3 vigorously oxidizes and ignites C1-C6 alcohols (Newth, F.H. et al. 1964. Chemistry and Industry 1482.). 
+Alcohols are exothermically oxidized by Na2O2, possibly causing fire or explosion (Fire and Explosion Hazards of Peroxy Compounds, Special Publication No. 394, Castrantas, H. M., Banerjee, D.K., Noller, D. C., Philadelphia, ASTM, 1965, p. 4.). 
+Reaction of isopropanol or ethanol with acidified sodium dichromate is highly exothermic, potentially explosive, and may pose a fire hazard (Annable, E.H. 1951. School Science Review 32(117):249; Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. Vol. 1, pp. 1385.). 
+Ethanol ignites and explodes on contact with nitrosyl perchlorate (Hoffmak, K.A. et al. 1909. Berichte. 42:2031.). 
+Ethylene glycol is hypergolic with CrO3, KMnO4, and Na2O2 (Oouchi, H. et al. 1982. Chemical Abstracts 97:8605.). 
+Glycerol ignites in contact with KMnO4 (British Chemical Industrial Safety Council. 1974. Quarterly Safety Summary 45:11-122.). 
+Glycerol and chlorine can explode at slightly elevated temperatures (Statesir, W.A. 1973. Chemical Engineering Progress 69(4):54.). 
+Reaction of BrF5 and ethanol may cause fire or explosion (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1. p. 172. Longmans, Green and Co Ltd.).
+Ethanol ignites in contact with chromyl chloride (Mellor, J.W. 1943. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 11, p. 396. Longmans, Green and Co Ltd.). 
+Reaction of C1-C3 alcohols and barium perchlorate yield highly explosive alkyl perchlorates (Kirk-Othmer Encyclopedia of Chemical Technology. John Wiley & Sons, Inc. 1964. Volume 5. pp. 75.). 
+Alcohols can form explosive mixtures with H2O2 (MCA Safety Datasheet 53. Safety Datasheets, Manufacturing Chemists’ Association, Washington. 1969.). 
+NaBrO3 and KBrO3 can produce explosive compounds with ethylene glycol (Oouchi, H. et al. 1982. Chemical Abstracts 97:8605.). 
+Methanol and lead perchlorate may form explosive methyl perchlorate (Willard, H.H. et al. 1930. Journal of the American Chemical Society 52:2396.). 
+Methanol can form explosive methyl hypochlorite in contact with sodium hypochlorite (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 1283.). 
+Ethanol can form explosive ethyl perchlorate with uranyl perchlorate (Eramesta, O. 1942. Suomen Kemist 15B:1.), KClO4 (Burton, H. et al. 1955. Analyst 80:16.), or magnesium perchlorate (Urben, P.G. 1995. Bretherick's Handbook of Reactive Chemical Hazards, 5th Edition. Oxford: Butterworth-Heinemann. pp. 1320.). 
+Reaction of ethanol with AgNO3 can form explosive silver fulminate and ethyl nitrate (Luchs, J.K. 1966. Photog. Sci. Eng. 10:334.).
+Reaction of sodium hypochlorite and ethylene glycol can be violent after a short induction period (Bickerton, J. 1991. Chemistry in Britain 27(6):504.). 
+P4O6 reacts violently with methanol (Thorpe, T.E. et al. 1890. Journal of the Chemical Society 57:569-573.). 
+Disulfuryl difluoride and ethanol react violently (Hayek, E. 1951. Monatshefte für Chemie. 82:942.). 
+Bromine and ethanol react vigorously with heat generation (Muir, G.D. 1972. Chemistry in Britain 8:6.). 
+EtOH reacts with hypohalites to form haloforms, but is the only primary alcohol that can undergo this type of reaction (Logsdon, J.E. 2004. Ethanol. In Kirk-Othmer Encyclopedia of Chemical Technology. John Wiley & Sons, Inc. (Online)).
+Methyl and ethyl alcohol may be oxidized to toxic and low-BP formaldehyde and acetaldehyde respectively by strong oxidizing agents such as K2Cr2O7 and KMnO4 (Morrison, R. T. and Boyd, R. N. Organic Chemistry, Allyn and Bacon, Inc, Boston: 1973, pp. 528).
+Oxidation of methanol may proceed to CO2 (Rodd, E. H, ed. Chemistry of Carbon Compounds, Elsevier Publishing Company, Amsterdam, 1951, vol. 1a, pp. 298).
+The reaction of ethyl alcohol and calcium hypochlorite yields chloroform, and by extension may also yield fluoroform with calcium hypofluorite (Rodd, E. H, ed. Chemistry of Carbon Compounds, Elsevier Publishing Company, Amsterdam, 1951, vol. 1a, pp. 304). 
+The reaction between the [ClO3]- ion and methanol may yield chlorine gas, carbon dioxide and chlorine dioxide gases (Masschelein, W. J. Chlorine Dioxide. Ann Arbor Science Publishers Inc, Ann Arbor, MI: 1979. pp. 120).
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN mixed with NITROGEN - 
+Oxidizing Agents WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+OXYGEN by itself - 
+Oxidizing Agents WITH Oxidizing Agents:
+Due to the highly reactive nature of members of this group, we cannot state with certainty that hazardous reactions between members of this group will not occur. Powerful oxidizers may in fact react with less powerful oxidizers. Caution should be used before proceeding. Further research of comparable examples in the literature or very small scale, carefully controlled experiments may be needed to fully assess compatibility.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+PROPANE mixed with CARBON DIOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with CARBON MONOXIDE - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with DIMETHYL ETHER - 
+Ethers WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with HYDROGEN - 
+Hydrocarbons, Aliphatic Saturated WITH Reducing Agents:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with METHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with METHANOL - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with N-BUTYL ALCOHOL - 
+Alcohols and Polyols WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with NITROGEN - 
+Hydrocarbons, Aliphatic Saturated WITH Not Chemically Reactive:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE mixed with OXYGEN - 
+Hydrocarbons, Aliphatic Saturated WITH Oxidizing Agents:
+Methane will ignite or explode on contact with BrF5 (Mellor, J.W. 1956. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, Supp. 1, p. 172. Longmans, Green and Co Ltd.).
+Methane will explode on contact with F2O2, or F2O2/F2O4 mixtures, at cryogenic temperatures (Streng, A.G. 1963. Chemical Reviews 63:615.).
+Methane or ethane will explode on contact with dioxygenyl tetrafluoroborate at low temperatures (Goetschel, C.T. et al. 1969. Journal of the American Chemical Society 91: 4706.).
+Hydrocarbons explode on contact with ClF3 at or below ambient temperatures (Brower, K.R. 1986. Journal of Fluorine Chemistry 31:333-349.).
+Hydrocarbons ignite or explode on contact with fluorine, even at cryogenic temperatures (Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11. Longmans, Green and Co Ltd.; 1956. Volume 2, Supplemental 1. pp. 198; The Chemical Elements and their Compounds, Sidgwick, N.V., Oxford, Oxford University Press, 1950, pp. 1117).
+Low molecular weight hydrocarbons will ignite on contact with IF7 (Booth, H.S. et al. 1947. Chemical Reviews 41:428.).
+Cycloalkanes can produce nitroperoxonitrates with N2O4 at low temperatures; these compounds are unstable at ambient temperatures (Lachowicz, D.R. et al. 1971. U.S. Patent 3621050.).
+Inorganic oxidants may liberate flammable and toxic aldehyde and inert CO2 gas upon exposure to saturated aliphatic compounds (Predicted, citation needed).
+Vanadyl Perchlorate: a powerful oxidant which may explode above 80°C, and which ignites organic solvents on contact.  (Schmeisser, M., Angew. Chem., 1955, 67, 499)
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+PROPANE by itself - 
+Hydrocarbons, Aliphatic Saturated WITH Hydrocarbons, Aliphatic Saturated:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---
+
+WATER mixed with CARBON DIOXIDE - 
+Not Chemically Reactive WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with CARBON MONOXIDE - 
+Reducing Agents WITH Water and Aqueous Solutions:
+1) CHROMOUS CHLORIDE is stable in dry air, but oxidizes rapidly in moist air or standing water with liberation of Hydrogen. It is soluble in water.
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+2) When exposed to air, white phosphorus emits a green light and gives off white fumes. Ignites at 30 C in moist air, higher temperatures are required for ignition in dry air. 
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+3) PHOSPHORUS TRICHLORIDE fumes in air.  The chemical reacts violently with water, generating dense hydrogen chloride vapors.  In experiments at Argonne National Laboratory, in which it was mixed with water and stirred at room conditions, about 33 percent of the theoretical yield of HCl evolved as a gas in the first minute. 
+-	Brown, D. F., et al. (2000) Development of the Table of Initial Isolation and Protective Action Distances for the 2000 Emergency Response Guidebook, ANL/DIS-00-1, Argonne National Laboratory, Argonne IL
+4) PHOSPHORUS TRIBROMIDE fumes in air. The chemical decomposed by water to form phosphoric acid and hydrobromic acid. Reaction with warm water is very rapid and may be violent.
+-	Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 8, p. 1032. Longmans, Green and Co Ltd.
+5) With water, sodium hydrosulfite slowly oxidizes to sodium bisulfite and later to sulfur dioxide and sodium hydroxide with evolution of heat.  The chemical may ignite combustible materials in contact with moisture or air.  Moist sodium hydrosulfite is likely to ignite upon drying. Experimental work at Argonne National Laboratory has determined that there is essentially very little SO2 gas formation; the substance, sodium hydrosulfite was quite unreactive in water.  This does not prevent SO2 formation by a catalytic mechanism, but under normal conditions sodium hyposulfite is quite unreactive.  The hydration reaction was rapid and quite exothermic.  The small change in gas volume was attributed to this heating. 
+-	Hazardous Chemical Reactions, NFPA 491M, Quincy (MA), National Fire Protection Association, 10th ed., 1991
+-	Argonne Report ANL/DIS-00-1, October 2000.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with DIMETHYL ETHER - 
+Ethers WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with ETHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with HYDROGEN - 
+Reducing Agents WITH Water and Aqueous Solutions:
+1) CHROMOUS CHLORIDE is stable in dry air, but oxidizes rapidly in moist air or standing water with liberation of Hydrogen. It is soluble in water.
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+2) When exposed to air, white phosphorus emits a green light and gives off white fumes. Ignites at 30 C in moist air, higher temperatures are required for ignition in dry air. 
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+3) PHOSPHORUS TRICHLORIDE fumes in air.  The chemical reacts violently with water, generating dense hydrogen chloride vapors.  In experiments at Argonne National Laboratory, in which it was mixed with water and stirred at room conditions, about 33 percent of the theoretical yield of HCl evolved as a gas in the first minute. 
+-	Brown, D. F., et al. (2000) Development of the Table of Initial Isolation and Protective Action Distances for the 2000 Emergency Response Guidebook, ANL/DIS-00-1, Argonne National Laboratory, Argonne IL
+4) PHOSPHORUS TRIBROMIDE fumes in air. The chemical decomposed by water to form phosphoric acid and hydrobromic acid. Reaction with warm water is very rapid and may be violent.
+-	Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 8, p. 1032. Longmans, Green and Co Ltd.
+5) With water, sodium hydrosulfite slowly oxidizes to sodium bisulfite and later to sulfur dioxide and sodium hydroxide with evolution of heat.  The chemical may ignite combustible materials in contact with moisture or air.  Moist sodium hydrosulfite is likely to ignite upon drying. Experimental work at Argonne National Laboratory has determined that there is essentially very little SO2 gas formation; the substance, sodium hydrosulfite was quite unreactive in water.  This does not prevent SO2 formation by a catalytic mechanism, but under normal conditions sodium hyposulfite is quite unreactive.  The hydration reaction was rapid and quite exothermic.  The small change in gas volume was attributed to this heating. 
+-	Hazardous Chemical Reactions, NFPA 491M, Quincy (MA), National Fire Protection Association, 10th ed., 1991
+-	Argonne Report ANL/DIS-00-1, October 2000.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with METHANE - 
+Hydrocarbons, Aliphatic Saturated WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with METHANOL - 
+Alcohols and Polyols WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with N-BUTYL ALCOHOL - 
+Alcohols and Polyols WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with NITROGEN - 
+Not Chemically Reactive WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with OXYGEN - 
+Oxidizing Agents WITH Water and Aqueous Solutions:
+1) CALCIUM HYPOCHLORITE is slowly decomposed by water with the evolution of gaseous chlorine and heat. Experimental work at Argonne National Laboratory has determined that there is essentially no Cl2 gas formation; the substance is quite unreactive in water. This does not prevent Cl2 formation by a catalytic mechanism, but under normal conditions calcium hypochlorite is quite unreactive. The hydration reaction was rapid and quite exothermic. The small change in gas volume was attributed to this heating. 
+-	Argonne Report ANL/DIS-00-1, October 2000.
+2) CHROMIUM OXYCHLORIDE fumes in moist air.  The compound hydrolyzes exothermically and vigorously on contact with water to generate chromic acid, hydrochloric acid and some chlorine. In experiments at Argonne National Laboratory, in which it was mixed with water and stirred at room conditions, about 8 percent of the theoretical yield of HCl evolved as a gas in the first 40 minutes. 
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+-	Brown, D. F., et al. (2000) Development of the Table of Initial Isolation and Protective Action Distances for the 2000 Emergency Response Guidebook, ANL/DIS-00-1, Argonne National Laboratory, Argonne IL.
+3) Water vapor will combust with fluorine; an explosive reaction occurs between liquid fluorine and ice, after an intermediate induction period. 
+-	NASA SP-3037: 52(1967) 
+4) If liquid air, which has stood for some time and contains condensed water from the atmosphere, is treated with fluorine, a precipitate is formed which is likely to explode. Explosive material is thought to be fluorine hydrate. 
+-	Mellor, J.W. 1940. Mellor’s Comprehensive Treatise on Inorganic and Theoretical Chemistry. Vol. 2, p. 11. Longmans, Green and Co Ltd.
+5) TRICHLORO-S-TRIAZINETRIONE may react with water releasing gaseous chlorine. If mixed with a small amount of water, the concentrated solution (with pH at about 2.0) may explode due to the evolution of unstable nitrogen trichloride. 
+-	Bretherick, L. 1996. Bretherick’s Handbook of Reactive Chemical Hazards. Vol. 1, p 384. Fifth Ed. Urben, P.G., Ed. Butterworth-Heinemann, Boston, MA.
+6) NITRIC OXIDE combines very rapidly with oxygen in the air to form nitrogen dioxide. Nitrogen dioxide reacts with water to form nitric acid and nitric oxide, reacts with alkalis to form nitrates and nitrites. 
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+7) NITROGEN DIOXIDE reacts with water to form nitric acid and nitric oxide, it reacts with alkalis to form nitrate and nitrites. The liquid nitrogen oxide is very sensitive to detonation, in the presence of water.
+-	The Merck Index, Rahway (NJ), Merck and Co. Inc., 11th ed. 1989
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER mixed with PROPANE - 
+Hydrocarbons, Aliphatic Saturated WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS MIXTURE PAIR ---
+
+WATER by itself - 
+Water and Aqueous Solutions WITH Water and Aqueous Solutions:
+No evidence was found for a hazardous reaction between these reactive groups.
+--- END OF DOCUMENTATION FOR THIS ITEM ---

@@ -1,0 +1,1807 @@
+
+ BLOCK:  2-1      MODEL: SEP             
+ ---------------------------
+   INLET STREAM:          SHALEGAS
+   OUTLET STREAMS:        CO2-FREE    CO2-1   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            14101.6         14101.6         0.00000    
+       MASS(KG/HR   )            270263.         270263.       -0.430748E-15
+       ENTHALPY(CAL/SEC )      -0.692602E+08   -0.692602E+08    0.215148E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.454955E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.454955E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR STREAM CO2-FREE
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR STREAM CO2-1   
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FRACTION OF FEED
+     SUBSTREAM= MIXED   
+       STREAM= CO2-1     CPT= H2        FRACTION=          0.0        
+                              WATER                        0.0        
+                              CH4                          0.0        
+                              N2                           0.0        
+                              C2H6                         0.0        
+                              C3H8                         0.0        
+                              CO                           0.0        
+                              METHANOL                     0.0        
+                              BUTANOL                      0.0        
+                              DIMET-01                     0.0        
+                              O2                           0.0        
+                              CO2                          1.00000    
+
+
+                           ***  RESULTS  ***
+
+   HEAT DUTY             CAL/SEC                            -0.14236E-07
+
+  COMPONENT = CH4     
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2-FREE   MIXED                 1.00000    
+
+  COMPONENT = N2      
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2-FREE   MIXED                 1.00000    
+
+  COMPONENT = C2H6    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2-FREE   MIXED                 1.00000    
+
+  COMPONENT = C3H8    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2-FREE   MIXED                 1.00000    
+
+  COMPONENT = CO2     
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2-1      MIXED                 1.00000    
+
+ BLOCK:  2-2      MODEL: SEP             
+ ---------------------------
+   INLET STREAM:          CO2-FREE
+   OUTLET STREAMS:        N2          N2-FREE 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            13902.0         13902.0         0.00000    
+       MASS(KG/HR   )            261480.         261480.        0.222609E-15
+       ENTHALPY(CAL/SEC )      -0.640570E+08   -0.640570E+08    0.232623E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.454077E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.454077E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR STREAM N2      
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR STREAM N2-FREE 
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FRACTION OF FEED
+     SUBSTREAM= MIXED   
+       STREAM= N2        CPT= H2        FRACTION=          0.0        
+                              WATER                        0.0        
+                              CH4                          0.0        
+                              N2                           1.00000    
+                              C2H6                         0.0        
+                              C3H8                         0.0        
+                              CO                           0.0        
+                              METHANOL                     0.0        
+                              BUTANOL                      0.0        
+                              DIMET-01                     0.0        
+                              O2                           0.0        
+                              CO2                          0.0        
+
+
+                           ***  RESULTS  ***
+
+   HEAT DUTY             CAL/SEC                            -0.14236E-07
+
+  COMPONENT = CH4     
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    N2-FREE    MIXED                 1.00000    
+
+  COMPONENT = N2      
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    N2         MIXED                 1.00000    
+
+  COMPONENT = C2H6    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    N2-FREE    MIXED                 1.00000    
+
+  COMPONENT = C3H8    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    N2-FREE    MIXED                 1.00000    
+
+ BLOCK:  2-3      MODEL: FSPLIT          
+ ------------------------------
+   INLET STREAM:          N2      
+   OUTLET STREAMS:        SP-1        SP2     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            1113.89         1113.89         0.00000    
+       MASS(KG/HR   )            31203.8         31203.8         0.00000    
+       ENTHALPY(CAL/SEC )        32291.7         32291.7         0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+  FRACTION OF FLOW                 STRM=SP2      FRAC=         0.0083000  
+
+                           ***  RESULTS  ***
+
+  STREAM= SP-1           SPLIT=          0.99170     KEY=  0    STREAM-ORDER=   2
+          SP2                            0.0083000         0                    1
+
+ BLOCK:  2-4      MODEL: FSPLIT          
+ ------------------------------
+   INLET STREAM:          N2-FREE 
+   OUTLET STREAMS:        SP-3        SP-4    
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            12788.1         12788.1         0.00000    
+       MASS(KG/HR   )            230276.         230276.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.640893E+08   -0.640893E+08     0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.454077E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.454077E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+  FRACTION OF FLOW                 STRM=SP-4     FRAC=         0.050000   
+
+                           ***  RESULTS  ***
+
+  STREAM= SP-3           SPLIT=          0.95000     KEY=  0    STREAM-ORDER=   2
+          SP-4                           0.050000          0                    1
+
+ BLOCK:  2-5      MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         SP-1        SP-4    
+   OUTLET STREAM:         FUEL    
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            1744.05         1744.05         0.00000    
+       MASS(KG/HR   )            42458.7         42458.7         0.00000    
+       ENTHALPY(CAL/SEC )      -0.317244E+07   -0.317244E+07    0.146783E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             227038.      KG/HR           
+    PRODUCT STREAMS CO2E          227038.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+
+ BLOCK:  2-6      MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         SP2         SP-3    
+   OUTLET STREAM:         PROCESS 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            12158.0         12158.0         0.00000    
+       MASS(KG/HR   )            219021.         219021.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.608846E+08   -0.608846E+08     0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.431373E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.431373E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+
+ BLOCK:  2-7      MODEL: DISTL           
+ -----------------------------
+   INLET STREAM:          PROCESS2
+   CONDENSER OUTLET:      NATGAS  
+   REBOILER OUTLET:       C2+C3   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            12158.0         12158.0         0.00000    
+       MASS(KG/HR   )            219021.         219021.        0.304277E-05
+       ENTHALPY(CAL/SEC )      -0.633635E+08   -0.649229E+08    0.240193E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.431373E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.431373E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+    THEORETICAL STAGES                                      15
+    FEED STAGE NO. FROM TOP                                  9
+    REFLUX RATIO                                             0.80000    
+    TOP STAGE PRESSURE (BAR     )                           32.0000     
+    BOTTOM STAGE PRESSURE (BAR     )                        33.0000     
+    DISTILLATE TO FEED RATIO                                 0.88530    
+    CONDENSER TYPE: PARTIAL CONDENSER
+
+                           ***  RESULTS  ***
+    FEED-QUALITY                                             0.97867    
+    FEED STAGE TEMPERATURE (C       )                      -91.6447     
+    TOP STAGE TEMPERATURE (C       )                       -94.0219     
+    BOTTOM STAGE TEMPERATURE (C       )                     22.2973     
+    CONDENSER COOLING REQUIRED (CAL/SEC )            2,383,360.         
+    NET CONDENSER DUTY (CAL/SEC )                   -2,383,360.         
+    REBOILER HEATING REQUIRED (CAL/SEC )               823,961.         
+    NET REBOILER DUTY (CAL/SEC )                       823,961.         
+
+ BLOCK:  2-8      MODEL: DISTL           
+ -----------------------------
+   INLET STREAM:          C2+C3   
+   CONDENSER OUTLET:      ETHANE  
+   REBOILER OUTLET:       PROPANE 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            1394.52         1394.52         0.00000    
+       MASS(KG/HR   )            46234.4         46234.0        0.942617E-05
+       ENTHALPY(CAL/SEC )      -0.884821E+07   -0.835996E+07   -0.551800E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             568.326      KG/HR           
+    PRODUCT STREAMS CO2E          568.326      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+    THEORETICAL STAGES                                      23
+    FEED STAGE NO. FROM TOP                                 13
+    REFLUX RATIO                                             1.36800    
+    TOP STAGE PRESSURE (BAR     )                           26.8896     
+    BOTTOM STAGE PRESSURE (BAR     )                        27.0274     
+    DISTILLATE TO FEED RATIO                                 0.78000    
+    CONDENSER TYPE: PARTIAL CONDENSER
+
+                           ***  RESULTS  ***
+    FEED-QUALITY                                             0.22648    
+    FEED STAGE TEMPERATURE (C       )                       53.7800     
+    TOP STAGE TEMPERATURE (C       )                         5.04717    
+    BOTTOM STAGE TEMPERATURE (C       )                     72.1675     
+    CONDENSER COOLING REQUIRED (CAL/SEC )              791,406.         
+    NET CONDENSER DUTY (CAL/SEC )                     -791,406.         
+    REBOILER HEATING REQUIRED (CAL/SEC )             1,279,650.         
+    NET REBOILER DUTY (CAL/SEC )                     1,279,650.         
+
+ BLOCK:  2-11     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          O2      
+   OUTLET STREAM:         H-O2    
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            6803.89         6803.89         0.00000    
+       MASS(KG/HR   )            217716.         217716.         0.00000    
+       ENTHALPY(CAL/SEC )        13248.5        0.236903E+07   -0.994408    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE                C                       200.000      
+   SPECIFIED PRESSURE                   BAR                      25.9932     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    200.00    
+   OUTLET PRESSURE       BAR                                  25.993    
+   HEAT DUTY             CAL/SEC                             0.23558E+07
+
+
+
+
+
+
+ BLOCK:  2-12     MODEL: RGIBBS          
+ ------------------------------
+   INLET STREAMS:         NG          H-O2    
+   OUTLET STREAM:         SG1     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         17567.3       32261.0       14693.7      0.120795E-05
+   MASS(KG/HR   )         390502.       390501.                    0.223862E-05
+   ENTHALPY(CAL/SEC )   -0.507755E+08 -0.450268E+08               -0.113216    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.431316E+07  KG/HR           
+    PRODUCT STREAMS CO2E          127975.      KG/HR           
+    NET STREAMS CO2E PRODUCTION -0.418519E+07  KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION       -0.418519E+07  KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   EQUILIBRIUM SPECIFICATIONS:                       
+     ONLY CHEMICAL EQUILIBRIUM IS CONSIDERED, THE FLUID PHASE IS VAPOR   
+     SYSTEM TEMPERATURE    C                                  1275.0    
+     TEMPERATURE FOR FREE ENERGY EVALUATION    C              1275.0    
+     SYSTEM PRESSURE       BAR                                24.959    
+
+   FLUID PHASE SPECIES IN PRODUCT LIST:
+     H2 WATER CH4 N2 C2H6 C3H8 CO METHANOL BUTANOL DIMET-01 O2 CO2   
+
+   ATOM MATRIX:   
+   ELEMENT      H    C    N    O   
+     H2         2.00 0.00 0.00 0.00
+     WATER      1.00 0.00 0.00 2.00
+     CH4        4.00 1.00 0.00 0.00
+     N2         0.00 0.00 2.00 0.00
+     C2H6       6.00 2.00 0.00 0.00
+     C3H8       8.00 3.00 0.00 0.00
+     CO         0.00 1.00 0.00 1.00
+     METHANOL   4.00 1.00 0.00 1.00
+     BUTANOL   10.00 4.00 0.00 1.00
+     DIMET-01   6.00 2.00 0.00 1.00
+     O2         0.00 0.00 0.00 2.00
+     CO2        0.00 1.00 0.00 2.00
+
+                           ***  RESULTS  ***
+   TEMPERATURE           C                                    1275.0    
+   PRESSURE              BAR                                  24.959    
+   HEAT DUTY             CAL/SEC                             0.57486E+07
+   VAPOR FRACTION                                             1.0000    
+   NUMBER OF FLUID PHASES                                              1
+
+   FLUID PHASE MOLE FRACTIONS:   
+
+   PHASE              VAPOR   
+   OF TYPE            VAPOR   
+   PHASE FRACTION     1.000000    
+   PLACED IN STREAM   SG1     
+     H2              0.6663642    
+     WATER           0.5140322E-06
+     CH4             0.1664389E-03
+     N2              0.2865769E-03
+     C2H6            0.1796146E-09
+     C3H8            0.5239231E-15
+     CO              0.2445631    
+     METHANOL        0.2309075E-07
+     BUTANOL         0.1228252E-23
+     DIMET-01        0.6125130E-15
+     O2              0.5037864E-12
+     CO2             0.8861912E-01
+
+   KMOL/HR            32261.01    
+
+ BLOCK:  2-13     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          SG1     
+   OUTLET STREAM:         SG2     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32261.0         32261.0         0.00000    
+       MASS(KG/HR   )            390501.         390501.        0.417365E-14
+       ENTHALPY(CAL/SEC )      -0.450268E+08   -0.738160E+08    0.390012    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             127975.      KG/HR           
+    PRODUCT STREAMS CO2E          127975.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       887.644      
+   SPECIFIED PRESSURE                   BAR                      39.5070     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    887.64    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                            -0.28789E+08
+   OUTLET VAPOR FRACTION                                      1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.66636        0.56125        0.66636         366.24    
+      WATER            0.51403E-06    0.99908E-06    0.51403E-06     158.71    
+      CH4              0.16644E-03    0.31862E-03    0.16644E-03     161.14    
+      N2               0.28658E-03    0.48479E-03    0.28658E-03     182.34    
+      C2H6             0.17961E-09    0.38692E-09    0.17961E-09     143.20    
+      CO               0.24456        0.39357        0.24456         191.68    
+      METHANOL         0.23091E-07    0.26702E-07    0.23091E-07     266.75    
+      O2               0.50379E-12    0.71834E-12    0.50379E-12     216.33    
+      CO2              0.88619E-01    0.44378E-01    0.88619E-01     615.98    
+
+ BLOCK:  2-14     MODEL: FLASH2          
+ ------------------------------
+   INLET STREAM:          two       
+   OUTLET VAPOR STREAM:   SG3     
+   OUTLET LIQUID STREAM:  LIQ-1   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32261.0         32261.0       -0.225534E-15
+       MASS(KG/HR   )            390501.         390501.       -0.134153E-14
+       ENTHALPY(CAL/SEC )      -0.131573E+09   -0.131573E+09    0.679525E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             127975.      KG/HR           
+    PRODUCT STREAMS CO2E          127975.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                  40.0000     
+   SPECIFIED PRESSURE    BAR                                39.4380     
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    40.000    
+   OUTLET PRESSURE       BAR                                  39.438    
+   HEAT DUTY             CAL/SEC                            -0.15947E-07
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.66636        0.42351E-01    0.66636         333.56    
+      WATER            0.51403E-06    0.22177E-02    0.51403E-06    0.49139E-02
+      CH4              0.16644E-03    0.30255E-03    0.16644E-03     11.662    
+      N2               0.28658E-03    0.17723E-03    0.28658E-03     34.279    
+      C2H6             0.17961E-09    0.40546E-08    0.17961E-09    0.93911    
+      CO               0.24456        0.15655        0.24456         33.118    
+      METHANOL         0.23091E-07    0.66504E-04    0.23091E-07    0.73606E-02
+      O2               0.50379E-12    0.36534E-12    0.50379E-12     29.233    
+      CO2              0.88619E-01    0.79833        0.88619E-01     2.3533    
+
+ BLOCK:  2-15     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          SG3     
+   OUTLET STREAM:         SG4     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32261.0         32261.0         0.00000    
+       MASS(KG/HR   )            390501.         390501.        0.149059E-15
+       ENTHALPY(CAL/SEC )      -0.131573E+09   -0.114594E+09   -0.129044    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             127975.      KG/HR           
+    PRODUCT STREAMS CO2E          127975.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE                C                       300.000      
+   SPECIFIED PRESSURE                   BAR                      39.5070     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    300.00    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                             0.16979E+08
+
+
+
+
+
+
+ BLOCK:  2-16     MODEL: RGIBBS          
+ ------------------------------
+   INLET STREAMS:         SG4         HP-STEAM
+   OUTLET STREAM:         SYNG1   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+
+     ***********************************************************************
+     *                                                                     *
+     *     BLOCK IS IN MASS IMBALANCE                                      *
+     *                                                                     *
+     ***********************************************************************
+
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         32857.5       32524.6      -332.864      0.221440E-15
+   MASS(KG/HR   )         401247.       410189.                   -0.218003E-01
+   ENTHALPY(CAL/SEC )   -0.123857E+09 -0.135132E+09                0.834326E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             127975.      KG/HR           
+    PRODUCT STREAMS CO2E          188182.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   60207.2      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         60207.2      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   EQUILIBRIUM SPECIFICATIONS:                       
+     ONLY CHEMICAL EQUILIBRIUM IS CONSIDERED, THE FLUID PHASE IS VAPOR   
+     SYSTEM TEMPERATURE    C                                  325.00    
+     TEMPERATURE FOR FREE ENERGY EVALUATION    C              325.00    
+     SYSTEM PRESSURE       BAR                                39.507    
+
+   FLUID PHASE SPECIES IN PRODUCT LIST:
+     H2 WATER CH4 N2 C2H6 C3H8 CO METHANOL BUTANOL DIMET-01 O2 CO2   
+
+   ATOM MATRIX:   
+   ELEMENT      H    C    N    O   
+     H2         2.00 0.00 0.00 0.00
+     WATER      1.00 0.00 0.00 2.00
+     CH4        4.00 1.00 0.00 0.00
+     N2         0.00 0.00 2.00 0.00
+     C2H6       6.00 2.00 0.00 0.00
+     C3H8       8.00 3.00 0.00 0.00
+     CO         0.00 1.00 0.00 1.00
+     METHANOL   4.00 1.00 0.00 1.00
+     BUTANOL   10.00 4.00 0.00 1.00
+     DIMET-01   6.00 2.00 0.00 1.00
+     O2         0.00 0.00 0.00 2.00
+     CO2        0.00 1.00 0.00 2.00
+
+   PRODUCT SPECIFICATIONS:
+     CH4         22.680     KMOL/HR         
+     C2H6       0.45359E-05 KMOL/HR         
+     C3H8       0.45359E-08 KMOL/HR         
+     METHANOL    0.0000     KMOL/HR         
+     BUTANOL     0.0000     KMOL/HR         
+     DIMET-01    0.0000     KMOL/HR         
+
+                           ***  RESULTS  ***
+   TEMPERATURE           C                                    325.00    
+   PRESSURE              BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                            -0.11274E+08
+   VAPOR FRACTION                                             1.0000    
+   NUMBER OF FLUID PHASES                                              1
+
+   FLUID PHASE MOLE FRACTIONS:   
+
+   PHASE              VAPOR   
+   OF TYPE            VAPOR   
+   PHASE FRACTION     1.000000    
+   PLACED IN STREAM   SYNG1   
+     H2              0.6690688    
+     CH4             0.6973062E-03
+     N2              0.2842542E-03
+     C2H6            0.1394612E-09
+     C3H8            0.1394627E-12
+     CO              0.2048372    
+     O2              0.4465564E-42
+     CO2             0.1251124    
+     WATER           0.1131801E-22
+
+   KMOL/HR            32524.62    
+
+ BLOCK:  2-17     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          SYNG1   
+   OUTLET STREAM:         SYNG2   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32524.6         32524.6         0.00000    
+       MASS(KG/HR   )            410189.         410189.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.135132E+09   -0.154236E+09    0.123863    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             188182.      KG/HR           
+    PRODUCT STREAMS CO2E          188182.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                        40.0000     
+   SPECIFIED PRESSURE                   BAR                      39.5070     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    40.000    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                            -0.19104E+08
+   OUTLET VAPOR FRACTION                                      1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.66907        0.31723E-01    0.66907         342.46    
+      CH4              0.69731E-03    0.93093E-03    0.69731E-03     12.163    
+      N2               0.28425E-03    0.13151E-03    0.28425E-03     35.096    
+      C2H6             0.13946E-09    0.20938E-08    0.13946E-09     1.0815    
+      C3H8             0.13946E-12    0.11116E-10    0.13946E-12    0.20371    
+      CO               0.20484        0.98829E-01    0.20484         33.655    
+      CO2              0.12511        0.86839        0.12511         2.3394    
+
+ BLOCK:  2-18     MODEL: FLASH2          
+ ------------------------------
+   INLET STREAM:          SYNG2   
+   OUTLET VAPOR STREAM:   SYNG3   
+   OUTLET LIQUID STREAM:  LIQ-2   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32524.6         32524.6         0.00000    
+       MASS(KG/HR   )            410189.         410189.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.154236E+09   -0.154236E+09     0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             188182.      KG/HR           
+    PRODUCT STREAMS CO2E          188182.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                  40.0000     
+   SPECIFIED PRESSURE    BAR                                39.5070     
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    40.000    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                              0.0000    
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.66907        0.31723E-01    0.66907         342.46    
+      CH4              0.69731E-03    0.93093E-03    0.69731E-03     12.163    
+      N2               0.28425E-03    0.13151E-03    0.28425E-03     35.096    
+      C2H6             0.13946E-09    0.20938E-08    0.13946E-09     1.0815    
+      C3H8             0.13946E-12    0.11116E-10    0.13946E-12    0.20371    
+      CO               0.20484        0.98829E-01    0.20484         33.655    
+      CO2              0.12511        0.86839        0.12511         2.3394    
+
+ BLOCK:  2-19     MODEL: SEP             
+ ---------------------------
+   INLET STREAM:          SYNG3   
+   OUTLET STREAMS:        CO2         SYNG4   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32524.6         32524.6         0.00000    
+       MASS(KG/HR   )            410189.         410189.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.154236E+09   -0.154236E+09     0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             188182.      KG/HR           
+    PRODUCT STREAMS CO2E          188182.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+
+                          ***  INPUT DATA  ***
+
+   FLASH SPECS FOR STREAM CO2     
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FLASH SPECS FOR STREAM SYNG4   
+   TWO    PHASE  TP  FLASH
+   PRESSURE DROP         BAR                                 0.0        
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+   FRACTION OF FEED
+     SUBSTREAM= MIXED   
+       STREAM= CO2       CPT= CO2       FRACTION=          1.00000    
+
+
+                           ***  RESULTS  ***
+
+   HEAT DUTY             CAL/SEC                              0.0000    
+
+  COMPONENT = H2      
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = CH4     
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = N2      
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = C2H6    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = C3H8    
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = CO      
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    SYNG4      MIXED                 1.00000    
+
+  COMPONENT = CO2     
+    STREAM     SUBSTREAM    SPLIT FRACTION
+    CO2        MIXED                 1.00000    
+
+ BLOCK:  2-20     MODEL: COMPR           
+ -----------------------------
+   INLET STREAM:          SYNG4   
+   OUTLET STREAM:         SYNG5   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            28455.4         28455.4         0.00000    
+       MASS(KG/HR   )            231103.         231103.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.481495E+08   -0.432316E+08   -0.102137    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             9096.09      KG/HR           
+    PRODUCT STREAMS CO2E          9096.09      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                           ***  INPUT DATA  ***
+
+   ISENTROPIC CENTRIFUGAL COMPRESSOR
+    OUTLET PRESSURE  BAR                                    76.0492     
+    ISENTROPIC EFFICIENCY                                    0.72000    
+    MECHANICAL EFFICIENCY                                    1.00000    
+
+                           ***  RESULTS  ***
+
+    INDICATED  HORSEPOWER REQUIREMENT  KW               20,590.0        
+    BRAKE      HORSEPOWER REQUIREMENT  KW               20,590.0        
+    NET WORK REQUIRED                  KW               20,590.0        
+    POWER LOSSES                       KW                    0.0        
+    ISENTROPIC HORSEPOWER REQUIREMENT  KW               14,824.8        
+    CALCULATED OUTLET TEMP  C                              129.478      
+    ISENTROPIC TEMPERATURE  C                              104.516      
+    EFFICIENCY (POLYTR/ISENTR) USED                          0.72000    
+    OUTLET VAPOR FRACTION                                    1.00000    
+    HEAD DEVELOPED,       M-KGF/KG                      23,548.6        
+    MECHANICAL EFFICIENCY USED                               1.00000    
+    INLET HEAT CAPACITY RATIO                                1.40368    
+    INLET VOLUMETRIC FLOW RATE , L/MIN                 312,550.         
+    OUTLET VOLUMETRIC FLOW RATE, L/MIN                 208,761.         
+    INLET  COMPRESSIBILITY FACTOR                            1.00000    
+    OUTLET COMPRESSIBILITY FACTOR                            1.00000    
+    AV. ISENT. VOL. EXPONENT                                 1.40063    
+    AV. ISENT. TEMP EXPONENT                                 1.40063    
+    AV. ACTUAL VOL. EXPONENT                                 1.62276    
+    AV. ACTUAL TEMP EXPONENT                                 1.62276    
+
+ BLOCK:  2-22     MODEL: FSPLIT          
+ ------------------------------
+   INLET STREAM:          VAP     
+   OUTLET STREAMS:        RCYCLE1     TO-FUEL 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            17226.2         17226.2         0.00000    
+       MASS(KG/HR   )            40976.0         40976.0         0.00000    
+       ENTHALPY(CAL/SEC )      -0.146797E+07   -0.146797E+07     0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             8911.96      KG/HR           
+    PRODUCT STREAMS CO2E          8911.96      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+  FRACTION OF FLOW                 STRM=RCYCLE1  FRAC=         0.50000    
+
+                           ***  RESULTS  ***
+
+  STREAM= RCYCLE1        SPLIT=          0.50000     KEY=  0    STREAM-ORDER=   1
+          TO-FUEL                        0.50000           0                    2
+
+ BLOCK:  2-23     MODEL: RGIBBS          
+ ------------------------------
+   INLET STREAM:          SYNG6   
+   OUTLET STREAM:         PRODUCT 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+
+     ***********************************************************************
+     *                                                                     *
+     *     ERRORS IN BLOCK CALCULATIONS                                    *
+     *                                                                     *
+     *     UNABLE TO SATISFY ATOM BALANCE(S)                               *   
+     *                                                                     *
+     ***********************************************************************
+
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         37068.5       23847.4      -13221.1      0.196284E-15
+   MASS(KG/HR   )         251591.       251766.                   -0.696093E-03
+   ENTHALPY(CAL/SEC )   -0.439523E+08 -0.800427E+08                0.450890    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             13552.1      KG/HR           
+    PRODUCT STREAMS CO2E          9106.54      KG/HR           
+    NET STREAMS CO2E PRODUCTION  -4445.53      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION        -4445.53      KG/HR           
+
+                          ***  INPUT DATA  ***
+
+   EQUILIBRIUM SPECIFICATIONS:                       
+     ONLY CHEMICAL EQUILIBRIUM IS CONSIDERED, THE FLUID PHASE IS VAPOR   
+     SYSTEM TEMPERATURE    C                                  200.00    
+     TEMPERATURE FOR FREE ENERGY EVALUATION    C              200.00    
+     SYSTEM PRESSURE       BAR                                76.049    
+
+   FLUID PHASE SPECIES IN PRODUCT LIST:
+     H2 WATER CH4 N2 C2H6 C3H8 CO METHANOL BUTANOL DIMET-01 O2 CO2   
+
+   ATOM MATRIX:   
+   ELEMENT      H    C    N    O   
+     H2         2.00 0.00 0.00 0.00
+     WATER      1.00 0.00 0.00 2.00
+     CH4        4.00 1.00 0.00 0.00
+     N2         0.00 0.00 2.00 0.00
+     C2H6       6.00 2.00 0.00 0.00
+     C3H8       8.00 3.00 0.00 0.00
+     CO         0.00 1.00 0.00 1.00
+     METHANOL   4.00 1.00 0.00 1.00
+     BUTANOL   10.00 4.00 0.00 1.00
+     DIMET-01   6.00 2.00 0.00 1.00
+     O2         0.00 0.00 0.00 2.00
+     CO2        0.00 1.00 0.00 2.00
+
+   PRODUCT SPECIFICATIONS:
+     CH4         22.680     KMOL/HR         
+     C2H6       0.45359E-07 KMOL/HR         
+     C3H8       0.45359E-07 KMOL/HR         
+     BUTANOL    0.45359E-08 KMOL/HR         
+     DIMET-01   0.22680     KMOL/HR         
+
+                           ***  RESULTS  ***
+   TEMPERATURE           C                                    200.00    
+   PRESSURE              BAR                                  76.049    
+   HEAT DUTY             CAL/SEC                            -0.36090E+08
+   VAPOR FRACTION                                             1.0000    
+   NUMBER OF FLUID PHASES                                              1
+
+   FLUID PHASE MOLE FRACTIONS:   
+
+   PHASE              VAPOR   
+   OF TYPE            VAPOR   
+   PHASE FRACTION     1.000000    
+   PLACED IN STREAM   PRODUCT 
+     H2              0.7143605    
+     CH4             0.9510326E-03
+     N2              0.7570310E-03
+     C2H6            0.1902065E-11
+     C3H8            0.1902065E-11
+     CO              0.4222882E-02
+     DIMET-01        0.9510326E-05
+     O2               0.000000    
+     CO2              0.000000    
+     BUTANOL         0.1902065E-12
+     METHANOL        0.2796990    
+     WATER            0.000000    
+
+   KMOL/HR            23847.36    
+
+ BLOCK:  2-24     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          PRODUCT 
+   OUTLET STREAM:         MEOH1   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            23847.4         23847.4         0.00000    
+       MASS(KG/HR   )            251766.         251766.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.800427E+08   -0.965082E+08    0.170612    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             9106.54      KG/HR           
+    PRODUCT STREAMS CO2E          9106.54      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       115.500      
+   SPECIFIED PRESSURE                   BAR                      75.5665     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    115.50    
+   OUTLET PRESSURE       BAR                                  75.567    
+   HEAT DUTY             CAL/SEC                            -0.16465E+08
+   OUTLET VAPOR FRACTION                                     0.77881    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.71436        0.45247E-02    0.91597         202.44    
+      CH4              0.95103E-03    0.35133E-04    0.12112E-02     34.474    
+      N2               0.75703E-03    0.37971E-04    0.96126E-03     25.315    
+      C2H6             0.19021E-11    0.22661E-12    0.23779E-11     10.494    
+      C3H8             0.19021E-11    0.53464E-12    0.22904E-11     4.2840    
+      CO               0.42229E-02    0.21709E-03    0.53606E-02     24.693    
+      METHANOL         0.27970        0.99518        0.76489E-01    0.76859E-01
+      BUTANOL          0.19021E-12    0.82391E-12    0.10224E-13    0.12409E-01
+      DIMET-01         0.95103E-05    0.38864E-05    0.11108E-04     2.8580    
+
+ BLOCK:  2-25     MODEL: FLASH2          
+ ------------------------------
+   INLET STREAM:          MEOH3   
+   OUTLET VAPOR STREAM:   VAP     
+   OUTLET LIQUID STREAM:  C-MEOH  
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            23847.4         23847.4       -0.152553E-15
+       MASS(KG/HR   )            251766.         251766.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.105748E+09   -0.105748E+09   -0.281824E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             9106.54      KG/HR           
+    PRODUCT STREAMS CO2E          9106.54      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                  45.0000     
+   SPECIFIED PRESSURE    BAR                                75.5665     
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    45.000    
+   OUTLET PRESSURE       BAR                                  75.567    
+   HEAT DUTY             CAL/SEC                             0.40522E-08
+   VAPOR FRACTION                                            0.72235    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.71436        0.67679E-02    0.98633         145.74    
+      CH4              0.95103E-03    0.72091E-04    0.12889E-02     17.878    
+      N2               0.75703E-03    0.66050E-04    0.10226E-02     15.483    
+      C2H6             0.19021E-11    0.61778E-12    0.23957E-11     3.8779    
+      C3H8             0.19021E-11    0.15216E-11    0.20483E-11     1.3461    
+      CO               0.42229E-02    0.40344E-03    0.56909E-02     14.106    
+      METHANOL         0.27970        0.99268        0.56556E-02    0.56973E-02
+      BUTANOL          0.19021E-12    0.68408E-12    0.37981E-15    0.55522E-03
+      DIMET-01         0.95103E-05    0.10284E-04    0.92128E-05    0.89582    
+
+ BLOCK:  2-26     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          C-MEOH  
+   OUTLET STREAM:         C-MEOH2 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            6621.13         6621.13         0.00000    
+       MASS(KG/HR   )            210790.         210790.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.104280E+09   -0.821903E+08   -0.211829    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             194.576      KG/HR           
+    PRODUCT STREAMS CO2E          194.576      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       260.000      
+   SPECIFIED PRESSURE                   BAR                      18.2000     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    260.00    
+   OUTLET PRESSURE       BAR                                  18.200    
+   HEAT DUTY             CAL/SEC                             0.22090E+08
+   OUTLET VAPOR FRACTION                                      1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.67679E-02    0.40680E-04    0.67679E-02     1036.8    
+      CH4              0.72091E-04    0.15260E-05    0.72091E-04     294.41    
+      N2               0.66050E-04    0.22098E-05    0.66050E-04     186.27    
+      C2H6             0.61778E-12    0.28312E-13    0.61778E-12     135.98    
+      C3H8             0.15216E-11    0.13220E-12    0.15216E-11     71.730    
+      CO               0.40344E-03    0.13010E-04    0.40344E-03     193.26    
+      METHANOL         0.99268        0.99994        0.99268         6.1867    
+      BUTANOL          0.68408E-12    0.25123E-11    0.68408E-12     1.6969    
+      DIMET-01         0.10284E-04    0.12193E-05    0.10284E-04     52.565    
+
+ BLOCK:  2-27     MODEL: RSTOIC          
+ ------------------------------
+   INLET STREAMS:         R-MEOH3     C-MEOH2 
+   OUTLET STREAM:         P-1     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                              IN          OUT       GENERATION   RELATIVE DIFF.
+   TOTAL BALANCE
+   MOLE(KMOL/HR )         8237.21       8237.21       0.00000       0.00000    
+   MASS(KG/HR   )         261015.       261015.                    0.223005E-15
+   ENTHALPY(CAL/SEC )   -0.103527E+09 -0.107376E+09                0.358518E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             194.576      KG/HR           
+    PRODUCT STREAMS CO2E          149046.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   148851.      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         148851.      KG/HR           
+
+                          ***  INPUT DATA  ***
+   STOICHIOMETRY MATRIX:
+
+    REACTION #   1:
+     SUBSTREAM MIXED   :
+     WATER      1.00    METHANOL  -2.00    DIMET-01   1.00    
+
+
+   REACTION CONVERSION SPECS: NUMBER=    1
+     REACTION #   1:
+     SUBSTREAM:MIXED    KEY COMP:METHANOL CONV FRAC: 0.8000    
+
+
+
+
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                 260.000      
+   SPECIFIED PRESSURE    BAR                                18.2000     
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   SIMULTANEOUS REACTIONS
+   GENERATE COMBUSTION REACTIONS FOR FEED SPECIES          NO  
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    260.00    
+   OUTLET PRESSURE       BAR                                  18.200    
+   HEAT DUTY             CAL/SEC                            -0.38496E+07
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   REACTION EXTENTS:
+
+      REACTION          REACTION
+      NUMBER            EXTENT  
+                        KMOL/HR         
+      1                  3231.1    
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.54401E-02    0.59071E-04    0.54401E-02     533.22    
+      WATER            0.40574        0.85315        0.40574         2.7535    
+      CH4              0.57947E-04    0.48685E-06    0.57947E-04     689.15    
+      N2               0.53091E-04    0.22546E-05    0.53091E-04     136.34    
+      C2H6             0.49657E-12    0.62217E-14    0.49657E-12     462.12    
+      C3H8             0.12231E-11    0.20339E-13    0.12231E-11     348.18    
+      CO               0.32429E-03    0.15402E-04    0.32429E-03     121.91    
+      METHANOL         0.19613        0.84632E-01    0.19613         13.418    
+      BUTANOL          0.48048E-11    0.96848E-12    0.48048E-11     28.726    
+      DIMET-01         0.39226        0.62140E-01    0.39226         36.549    
+
+ BLOCK:  2-28     MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          P-1     
+   OUTLET STREAM:         P-2     
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            8237.21         8237.21         0.00000    
+       MASS(KG/HR   )            261015.         261015.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.107376E+09   -0.107978E+09    0.556962E-02
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             149046.      KG/HR           
+    PRODUCT STREAMS CO2E          149046.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       242.961      
+   SPECIFIED PRESSURE                   BAR                      22.2023     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    242.96    
+   OUTLET PRESSURE       BAR                                  22.202    
+   HEAT DUTY             CAL/SEC                            -0.60139E+06
+   OUTLET VAPOR FRACTION                                      1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.54401E-02    0.44542E-04    0.54401E-02     440.92    
+      WATER            0.40574        0.86281        0.40574         1.6977    
+      CH4              0.57947E-04    0.37461E-06    0.57947E-04     558.43    
+      N2               0.53091E-04    0.17557E-05    0.53091E-04     109.17    
+      C2H6             0.49657E-12    0.48735E-14    0.49657E-12     367.85    
+      C3H8             0.12231E-11    0.15991E-13    0.12231E-11     276.13    
+      CO               0.32429E-03    0.12070E-04    0.32429E-03     96.997    
+      METHANOL         0.19613        0.84530E-01    0.19613         8.3762    
+      BUTANOL          0.48048E-11    0.81849E-12    0.48048E-11     21.193    
+      DIMET-01         0.39226        0.52603E-01    0.39226         26.920    
+
+ BLOCK:  2-29     MODEL: DISTL           
+ -----------------------------
+   INLET STREAM:          five       
+   CONDENSER OUTLET:      DME     
+   REBOILER OUTLET:       MEOH-H2O
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            8237.21         8237.21         0.00000    
+       MASS(KG/HR   )            261015.         261015.       -0.112518E-07
+       ENTHALPY(CAL/SEC )      -0.125981E+09   -0.124233E+09   -0.138728E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             149046.      KG/HR           
+    PRODUCT STREAMS CO2E          149046.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+    THEORETICAL STAGES                                      20
+    FEED STAGE NO. FROM TOP                                 11
+    REFLUX RATIO                                             1.40000    
+    TOP STAGE PRESSURE (BAR     )                           10.6206     
+    BOTTOM STAGE PRESSURE (BAR     )                        10.6402     
+    DISTILLATE TO FEED RATIO                                 0.41155    
+    CONDENSER TYPE: PARTIAL CONDENSER
+
+                           ***  RESULTS  ***
+    FEED-QUALITY                                             0.33946    
+    FEED STAGE TEMPERATURE (C       )                      137.679      
+    TOP STAGE TEMPERATURE (C       )                        54.2841     
+    BOTTOM STAGE TEMPERATURE (C       )                    152.843      
+    CONDENSER COOLING REQUIRED (CAL/SEC )            6,864,970.         
+    NET CONDENSER DUTY (CAL/SEC )                   -6,864,970.         
+    REBOILER HEATING REQUIRED (CAL/SEC )             8,612,680.         
+    NET REBOILER DUTY (CAL/SEC )                     8,612,680.         
+
+ BLOCK:  2-30     MODEL: DISTL           
+ -----------------------------
+   INLET STREAM:          MEOH-H2O
+   CONDENSER OUTLET:      R-MEOH  
+   REBOILER OUTLET:       WATER   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            4847.18         4847.18         0.00000    
+       MASS(KG/HR   )            108434.         108434.       -0.624363E-07
+       ENTHALPY(CAL/SEC )      -0.837092E+08   -0.818035E+08   -0.227658E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.110384E-04  KG/HR           
+    PRODUCT STREAMS CO2E         0.110384E-04  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+    THEORETICAL STAGES                                      20
+    FEED STAGE NO. FROM TOP                                 11
+    REFLUX RATIO                                             1.40000    
+    TOP STAGE PRESSURE (BAR     )                            1.27486    
+    BOTTOM STAGE PRESSURE (BAR     )                         1.30428    
+    DISTILLATE TO FEED RATIO                                 0.33340    
+    CONDENSER TYPE: PARTIAL CONDENSER
+
+                           ***  RESULTS  ***
+    FEED-QUALITY                                             0.19919    
+    FEED STAGE TEMPERATURE (C       )                       94.7065     
+    TOP STAGE TEMPERATURE (C       )                        73.0617     
+    BOTTOM STAGE TEMPERATURE (C       )                    107.024      
+    CONDENSER COOLING REQUIRED (CAL/SEC )            5,789,280.         
+    NET CONDENSER DUTY (CAL/SEC )                   -5,789,280.         
+    REBOILER HEATING REQUIRED (CAL/SEC )             7,694,990.         
+    NET REBOILER DUTY (CAL/SEC )                     7,694,990.         
+
+ BLOCK:  B1       MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         SYNG5       RCYCLE2 
+   OUTLET STREAM:         SYNG6   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            37068.5         37068.5         0.00000    
+       MASS(KG/HR   )            251591.         251591.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.439523E+08   -0.439523E+08   -0.169515E-15
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             13552.1      KG/HR           
+    PRODUCT STREAMS CO2E          13552.1      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE      FLASH
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+
+ BLOCK:  B2       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          NATGAS  
+   OUTLET STREAM:         NG      
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            10763.4         10763.4         0.00000    
+       MASS(KG/HR   )            172786.         172786.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.560747E+08   -0.531445E+08   -0.522557E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.431316E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.431316E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE                C                        26.0000     
+   SPECIFIED PRESSURE                   BAR                      25.9932     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    26.000    
+   OUTLET PRESSURE       BAR                                  25.993    
+   HEAT DUTY             CAL/SEC                             0.29304E+07
+
+
+
+
+
+
+ BLOCK:  B3       MODEL: COMPR           
+ -----------------------------
+   INLET STREAM:          R-MEOH  
+   OUTLET STREAM:         R-MEOH2 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            1616.05         1616.05         0.00000    
+       MASS(KG/HR   )            50223.2         50223.2         0.00000    
+       ENTHALPY(CAL/SEC )      -0.216148E+08   -0.201892E+08   -0.659525E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.110384E-04  KG/HR           
+    PRODUCT STREAMS CO2E         0.110384E-04  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                           ***  INPUT DATA  ***
+
+   ISENTROPIC CENTRIFUGAL COMPRESSOR
+    OUTLET PRESSURE  BAR                                    18.1332     
+    ISENTROPIC EFFICIENCY                                    0.72000    
+    MECHANICAL EFFICIENCY                                    1.00000    
+
+                           ***  RESULTS  ***
+
+    INDICATED  HORSEPOWER REQUIREMENT  KW                5,968.50       
+    BRAKE      HORSEPOWER REQUIREMENT  KW                5,968.50       
+    NET WORK REQUIRED                  KW                5,968.50       
+    POWER LOSSES                       KW                    0.0        
+    ISENTROPIC HORSEPOWER REQUIREMENT  KW                4,297.32       
+    CALCULATED OUTLET TEMP  C                              312.791      
+    ISENTROPIC TEMPERATURE  C                              252.807      
+    EFFICIENCY (POLYTR/ISENTR) USED                          0.72000    
+    OUTLET VAPOR FRACTION                                    1.00000    
+    HEAD DEVELOPED,       M-KGF/KG                      31,410.5        
+    MECHANICAL EFFICIENCY USED                               1.00000    
+    INLET HEAT CAPACITY RATIO                                1.21802    
+    INLET VOLUMETRIC FLOW RATE , L/MIN                 608,147.         
+    OUTLET VOLUMETRIC FLOW RATE, L/MIN                  72,361.9        
+    INLET  COMPRESSIBILITY FACTOR                            1.00000    
+    OUTLET COMPRESSIBILITY FACTOR                            1.00000    
+    AV. ISENT. VOL. EXPONENT                                 1.18696    
+    AV. ISENT. TEMP EXPONENT                                 1.18696    
+    AV. ACTUAL VOL. EXPONENT                                 1.24717    
+    AV. ACTUAL TEMP EXPONENT                                 1.24717    
+
+ BLOCK:  B4       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          R-MEOH2 
+   OUTLET STREAM:         R-MEOH3 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            1616.05         1616.08       -0.181261E-04
+       MASS(KG/HR   )            50223.2         50224.2       -0.186887E-04
+       ENTHALPY(CAL/SEC )      -0.201892E+08   -0.213362E+08    0.537593E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.110384E-04  KG/HR           
+    PRODUCT STREAMS CO2E         0.110394E-04  KG/HR           
+    NET STREAMS CO2E PRODUCTION  0.994296E-09  KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION        0.994296E-09  KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE                C                       126.667      
+   SPECIFIED PRESSURE                   BAR                      18.1332     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    126.67    
+   OUTLET PRESSURE       BAR                                  18.133    
+   HEAT DUTY             CAL/SEC                            -0.11469E+07
+
+
+
+
+
+
+ BLOCK:  B5       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          SG2     
+   OUTLET STREAM:         two       
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            32261.0         32261.0         0.00000    
+       MASS(KG/HR   )            390501.         390501.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.738160E+08   -0.131573E+09    0.438972    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             127975.      KG/HR           
+    PRODUCT STREAMS CO2E          127975.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                        40.0000     
+   SPECIFIED PRESSURE                   BAR                      39.5070     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    40.000    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                            -0.57757E+08
+   OUTLET VAPOR FRACTION                                      1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.66636        0.42351E-01    0.66636         332.98    
+      WATER            0.51403E-06    0.22177E-02    0.51403E-06    0.49053E-02
+      CH4              0.16644E-03    0.30255E-03    0.16644E-03     11.642    
+      N2               0.28658E-03    0.17723E-03    0.28658E-03     34.219    
+      C2H6             0.17961E-09    0.40546E-08    0.17961E-09    0.93747    
+      CO               0.24456        0.15655        0.24456         33.060    
+      METHANOL         0.23091E-07    0.66504E-04    0.23091E-07    0.73478E-02
+      O2               0.50379E-12    0.36534E-12    0.50379E-12     29.182    
+      CO2              0.88619E-01    0.79833        0.88619E-01     2.3492    
+
+ BLOCK:  B6       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          PROCESS 
+   OUTLET STREAM:         PROCESS2
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            12158.0         12158.0         0.00000    
+       MASS(KG/HR   )            219021.         219021.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.608846E+08   -0.633635E+08    0.391223E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E            0.431373E+07  KG/HR           
+    PRODUCT STREAMS CO2E         0.431373E+07  KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE  TP  FLASH   SPECIFIED PHASE IS  VAPOR  
+   SPECIFIED TEMPERATURE                C                       -42.7778     
+   SPECIFIED PRESSURE                   BAR                      39.5070     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                   -42.778    
+   OUTLET PRESSURE       BAR                                  39.507    
+   HEAT DUTY             CAL/SEC                            -0.24789E+07
+
+
+
+
+
+
+ BLOCK:  B7       MODEL: COMPR           
+ -----------------------------
+   INLET STREAM:          RCYCLE1 
+   OUTLET STREAM:         RCYCLE2 
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            8613.12         8613.11        0.126428E-05
+       MASS(KG/HR   )            20488.0         20488.0       -0.452948E-06
+       ENTHALPY(CAL/SEC )       -733985.        -720615.       -0.182149E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             4455.98      KG/HR           
+    PRODUCT STREAMS CO2E          4455.98      KG/HR           
+    NET STREAMS CO2E PRODUCTION -0.204080E-02  KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION       -0.204080E-02  KG/HR           
+
+                           ***  INPUT DATA  ***
+
+   ISENTROPIC CENTRIFUGAL COMPRESSOR
+    OUTLET PRESSURE  BAR                                    76.0492     
+    ISENTROPIC EFFICIENCY                                    0.72000    
+    MECHANICAL EFFICIENCY                                    1.00000    
+
+                           ***  RESULTS  ***
+
+    INDICATED  HORSEPOWER REQUIREMENT  KW                   56.0125     
+    BRAKE      HORSEPOWER REQUIREMENT  KW                   56.0125     
+    NET WORK REQUIRED                  KW                   56.0125     
+    POWER LOSSES                       KW                    0.0        
+    ISENTROPIC HORSEPOWER REQUIREMENT  KW                   40.3290     
+    CALCULATED OUTLET TEMP  C                               45.8069     
+    ISENTROPIC TEMPERATURE  C                               45.5812     
+    EFFICIENCY (POLYTR/ISENTR) USED                          0.72000    
+    OUTLET VAPOR FRACTION                                    1.00000    
+    HEAD DEVELOPED,       M-KGF/KG                         722.602      
+    MECHANICAL EFFICIENCY USED                               1.00000    
+    INLET HEAT CAPACITY RATIO                                1.40251    
+    INLET VOLUMETRIC FLOW RATE , L/MIN                  50,250.3        
+    OUTLET VOLUMETRIC FLOW RATE, L/MIN                  50,058.0        
+    INLET  COMPRESSIBILITY FACTOR                            1.00000    
+    OUTLET COMPRESSIBILITY FACTOR                            1.00000    
+    AV. ISENT. VOL. EXPONENT                                 1.40191    
+    AV. ISENT. TEMP EXPONENT                                 1.40191    
+    AV. ACTUAL VOL. EXPONENT                                 1.66075    
+    AV. ACTUAL TEMP EXPONENT                                 1.66075    
+
+ BLOCK:  B8       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          MEOH1   
+   OUTLET STREAM:         MEOH2   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            23847.4         23847.4         0.00000    
+       MASS(KG/HR   )            251766.         251766.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.965082E+08   -0.988061E+08    0.232566E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             9106.54      KG/HR           
+    PRODUCT STREAMS CO2E          9106.54      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       102.389      
+   SPECIFIED PRESSURE                   BAR                      75.5665     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    102.39    
+   OUTLET PRESSURE       BAR                                  75.567    
+   HEAT DUTY             CAL/SEC                            -0.22979E+07
+   OUTLET VAPOR FRACTION                                     0.75811    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.71436        0.48440E-02    0.94074         194.21    
+      CH4              0.95103E-03    0.39798E-04    0.12418E-02     31.202    
+      N2               0.75703E-03    0.41987E-04    0.98517E-03     23.464    
+      C2H6             0.19021E-11    0.26908E-12    0.24231E-11     9.0051    
+      C3H8             0.19021E-11    0.64720E-12    0.23024E-11     3.5575    
+      CO               0.42229E-02    0.24232E-03    0.54929E-02     22.668    
+      METHANOL         0.27970        0.99483        0.51529E-01    0.51797E-01
+      BUTANOL          0.19021E-12    0.76788E-12    0.58923E-14    0.76735E-02
+      DIMET-01         0.95103E-05    0.46564E-05    0.11059E-04     2.3750    
+
+ BLOCK:  B9       MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          MEOH2   
+   OUTLET STREAM:         MEOH3   
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            23847.4         23847.4         0.00000    
+       MASS(KG/HR   )            251766.         251766.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.988061E+08   -0.105748E+09    0.656446E-01
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             9106.54      KG/HR           
+    PRODUCT STREAMS CO2E          9106.54      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                        45.0000     
+   SPECIFIED PRESSURE                   BAR                      75.5665     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    45.000    
+   OUTLET PRESSURE       BAR                                  75.567    
+   HEAT DUTY             CAL/SEC                            -0.69418E+07
+   OUTLET VAPOR FRACTION                                     0.72235    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.71436        0.67679E-02    0.98633         145.74    
+      CH4              0.95103E-03    0.72091E-04    0.12889E-02     17.878    
+      N2               0.75703E-03    0.66050E-04    0.10226E-02     15.483    
+      C2H6             0.19021E-11    0.61778E-12    0.23957E-11     3.8779    
+      C3H8             0.19021E-11    0.15216E-11    0.20483E-11     1.3461    
+      CO               0.42229E-02    0.40344E-03    0.56909E-02     14.106    
+      METHANOL         0.27970        0.99268        0.56556E-02    0.56973E-02
+      BUTANOL          0.19021E-12    0.68408E-12    0.37981E-15    0.55522E-03
+      DIMET-01         0.95103E-05    0.10284E-04    0.92128E-05    0.89582    
+
+ BLOCK:  B10      MODEL: HEATER          
+ ------------------------------
+   INLET STREAM:          P-2     
+   OUTLET STREAM:         five       
+   PROPERTY OPTION SET:   NRTL      RENON (NRTL) / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            8237.21         8237.21         0.00000    
+       MASS(KG/HR   )            261015.         261015.         0.00000    
+       ENTHALPY(CAL/SEC )      -0.107978E+09   -0.125981E+09    0.142907    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             149046.      KG/HR           
+    PRODUCT STREAMS CO2E          149046.      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE                C                       110.000      
+   SPECIFIED PRESSURE                   BAR                      22.2023     
+   MAXIMUM NO. ITERATIONS                                        30
+   CONVERGENCE TOLERANCE                                          0.000100000
+
+
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    110.00    
+   OUTLET PRESSURE       BAR                                  22.202    
+   HEAT DUTY             CAL/SEC                            -0.18004E+08
+   OUTLET VAPOR FRACTION                                     0.11922    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      H2               0.54401E-02    0.49580E-03    0.41968E-01     84.647    
+      WATER            0.40574        0.45535        0.39205E-01    0.86098E-01
+      CH4              0.57947E-04    0.43567E-05    0.45387E-03     104.18    
+      N2               0.53091E-04    0.16856E-04    0.32079E-03     19.031    
+      C2H6             0.49657E-12    0.10915E-12    0.33588E-11     30.771    
+      C3H8             0.12231E-11    0.53052E-12    0.63397E-11     11.950    
+      CO               0.32429E-03    0.12931E-03    0.17647E-02     13.647    
+      METHANOL         0.19613        0.21245        0.75488E-01    0.35531    
+      BUTANOL          0.48048E-11    0.54051E-11    0.36998E-12    0.68450E-01
+      DIMET-01         0.39226        0.33155        0.84080         2.5360    

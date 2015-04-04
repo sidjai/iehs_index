@@ -1,0 +1,2721 @@
+                                                                                
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + +   + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + +   + +       + +   + + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + + + + +       +       +       + + + + + + + + + + + + +
+ + + + + + + + + + +   + +       +       +       + +   + + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + +   + +       +       +       +       +       + +   + + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + +       +       +       +       +       +       +       + + + + +
+ + + + + + +   + +       +       +       +       +       + +   + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + +       +       +       +       +       + + + + + + + + +
+ + + + + + + + + + +   + + +   + +       + +   + + +   + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + +       + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + +   + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+                                                                        TM
+ AAAAA   SSSSS   PPPPP   EEEEE   NN    N   PPPPP   L       U   U   SSSSS
+ A   A   S       P   P   E       N N   N   P   P   L       U   U   S    
+ AAAAA   SSSSS   PPPPP   EEEEE   N   N N   PPPPP   L       U   U   SSSSS
+ A   A       S   P       E       N    NN   P       L       U   U       S
+ A   A   SSSSS   P       EEEEE   N     N   P       LLLLL   UUUUU   SSSSS
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 200 WHEELER ROAD                       EUROPE (44) 1189-226555
+ BURLINGTON, MASSACHUSETTS 01803                             
+ 781/221-6400
+
+ PLATFORM: WINDOWS                                       JUNE 3, 2014        
+ VERSION: 28.0   Build 25                                TUESDAY     
+ INSTALLATION:                                           4:52:27 P.M.        
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 200 WHEELER ROAD,
+      BURLINGTON, MA 01803.
+                               TABLE OF CONTENTS                                
+
+
+            PROPERTY CONSTANT ESTIMATION SECTION...................  1
+                 PURE COMPONENT PARAMETERS.........................  1
+                 BINARY PARAMETERS................................. 37
+
+            PROBLEM STATUS SECTION................................. 63
+                 BLOCK STATUS...................................... 63
+                                                                                
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 1   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS               
+ -------------------------
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  H2         FORMULA:  H2          
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.79413E+06
+                    AT TC                   0.13130E+07
+     ACENTRIC FACTOR           OMEGA        -0.2158                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.84745E+06  J/KMOL      DEFINITION  
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 2   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   12.455      K,N/SQM     RIEDEL      
+                                       (2)  -98.182    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)   1.2874    
+                                       (6)  0.61472E-10
+                                       (7)   6.0000    
+                                       (8)   20.390    
+                                       (9)   33.190    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.88876E+06  K,J/KMOL    DEFINITION  
+                                       (2)   13.950    
+                                       (3)  0.42752    
+                                       (4) -0.80572    
+                                       (5)   13.950    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 3   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     13.95     0.8977E+06   0.8888E+06    -1.00
+                   2     16.05     0.8897E+06   0.8876E+06    -0.24
+                   3     18.15     0.8700E+06   0.8752E+06     0.60
+                   4     20.25     0.8387E+06   0.8496E+06     1.31
+                   5     22.35     0.7956E+06   0.8087E+06     1.64
+                   6     24.45     0.7396E+06   0.7497E+06     1.37
+                   7     26.56     0.6672E+06   0.6692E+06     0.30
+                   8     28.66     0.5713E+06   0.5617E+06    -1.67
+                   9     30.76     0.4332E+06   0.4148E+06    -4.25
+                  10     32.86     0.1585E+06   0.1619E+06     2.10
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 4   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  WATER      FORMULA:  H2O         
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10129E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.99767E+07
+                    AT TC                   0.22064E+08
+     ACENTRIC FACTOR           OMEGA         0.3217                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.41360E+08  J/KMOL      DEFINITION  
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 5   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   62.798      K,N/SQM     RIEDEL      
+                                       (2)  -7123.6    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -5.4363    
+                                       (6)  0.41650E-17
+                                       (7)   6.0000    
+                                       (8)   373.15    
+                                       (9)   647.10    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.44436E+08  K,J/KMOL    DEFINITION  
+                                       (2)   273.16    
+                                       (3)  0.39943    
+                                       (4) -0.39887    
+                                       (5)   273.16    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 6   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    273.16     0.4516E+08   0.4444E+08    -1.61
+                   2    313.99     0.4336E+08   0.4345E+08     0.21
+                   3    354.82     0.4160E+08   0.4210E+08     1.19
+                   4    395.65     0.3974E+08   0.4033E+08     1.48
+                   5    436.48     0.3759E+08   0.3806E+08     1.27
+                   6    477.31     0.3498E+08   0.3521E+08     0.65
+                   7    518.14     0.3172E+08   0.3161E+08    -0.35
+                   8    558.97     0.2743E+08   0.2698E+08    -1.63
+                   9    599.80     0.2123E+08   0.2067E+08    -2.64
+                  10    640.63     0.8799E+07   0.8934E+07     1.53
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 7   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  CH4        FORMULA:  CH4         
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10129E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.24653E+07
+                    AT TC                   0.45990E+07
+     ACENTRIC FACTOR           OMEGA         0.0078                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.77868E+07  J/KMOL      DEFINITION  
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 8   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   29.353      K,N/SQM     RIEDEL      
+                                       (2)  -1200.3    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -1.5024    
+                                       (6)  0.36533E-14
+                                       (7)   6.0000    
+                                       (8)   111.66    
+                                       (9)   190.56    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.88615E+07  K,J/KMOL    DEFINITION  
+                                       (2)   90.690    
+                                       (3)  0.30796    
+                                       (4)  0.58113    
+                                       (5)   90.690    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 9   
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     90.69     0.8701E+07   0.8862E+07     1.85
+                   2    101.79     0.8389E+07   0.8278E+07    -1.32
+                   3    112.88     0.8013E+07   0.7728E+07    -3.57
+                   4    123.98     0.7567E+07   0.7203E+07    -4.81
+                   5    135.08     0.7045E+07   0.6694E+07    -4.97
+                   6    146.17     0.6436E+07   0.6186E+07    -3.89
+                   7    157.27     0.5713E+07   0.5651E+07    -1.09
+                   8    168.37     0.4808E+07   0.5037E+07     4.77
+                   9    179.46     0.3532E+07   0.4182E+07    18.39
+                  10    190.56     0.4052E+06   0.3920E+06    -3.26
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 10  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  N2         FORMULA:  N2          
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.17951E+07
+                    AT TC                   0.34000E+07
+     ACENTRIC FACTOR           OMEGA         0.0356                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.54844E+07  J/KMOL      DEFINITION  
+     PARACHOR                  PARC           35.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 11  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   30.540      K,N/SQM     RIEDEL      
+                                       (2)  -847.96    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -1.8538    
+                                       (6)  0.46202E-13
+                                       (7)   6.0000    
+                                       (8)   77.344    
+                                       (9)   126.20    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.59956E+07  K,J/KMOL    DEFINITION  
+                                       (2)   63.150    
+                                       (3)  0.44023    
+                                       (4) -0.23464    
+                                       (5)   63.150    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 12  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     63.15     0.6021E+07   0.5996E+07    -0.42
+                   2     70.02     0.5770E+07   0.5768E+07    -0.03
+                   3     76.88     0.5490E+07   0.5504E+07     0.26
+                   4     83.75     0.5173E+07   0.5197E+07     0.46
+                   5     90.61     0.4815E+07   0.4841E+07     0.53
+                   6     97.48     0.4407E+07   0.4423E+07     0.38
+                   7    104.34     0.3927E+07   0.3926E+07    -0.03
+                   8    111.21     0.3337E+07   0.3316E+07    -0.64
+                   9    118.07     0.2537E+07   0.2509E+07    -1.10
+                  10    124.94     0.1075E+07   0.1081E+07     0.61
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 13  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  C2H6       FORMULA:  C2H6        
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.24908E+07
+                    AT TC                   0.48720E+07
+     ACENTRIC FACTOR           OMEGA         0.0952                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.14637E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC          111.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 14  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   37.659      K,N/SQM     RIEDEL      
+                                       (2)  -2323.4    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -2.5976    
+                                       (6)  0.26094E-15
+                                       (7)   6.0000    
+                                       (8)   184.55    
+                                       (9)   305.32    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.17739E+08  K,J/KMOL    DEFINITION  
+                                       (2)   90.350    
+                                       (3)  0.42368    
+                                       (4) -0.22820    
+                                       (5)   90.350    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 15  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     90.35     0.1794E+08   0.1774E+08    -1.10
+                   2    113.90     0.1711E+08   0.1717E+08     0.35
+                   3    137.44     0.1634E+08   0.1648E+08     0.87
+                   4    160.99     0.1552E+08   0.1564E+08     0.78
+                   5    184.54     0.1456E+08   0.1464E+08     0.53
+                   6    208.08     0.1339E+08   0.1343E+08     0.30
+                   7    231.63     0.1196E+08   0.1196E+08    -0.07
+                   8    255.17     0.1019E+08   0.1011E+08    -0.81
+                   9    278.72     0.7761E+07   0.7629E+07    -1.69
+                  10    302.27     0.2928E+07   0.2954E+07     0.88
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 16  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  C3H8       FORMULA:  C3H8        
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.21086E+07
+                    AT TC                   0.42480E+07
+     ACENTRIC FACTOR           OMEGA         0.1498                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.18635E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC          151.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 17  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   42.849      K,N/SQM     RIEDEL      
+                                       (2)  -3116.5    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -3.2799    
+                                       (6)  0.91484E-16
+                                       (7)   6.0000    
+                                       (8)   231.11    
+                                       (9)   369.83    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.24509E+08  K,J/KMOL    DEFINITION  
+                                       (2)   85.470    
+                                       (3)  0.41959    
+                                       (4) -0.10096    
+                                       (5)   85.470    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 18  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     85.47     0.2484E+08   0.2451E+08    -1.34
+                   2    116.65     0.2344E+08   0.2353E+08     0.38
+                   3    147.84     0.2216E+08   0.2242E+08     1.20
+                   4    179.02     0.2095E+08   0.2117E+08     1.04
+                   5    210.21     0.1965E+08   0.1973E+08     0.39
+                   6    241.39     0.1809E+08   0.1805E+08    -0.17
+                   7    272.58     0.1616E+08   0.1608E+08    -0.50
+                   8    303.76     0.1374E+08   0.1364E+08    -0.76
+                   9    334.95     0.1045E+08   0.1037E+08    -0.80
+                  10    366.13     0.3958E+07   0.3981E+07     0.57
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 19  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  CO         FORMULA:  CO          
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.18325E+07
+                    AT TC                   0.34990E+07
+     ACENTRIC FACTOR           OMEGA         0.0506                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.59161E+07  J/KMOL      DEFINITION  
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 20  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   31.799      K,N/SQM     RIEDEL      
+                                       (2)  -922.93    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -2.0412    
+                                       (6)  0.34973E-13
+                                       (7)   6.0000    
+                                       (8)   81.700    
+                                       (9)   132.92    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.64600E+07  K,J/KMOL    DEFINITION  
+                                       (2)   68.150    
+                                       (3)  0.45002    
+                                       (4) -0.19542    
+                                       (5)   68.150    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 21  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     68.15     0.6475E+07   0.6460E+07    -0.23
+                   2     75.20     0.6200E+07   0.6194E+07    -0.10
+                   3     82.25     0.5886E+07   0.5891E+07     0.09
+                   4     89.30     0.5528E+07   0.5546E+07     0.32
+                   5     96.35     0.5126E+07   0.5151E+07     0.49
+                   6    103.39     0.4672E+07   0.4694E+07     0.46
+                   7    110.44     0.4150E+07   0.4155E+07     0.13
+                   8    117.49     0.3518E+07   0.3499E+07    -0.53
+                   9    124.54     0.2672E+07   0.2639E+07    -1.23
+                  10    131.59     0.1125E+07   0.1132E+07     0.62
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 22  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  METHANOL   FORMULA:  CH4O        
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10131E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.32255E+07
+                    AT TC                   0.80840E+07
+     ACENTRIC FACTOR           OMEGA         0.5557                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.37590E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC           85.30                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 23  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   81.937      K,N/SQM     RIEDEL      
+                                       (2)  -7416.5    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -8.3282    
+                                       (6)  0.22184E-16
+                                       (7)   6.0000    
+                                       (8)   337.85    
+                                       (9)   512.50    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.43469E+08  K,J/KMOL    DEFINITION  
+                                       (2)   175.47    
+                                       (3)  0.40387    
+                                       (4) -0.53646    
+                                       (5)   175.47    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 24  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    175.47     0.4515E+08   0.4347E+08    -3.72
+                   2    212.35     0.4295E+08   0.4302E+08     0.17
+                   3    249.23     0.4095E+08   0.4211E+08     2.84
+                   4    286.11     0.3911E+08   0.4068E+08     4.00
+                   5    322.98     0.3727E+08   0.3862E+08     3.61
+                   6    359.86     0.3515E+08   0.3583E+08     1.93
+                   7    396.74     0.3238E+08   0.3213E+08    -0.75
+                   8    433.62     0.2843E+08   0.2726E+08    -4.12
+                   9    470.50     0.2218E+08   0.2054E+08    -7.39
+                  10    507.38     0.7870E+07   0.8198E+07     4.17
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 25  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  BUTANOL    FORMULA:  C4H10O-1    
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10131E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.17157E+07
+                    AT TC                   0.44140E+07
+     ACENTRIC FACTOR           OMEGA         0.6060                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.42805E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC          205.30                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 26  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   86.647      K,N/SQM     RIEDEL      
+                                       (2)  -8556.2    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -8.9326    
+                                       (6)  0.13240E-16
+                                       (7)   6.0000    
+                                       (8)   391.90    
+                                       (9)   563.10    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.64202E+08  K,J/KMOL    DEFINITION  
+                                       (2)   183.85    
+                                       (3)  0.48369    
+                                       (4)  0.85454E-01
+                                       (5)   183.85    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 27  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    183.85     0.6422E+08   0.6420E+08    -0.03
+                   2    225.36     0.6021E+08   0.6034E+08     0.22
+                   3    266.88     0.5622E+08   0.5634E+08     0.22
+                   4    308.39     0.5223E+08   0.5215E+08    -0.15
+                   5    349.90     0.4804E+08   0.4769E+08    -0.72
+                   6    391.42     0.4327E+08   0.4286E+08    -0.95
+                   7    432.93     0.3760E+08   0.3748E+08    -0.32
+                   8    474.44     0.3089E+08   0.3117E+08     0.92
+                   9    515.96     0.2271E+08   0.2307E+08     1.57
+                  10    557.47     0.8411E+07   0.8349E+07    -0.73
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 28  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  DIMET-01   FORMULA:  C2H6O-1     
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10130E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.26006E+07
+                    AT TC                   0.53700E+07
+     ACENTRIC FACTOR           OMEGA         0.1955                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.21206E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC          131.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 29  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   47.422      K,N/SQM     RIEDEL      
+                                       (2)  -3644.7    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -3.8502    
+                                       (6)  0.61685E-16
+                                       (7)   6.0000    
+                                       (8)   248.31    
+                                       (9)   400.10    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.25679E+08  K,J/KMOL    DEFINITION  
+                                       (2)   131.65    
+                                       (3)  0.38607    
+                                       (4) -0.13293    
+                                       (5)   131.65    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 30  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    131.65     0.2554E+08   0.2568E+08     0.52
+                   2    161.03     0.2470E+08   0.2478E+08     0.32
+                   3    190.42     0.2382E+08   0.2375E+08    -0.29
+                   4    219.80     0.2277E+08   0.2255E+08    -0.95
+                   5    249.18     0.2142E+08   0.2116E+08    -1.19
+                   6    278.57     0.1967E+08   0.1953E+08    -0.73
+                   7    307.95     0.1751E+08   0.1756E+08     0.26
+                   8    337.33     0.1491E+08   0.1510E+08     1.26
+                   9    366.72     0.1154E+08   0.1175E+08     1.82
+                  10    396.10     0.5141E+07   0.5091E+07    -0.99
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 31  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  O2         FORMULA:  O2          
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10129E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.26858E+07
+                    AT TC                   0.50430E+07
+     ACENTRIC FACTOR           OMEGA         0.0198                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.67287E+07  J/KMOL      DEFINITION  
+     PARACHOR                  PARC           40.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 32  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   30.062      K,N/SQM     RIEDEL      
+                                       (2)  -1001.4    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -1.6526    
+                                       (6)  0.13190E-13
+                                       (7)   6.0000    
+                                       (8)   90.188    
+                                       (9)   154.58    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.77182E+07  K,J/KMOL    DEFINITION  
+                                       (2)   54.360    
+                                       (3)  0.42910    
+                                       (4) -0.28563    
+                                       (5)   54.360    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 33  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1     54.36     0.7765E+07   0.7718E+07    -0.61
+                   2     65.32     0.7466E+07   0.7486E+07     0.26
+                   3     76.29     0.7164E+07   0.7195E+07     0.43
+                   4     87.25     0.6813E+07   0.6837E+07     0.35
+                   5     98.22     0.6385E+07   0.6402E+07     0.26
+                   6    109.18     0.5862E+07   0.5872E+07     0.17
+                   7    120.14     0.5226E+07   0.5224E+07    -0.04
+                   8    131.11     0.4429E+07   0.4409E+07    -0.46
+                   9    142.07     0.3343E+07   0.3316E+07    -0.80
+                  10    153.03     0.1298E+07   0.1304E+07     0.43
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 34  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+
+     --------------------------------------------------------------------------
+     COMPONENT ID:  CO2        FORMULA:  CO2         
+     --------------------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED                METHOD OF
+     PROPERTY NAME             NAME         VALUE        UNITS       ESTIMATION
+     -------------             -------      ---------    -----       ----------
+     VAPOR PRESSURE AT TB                   0.10131E+06  N/SQM       RIEDEL      
+                    AT 0.9*TC               0.32078E+07
+                    AT TC                   0.73830E+07
+     ACENTRIC FACTOR           OMEGA         0.3969                  LEE-KESL    
+     HEAT OF VAP AT TB         DHVLB        0.16446E+08  J/KMOL      DEFINITION  
+     PARACHOR                  PARC           66.00                  PARACHOR    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 35  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     --------------------------------
+     TEMPERATURE-DEPENDENT PROPERTIES
+     --------------------------------
+                               PARAMETER    PARAMETER                METHOD OF
+     PROPERTY NAME             NAME(EL)     VALUES       UNITS       ESTIMATION
+     -------------             ---------    ---------    -----       ----------
+
+     VAPOR PRESSURE            PLXANT  (1)   63.949      K,N/SQM     RIEDEL      
+                                       (2)  -3684.9    
+                                       (3)       0.
+                                       (4)       0.
+                                       (5)  -6.3588    
+                                       (6)  0.42454E-15
+                                       (7)   6.0000    
+                                       (8)   194.70    
+                                       (9)   304.21    
+
+     HEAT OF VAPORIZATION      DHVLWT  (1)  0.15156E+08  K,J/KMOL    DEFINITION  
+                                       (2)   216.58    
+                                       (3)  0.45992    
+                                       (4) -0.25987    
+                                       (5)   216.58    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 36  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ PURE COMPONENT PARAMETERS (CONTINUED)               
+
+     ---------------------------------------------------------
+     DEVIATIONS IN REGRESSING TEMPERATURE-DEPENDENT PROPERTIES
+     ---------------------------------------------------------
+
+
+     HEAT OF VAPORIZATION    
+
+          METHOD = DEFINITI
+                                     HEAT OF VAPORIZATION    
+                                       (J/KMOL      )
+                 POINT   TEMP      -----------------------
+                  NO.    (K)          DATA      CALCULATED    % ERROR
+                  ---   ------     ----------   ----------    -------
+                   1    216.58     0.1528E+08   0.1516E+08    -0.80
+                   2    225.98     0.1450E+08   0.1450E+08    -0.03
+                   3    235.38     0.1369E+08   0.1376E+08     0.51
+                   4    244.78     0.1283E+08   0.1293E+08     0.79
+                   5    254.17     0.1191E+08   0.1200E+08     0.76
+                   6    263.57     0.1088E+08   0.1093E+08     0.44
+                   7    272.97     0.9710E+07   0.9694E+07    -0.16
+                   8    282.37     0.8288E+07   0.8210E+07    -0.94
+                   9    291.77     0.6403E+07   0.6305E+07    -1.54
+                  10    301.17     0.3228E+07   0.3259E+07     0.99
+                  ---------------------------------------------------
+    
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 37  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS                       
+ -----------------
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING H2      
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         H2         WATER      WILSON/2     216.3    
+         WATER      H2         WILSON/2    -204.0    
+
+         H2         CH4        WILSON/2     225.3    
+         CH4        H2         WILSON/2    -219.7    
+
+         H2         N2         WILSON/2    -459.3    
+         N2         H2         WILSON/2     293.5    
+
+         H2         C2H6       WILSON/2    -2179.    
+         C2H6       H2         WILSON/2     649.3    
+
+         H2         C3H8       WILSON/2    -5691.    
+         C3H8       H2         WILSON/2     905.1    
+
+         H2         CO         WILSON/2    -327.4    
+         CO         H2         WILSON/2     232.7    
+
+         H2         METHANOL   WILSON/2    -1380.    
+         METHANOL   H2         WILSON/2     535.6    
+
+         H2         BUTANOL    WILSON/2     618.4    
+         BUTANOL    H2         WILSON/2    -210.6    
+
+         H2         DIMET-01   WILSON/2     406.1    
+         DIMET-01   H2         WILSON/2    -269.1    
+
+         H2         O2         WILSON/2    -355.1    
+         O2         H2         WILSON/2     246.5    
+
+         H2         CO2        WILSON/2     215.5    
+         CO2        H2         WILSON/2    -344.0    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         H2         WATER      NRTL  /2    -449.7    
+         WATER      H2         NRTL  /2     638.3    
+
+         H2         WATER      NRTL  /3    0.3000    
+         WATER      H2         NRTL  /3    0.3000    
+
+         H2         CH4        NRTL  /2    -454.5    
+         CH4        H2         NRTL  /2     648.3    
+
+         H2         CH4        NRTL  /3    0.3000    
+         CH4        H2         NRTL  /3    0.3000    
+
+         H2         N2         NRTL  /2    -343.7    
+         N2         H2         NRTL  /2     445.4    
+
+         H2         N2         NRTL  /3    0.3000    
+         N2         H2         NRTL  /3    0.3000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 38  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         H2         C2H6       NRTL  /2    -704.6    
+         C2H6       H2         NRTL  /2     1278.    
+
+         H2         C2H6       NRTL  /3    0.3000    
+         C2H6       H2         NRTL  /3    0.3000    
+
+         H2         C3H8       NRTL  /2    -883.6    
+         C3H8       H2         NRTL  /2     1931.    
+
+         H2         C3H8       NRTL  /3    0.3000    
+         C3H8       H2         NRTL  /3    0.3000    
+
+         H2         CO         NRTL  /2    -271.6    
+         CO         H2         NRTL  /2     331.7    
+
+         H2         CO         NRTL  /3    0.3000    
+         CO         H2         NRTL  /3    0.3000    
+
+         H2         METHANOL   NRTL  /2    -606.0    
+         METHANOL   H2         NRTL  /2     996.4    
+
+         H2         METHANOL   NRTL  /3    0.3000    
+         METHANOL   H2         NRTL  /3    0.3000    
+
+         H2         BUTANOL    NRTL  /2    -1864.    
+         BUTANOL    H2         NRTL  /2    0.1169E+05
+
+         H2         BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    H2         NRTL  /3    0.3000    
+
+         H2         DIMET-01   NRTL  /2    -878.2    
+         DIMET-01   H2         NRTL  /2     1896.    
+
+         H2         DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   H2         NRTL  /3    0.3000    
+
+         H2         O2         NRTL  /2    -288.0    
+         O2         H2         NRTL  /2     356.5    
+
+         H2         O2         NRTL  /3    0.3000    
+         O2         H2         NRTL  /3    0.3000    
+
+         H2         CO2        NRTL  /2     391.0    
+         CO2        H2         NRTL  /2    -275.2    
+
+         H2         CO2        NRTL  /3    0.3000    
+         CO2        H2         NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         H2         WATER      UNIQ  /2    -38.09    
+         WATER      H2         UNIQ  /2     36.15    
+
+         H2         CH4        UNIQ  /2    -34.95    
+         CH4        H2         UNIQ  /2     23.29    
+
+         H2         N2         UNIQ  /2    -29.47    
+         N2         H2         UNIQ  /2    -15.34    
+
+         H2         C2H6       UNIQ  /2     55.25    
+         C2H6       H2         UNIQ  /2    -59.81    
+
+         H2         C3H8       UNIQ  /2     58.78    
+         C3H8       H2         UNIQ  /2    -63.99    
+
+         H2         CO         UNIQ  /2    -26.45    
+         CO         H2         UNIQ  /2    -51.29    
+
+         H2         METHANOL   UNIQ  /2     50.96    
+         METHANOL   H2         UNIQ  /2    -54.80    
+
+         H2         BUTANOL    UNIQ  /2     150.0    
+         BUTANOL    H2         UNIQ  /2     104.3    
+
+         H2         DIMET-01   UNIQ  /2     69.64    
+         DIMET-01   H2         UNIQ  /2    -1.200    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 39  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         H2         O2         UNIQ  /2    -22.39    
+         O2         H2         UNIQ  /2    -2.098    
+
+         H2         CO2        UNIQ  /2    -109.0    
+         CO2        H2         UNIQ  /2    -57.72    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         H2         WATER      SRKKIJ/1   -0.9792    
+         WATER      H2         SRKKIJ/1   -0.9792    
+
+         H2         WATER      SRKKIJ/2     0.000    
+         WATER      H2         SRKKIJ/2     0.000    
+
+         H2         WATER      SRKKIJ/3     0.000    
+         WATER      H2         SRKKIJ/3     0.000    
+
+         H2         CH4        SRKKIJ/1     25.92    
+         CH4        H2         SRKKIJ/1     25.92    
+
+         H2         CH4        SRKKIJ/2     0.000    
+         CH4        H2         SRKKIJ/2     0.000    
+
+         H2         CH4        SRKKIJ/3     0.000    
+         CH4        H2         SRKKIJ/3     0.000    
+
+         H2         N2         SRKKIJ/1     18.07    
+         N2         H2         SRKKIJ/1     18.07    
+
+         H2         N2         SRKKIJ/2     0.000    
+         N2         H2         SRKKIJ/2     0.000    
+
+         H2         N2         SRKKIJ/3     0.000    
+         N2         H2         SRKKIJ/3     0.000    
+
+         H2         C2H6       SRKKIJ/1     32.17    
+         C2H6       H2         SRKKIJ/1     32.17    
+
+         H2         C2H6       SRKKIJ/2     0.000    
+         C2H6       H2         SRKKIJ/2     0.000    
+
+         H2         C2H6       SRKKIJ/3     0.000    
+         C2H6       H2         SRKKIJ/3     0.000    
+
+         H2         C3H8       SRKKIJ/1     21.51    
+         C3H8       H2         SRKKIJ/1     21.51    
+
+         H2         C3H8       SRKKIJ/2     0.000    
+         C3H8       H2         SRKKIJ/2     0.000    
+
+         H2         C3H8       SRKKIJ/3     0.000    
+         C3H8       H2         SRKKIJ/3     0.000    
+
+         H2         CO         SRKKIJ/1     21.66    
+         CO         H2         SRKKIJ/1     21.66    
+
+         H2         CO         SRKKIJ/2     0.000    
+         CO         H2         SRKKIJ/2     0.000    
+
+         H2         CO         SRKKIJ/3     0.000    
+         CO         H2         SRKKIJ/3     0.000    
+
+         H2         METHANOL   SRKKIJ/1     6.283    
+         METHANOL   H2         SRKKIJ/1     6.283    
+
+         H2         METHANOL   SRKKIJ/2     0.000    
+         METHANOL   H2         SRKKIJ/2     0.000    
+
+         H2         METHANOL   SRKKIJ/3     0.000    
+         METHANOL   H2         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 40  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         H2         BUTANOL    SRKKIJ/1     8.518    
+         BUTANOL    H2         SRKKIJ/1     8.518    
+
+         H2         BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    H2         SRKKIJ/2     0.000    
+
+         H2         BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    H2         SRKKIJ/3     0.000    
+
+         H2         DIMET-01   SRKKIJ/1     15.50    
+         DIMET-01   H2         SRKKIJ/1     15.50    
+
+         H2         DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   H2         SRKKIJ/2     0.000    
+
+         H2         DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   H2         SRKKIJ/3     0.000    
+
+         H2         O2         SRKKIJ/1     21.53    
+         O2         H2         SRKKIJ/1     21.53    
+
+         H2         O2         SRKKIJ/2     0.000    
+         O2         H2         SRKKIJ/2     0.000    
+
+         H2         O2         SRKKIJ/3     0.000    
+         O2         H2         SRKKIJ/3     0.000    
+
+         H2         CO2        SRKKIJ/1     25.90    
+         CO2        H2         SRKKIJ/1     25.90    
+
+         H2         CO2        SRKKIJ/2     0.000    
+         CO2        H2         SRKKIJ/2     0.000    
+
+         H2         CO2        SRKKIJ/3     0.000    
+         CO2        H2         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 41  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING WATER   
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         WATER      CH4        WILSON/2    -2019.    
+         CH4        WATER      WILSON/2    -538.6    
+
+         WATER      N2         WILSON/2    -109.6    
+         N2         WATER      WILSON/2     4.101    
+
+         WATER      C2H6       WILSON/2    -1975.    
+         C2H6       WATER      WILSON/2    -970.2    
+
+         WATER      C3H8       WILSON/2    -1948.    
+         C3H8       WATER      WILSON/2    -1367.    
+
+         WATER      CO         WILSON/2    -138.4    
+         CO         WATER      WILSON/2     71.42    
+
+         WATER      DIMET-01   WILSON/2     50.66    
+         DIMET-01   WATER      WILSON/2    -666.9    
+
+         WATER      O2         WILSON/2    -131.2    
+         O2         WATER      WILSON/2     61.53    
+
+         WATER      CO2        WILSON/2    -209.6    
+         CO2        WATER      WILSON/2    -289.3    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         WATER      CH4        NRTL  /2     562.1    
+         CH4        WATER      NRTL  /2     1949.    
+
+         WATER      CH4        NRTL  /3    0.3000    
+         CH4        WATER      NRTL  /3    0.3000    
+
+         WATER      N2         NRTL  /2    -35.83    
+         N2         WATER      NRTL  /2     142.4    
+
+         WATER      N2         NRTL  /3    0.3000    
+         N2         WATER      NRTL  /3    0.3000    
+
+         WATER      C2H6       NRTL  /2     986.6    
+         C2H6       WATER      NRTL  /2     1897.    
+
+         WATER      C2H6       NRTL  /3    0.3000    
+         C2H6       WATER      NRTL  /3    0.3000    
+
+         WATER      C3H8       NRTL  /2     1384.    
+         C3H8       WATER      NRTL  /2     1899.    
+
+         WATER      C3H8       NRTL  /3    0.3000    
+         C3H8       WATER      NRTL  /3    0.3000    
+
+         WATER      CO         NRTL  /2    -112.2    
+         CO         WATER      NRTL  /2     181.8    
+
+         WATER      CO         NRTL  /3    0.3000    
+         CO         WATER      NRTL  /3    0.3000    
+
+         WATER      DIMET-01   NRTL  /2     772.0    
+         DIMET-01   WATER      NRTL  /2    -139.4    
+
+         WATER      DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   WATER      NRTL  /3    0.3000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 42  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         WATER      O2         NRTL  /2    -101.8    
+         O2         WATER      NRTL  /2     174.5    
+
+         WATER      O2         NRTL  /3    0.3000    
+         O2         WATER      NRTL  /3    0.3000    
+
+         WATER      CO2        NRTL  /2     291.4    
+         CO2        WATER      NRTL  /2     177.4    
+
+         WATER      CO2        NRTL  /3    0.3000    
+         CO2        WATER      NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         WATER      CH4        UNIQ  /2    -303.5    
+         CH4        WATER      UNIQ  /2    -1331.    
+
+         WATER      N2         UNIQ  /2     252.1    
+         N2         WATER      UNIQ  /2    -379.8    
+
+         WATER      C2H6       UNIQ  /2    -300.0    
+         C2H6       WATER      UNIQ  /2    -1318.    
+
+         WATER      C3H8       UNIQ  /2    -300.0    
+         C3H8       WATER      UNIQ  /2    -1318.    
+
+         WATER      CO         UNIQ  /2     339.5    
+         CO         WATER      UNIQ  /2    -581.5    
+
+         WATER      DIMET-01   UNIQ  /2    -383.0    
+         DIMET-01   WATER      UNIQ  /2     153.1    
+
+         WATER      O2         UNIQ  /2     255.0    
+         O2         WATER      UNIQ  /2    -376.7    
+
+         WATER      CO2        UNIQ  /2    -144.5    
+         CO2        WATER      UNIQ  /2    -61.36    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         WATER      CH4        SRKKIJ/1   -0.6353    
+         CH4        WATER      SRKKIJ/1   -0.6353    
+
+         WATER      CH4        SRKKIJ/2     0.000    
+         CH4        WATER      SRKKIJ/2     0.000    
+
+         WATER      CH4        SRKKIJ/3     0.000    
+         CH4        WATER      SRKKIJ/3     0.000    
+
+         WATER      N2         SRKKIJ/1    -1.170    
+         N2         WATER      SRKKIJ/1    -1.170    
+
+         WATER      N2         SRKKIJ/2     0.000    
+         N2         WATER      SRKKIJ/2     0.000    
+
+         WATER      N2         SRKKIJ/3     0.000    
+         N2         WATER      SRKKIJ/3     0.000    
+
+         WATER      C2H6       SRKKIJ/1   -0.3701    
+         C2H6       WATER      SRKKIJ/1   -0.3701    
+
+         WATER      C2H6       SRKKIJ/2     0.000    
+         C2H6       WATER      SRKKIJ/2     0.000    
+
+         WATER      C2H6       SRKKIJ/3     0.000    
+         C2H6       WATER      SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 43  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         WATER      C3H8       SRKKIJ/1   -0.3435    
+         C3H8       WATER      SRKKIJ/1   -0.3435    
+
+         WATER      C3H8       SRKKIJ/2     0.000    
+         C3H8       WATER      SRKKIJ/2     0.000    
+
+         WATER      C3H8       SRKKIJ/3     0.000    
+         C3H8       WATER      SRKKIJ/3     0.000    
+
+         WATER      CO         SRKKIJ/1    -1.298    
+         CO         WATER      SRKKIJ/1    -1.298    
+
+         WATER      CO         SRKKIJ/2     0.000    
+         CO         WATER      SRKKIJ/2     0.000    
+
+         WATER      CO         SRKKIJ/3     0.000    
+         CO         WATER      SRKKIJ/3     0.000    
+
+         WATER      METHANOL   SRKKIJ/1   -0.9500E-01
+         METHANOL   WATER      SRKKIJ/1   -0.9500E-01
+
+         WATER      METHANOL   SRKKIJ/2     0.000    
+         METHANOL   WATER      SRKKIJ/2     0.000    
+
+         WATER      METHANOL   SRKKIJ/3     0.000    
+         METHANOL   WATER      SRKKIJ/3     0.000    
+
+         WATER      BUTANOL    SRKKIJ/1   -0.1261    
+         BUTANOL    WATER      SRKKIJ/1   -0.1261    
+
+         WATER      BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    WATER      SRKKIJ/2     0.000    
+
+         WATER      BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    WATER      SRKKIJ/3     0.000    
+
+         WATER      DIMET-01   SRKKIJ/1   -0.3236    
+         DIMET-01   WATER      SRKKIJ/1   -0.3236    
+
+         WATER      DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   WATER      SRKKIJ/2     0.000    
+
+         WATER      DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   WATER      SRKKIJ/3     0.000    
+
+         WATER      O2         SRKKIJ/1   -0.9499    
+         O2         WATER      SRKKIJ/1   -0.9499    
+
+         WATER      O2         SRKKIJ/2     0.000    
+         O2         WATER      SRKKIJ/2     0.000    
+
+         WATER      O2         SRKKIJ/3     0.000    
+         O2         WATER      SRKKIJ/3     0.000    
+
+         WATER      CO2        SRKKIJ/1   -0.3110    
+         CO2        WATER      SRKKIJ/1   -0.3110    
+
+         WATER      CO2        SRKKIJ/2     0.000    
+         CO2        WATER      SRKKIJ/2     0.000    
+
+         WATER      CO2        SRKKIJ/3     0.000    
+         CO2        WATER      SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 44  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING CH4     
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         CH4        N2         WILSON/2    -42.73    
+         N2         CH4        WILSON/2     45.10    
+
+         CH4        C2H6       WILSON/2    -328.5    
+         C2H6       CH4        WILSON/2     233.3    
+
+         CH4        C3H8       WILSON/2    -678.3    
+         C3H8       CH4        WILSON/2     372.7    
+
+         CH4        CO         WILSON/2    -61.72    
+         CO         CH4        WILSON/2     68.82    
+
+         CH4        METHANOL   WILSON/2    -26.35    
+         METHANOL   CH4        WILSON/2    -987.1    
+
+         CH4        BUTANOL    WILSON/2     335.3    
+         BUTANOL    CH4        WILSON/2    -1115.    
+
+         CH4        DIMET-01   WILSON/2     135.6    
+         DIMET-01   CH4        WILSON/2    -332.9    
+
+         CH4        O2         WILSON/2    -47.52    
+         O2         CH4        WILSON/2     54.32    
+
+         CH4        CO2        WILSON/2    -15.75    
+         CO2        CH4        WILSON/2    -42.78    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         CH4        N2         NRTL  /2     133.7    
+         N2         CH4        NRTL  /2    -122.8    
+
+         CH4        N2         NRTL  /3    0.3000    
+         N2         CH4        NRTL  /3    0.3000    
+
+         CH4        C2H6       NRTL  /2    -272.3    
+         C2H6       CH4        NRTL  /2     332.6    
+
+         CH4        C2H6       NRTL  /3    0.3000    
+         C2H6       CH4        NRTL  /3    0.3000    
+
+         CH4        C3H8       NRTL  /2    -435.6    
+         C3H8       CH4        NRTL  /2     611.0    
+
+         CH4        C3H8       NRTL  /3    0.3000    
+         C3H8       CH4        NRTL  /3    0.3000    
+
+         CH4        CO         NRTL  /2     218.4    
+         CO         CH4        NRTL  /2    -191.0    
+
+         CH4        CO         NRTL  /3    0.3000    
+         CO         CH4        NRTL  /3    0.3000    
+
+         CH4        METHANOL   NRTL  /2     1066.    
+         METHANOL   CH4        NRTL  /2    -51.07    
+
+         CH4        METHANOL   NRTL  /3    0.3000    
+         METHANOL   CH4        NRTL  /3    0.3000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 45  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         CH4        BUTANOL    NRTL  /2     1109.    
+         BUTANOL    CH4        NRTL  /2    -407.6    
+
+         CH4        BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    CH4        NRTL  /3    0.3000    
+
+         CH4        DIMET-01   NRTL  /2     422.5    
+         DIMET-01   CH4        NRTL  /2    -211.2    
+
+         CH4        DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   CH4        NRTL  /3    0.3000    
+
+         CH4        O2         NRTL  /2     189.2    
+         O2         CH4        NRTL  /2    -168.4    
+
+         CH4        O2         NRTL  /3    0.3000    
+         O2         CH4        NRTL  /3    0.3000    
+
+         CH4        CO2        NRTL  /2     58.65    
+         CO2        CH4        NRTL  /2   -0.5321    
+
+         CH4        CO2        NRTL  /3    0.3000    
+         CO2        CH4        NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         CH4        N2         UNIQ  /2     24.29    
+         N2         CH4        UNIQ  /2    -20.63    
+
+         CH4        C2H6       UNIQ  /2    -13.84    
+         C2H6       CH4        UNIQ  /2     16.11    
+
+         CH4        C3H8       UNIQ  /2    -20.47    
+         C3H8       CH4        UNIQ  /2     23.92    
+
+         CH4        CO         UNIQ  /2     54.20    
+         CO         CH4        UNIQ  /2    -45.99    
+
+         CH4        METHANOL   UNIQ  /2    -704.5    
+         METHANOL   CH4        UNIQ  /2    -8.714    
+
+         CH4        BUTANOL    UNIQ  /2    -478.9    
+         BUTANOL    CH4        UNIQ  /2     176.7    
+
+         CH4        DIMET-01   UNIQ  /2    -124.0    
+         DIMET-01   CH4        UNIQ  /2     11.29    
+
+         CH4        O2         UNIQ  /2    -14.84    
+         O2         CH4        UNIQ  /2     18.03    
+
+         CH4        CO2        UNIQ  /2    -4.844    
+         CO2        CH4        UNIQ  /2    -45.27    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         CH4        N2         SRKKIJ/1     1.912    
+         N2         CH4        SRKKIJ/1     1.912    
+
+         CH4        N2         SRKKIJ/2     0.000    
+         N2         CH4        SRKKIJ/2     0.000    
+
+         CH4        N2         SRKKIJ/3     0.000    
+         N2         CH4        SRKKIJ/3     0.000    
+
+         CH4        C2H6       SRKKIJ/1    0.2270    
+         C2H6       CH4        SRKKIJ/1    0.2270    
+
+         CH4        C2H6       SRKKIJ/2     0.000    
+         C2H6       CH4        SRKKIJ/2     0.000    
+
+         CH4        C2H6       SRKKIJ/3     0.000    
+         C2H6       CH4        SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 46  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         CH4        C3H8       SRKKIJ/1   -0.4165E-02
+         C3H8       CH4        SRKKIJ/1   -0.4165E-02
+
+         CH4        C3H8       SRKKIJ/2     0.000    
+         C3H8       CH4        SRKKIJ/2     0.000    
+
+         CH4        C3H8       SRKKIJ/3     0.000    
+         C3H8       CH4        SRKKIJ/3     0.000    
+
+         CH4        CO         SRKKIJ/1     1.107    
+         CO         CH4        SRKKIJ/1     1.107    
+
+         CH4        CO         SRKKIJ/2     0.000    
+         CO         CH4        SRKKIJ/2     0.000    
+
+         CH4        CO         SRKKIJ/3     0.000    
+         CO         CH4        SRKKIJ/3     0.000    
+
+         CH4        METHANOL   SRKKIJ/1   -0.2010    
+         METHANOL   CH4        SRKKIJ/1   -0.2010    
+
+         CH4        METHANOL   SRKKIJ/2     0.000    
+         METHANOL   CH4        SRKKIJ/2     0.000    
+
+         CH4        METHANOL   SRKKIJ/3     0.000    
+         METHANOL   CH4        SRKKIJ/3     0.000    
+
+         CH4        BUTANOL    SRKKIJ/1   -0.2540    
+         BUTANOL    CH4        SRKKIJ/1   -0.2540    
+
+         CH4        BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    CH4        SRKKIJ/2     0.000    
+
+         CH4        BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    CH4        SRKKIJ/3     0.000    
+
+         CH4        DIMET-01   SRKKIJ/1    0.1297E-02
+         DIMET-01   CH4        SRKKIJ/1    0.1297E-02
+
+         CH4        DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   CH4        SRKKIJ/2     0.000    
+
+         CH4        DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   CH4        SRKKIJ/3     0.000    
+
+         CH4        O2         SRKKIJ/1    0.3332    
+         O2         CH4        SRKKIJ/1    0.3332    
+
+         CH4        O2         SRKKIJ/2     0.000    
+         O2         CH4        SRKKIJ/2     0.000    
+
+         CH4        O2         SRKKIJ/3     0.000    
+         O2         CH4        SRKKIJ/3     0.000    
+
+         CH4        CO2        SRKKIJ/1    0.1982    
+         CO2        CH4        SRKKIJ/1    0.1982    
+
+         CH4        CO2        SRKKIJ/2     0.000    
+         CO2        CH4        SRKKIJ/2     0.000    
+
+         CH4        CO2        SRKKIJ/3     0.000    
+         CO2        CH4        SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 47  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING N2      
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         N2         C2H6       WILSON/2    -560.7    
+         C2H6       N2         WILSON/2     332.9    
+
+         N2         C3H8       WILSON/2    -1080.    
+         C3H8       N2         WILSON/2     477.1    
+
+         N2         CO         WILSON/2    -20.69    
+         CO         N2         WILSON/2     21.91    
+
+         N2         METHANOL   WILSON/2    -358.5    
+         METHANOL   N2         WILSON/2     248.2    
+
+         N2         BUTANOL    WILSON/2     459.1    
+         BUTANOL    N2         WILSON/2    -63.59    
+
+         N2         DIMET-01   WILSON/2     242.8    
+         DIMET-01   N2         WILSON/2    -118.7    
+
+         N2         O2         WILSON/2    -2.297    
+         O2         N2         WILSON/2     3.160    
+
+         N2         CO2        WILSON/2     46.71    
+         CO2        N2         WILSON/2    -130.0    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         N2         C2H6       NRTL  /2    -389.9    
+         C2H6       N2         NRTL  /2     525.4    
+
+         N2         C2H6       NRTL  /3    0.3000    
+         C2H6       N2         NRTL  /3    0.3000    
+
+         N2         C3H8       NRTL  /2    -548.5    
+         C3H8       N2         NRTL  /2     853.2    
+
+         N2         C3H8       NRTL  /3    0.3000    
+         C3H8       N2         NRTL  /3    0.3000    
+
+         N2         CO         NRTL  /2     76.61    
+         CO         N2         NRTL  /2    -72.97    
+
+         N2         CO         NRTL  /3    0.3000    
+         CO         N2         NRTL  /3    0.3000    
+
+         N2         METHANOL   NRTL  /2    -290.0    
+         METHANOL   N2         NRTL  /2     359.4    
+
+         N2         METHANOL   NRTL  /3    0.3000    
+         METHANOL   N2         NRTL  /3    0.3000    
+
+         N2         BUTANOL    NRTL  /2    -1151.    
+         BUTANOL    N2         NRTL  /2     3264.    
+
+         N2         BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    N2         NRTL  /3    0.3000    
+
+         N2         DIMET-01   NRTL  /2    -621.7    
+         DIMET-01   N2         NRTL  /2     1017.    
+
+         N2         DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   N2         NRTL  /3    0.3000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 48  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         N2         O2         NRTL  /2    -5.121    
+         O2         N2         NRTL  /2     4.268    
+
+         N2         O2         NRTL  /3    0.3000    
+         O2         N2         NRTL  /3    0.3000    
+
+         N2         CO2        NRTL  /2     179.5    
+         CO2        N2         NRTL  /2    -91.24    
+
+         N2         CO2        NRTL  /3    0.3000    
+         CO2        N2         NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         N2         C2H6       UNIQ  /2    -29.82    
+         C2H6       N2         UNIQ  /2     49.23    
+
+         N2         C3H8       UNIQ  /2    -30.14    
+         C3H8       N2         UNIQ  /2     56.46    
+
+         N2         CO         UNIQ  /2    -68.72    
+         CO         N2         UNIQ  /2     63.18    
+
+         N2         METHANOL   UNIQ  /2    -30.73    
+         METHANOL   N2         UNIQ  /2     44.60    
+
+         N2         BUTANOL    UNIQ  /2     115.2    
+         BUTANOL    N2         UNIQ  /2     111.7    
+
+         N2         DIMET-01   UNIQ  /2     26.69    
+         DIMET-01   N2         UNIQ  /2     61.79    
+
+         N2         O2         UNIQ  /2     32.60    
+         O2         N2         UNIQ  /2    -37.89    
+
+         N2         CO2        UNIQ  /2    -69.04    
+         CO2        N2         UNIQ  /2     3.251    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         N2         C2H6       SRKKIJ/1     2.626    
+         C2H6       N2         SRKKIJ/1     2.626    
+
+         N2         C2H6       SRKKIJ/2     0.000    
+         C2H6       N2         SRKKIJ/2     0.000    
+
+         N2         C2H6       SRKKIJ/3     0.000    
+         C2H6       N2         SRKKIJ/3     0.000    
+
+         N2         C3H8       SRKKIJ/1     1.544    
+         C3H8       N2         SRKKIJ/1     1.544    
+
+         N2         C3H8       SRKKIJ/2     0.000    
+         C3H8       N2         SRKKIJ/2     0.000    
+
+         N2         C3H8       SRKKIJ/3     0.000    
+         C3H8       N2         SRKKIJ/3     0.000    
+
+         N2         CO         SRKKIJ/1    0.7473    
+         CO         N2         SRKKIJ/1    0.7473    
+
+         N2         CO         SRKKIJ/2     0.000    
+         CO         N2         SRKKIJ/2     0.000    
+
+         N2         CO         SRKKIJ/3     0.000    
+         CO         N2         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 49  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         N2         METHANOL   SRKKIJ/1   -0.6911E-01
+         METHANOL   N2         SRKKIJ/1   -0.6911E-01
+
+         N2         METHANOL   SRKKIJ/2     0.000    
+         METHANOL   N2         SRKKIJ/2     0.000    
+
+         N2         METHANOL   SRKKIJ/3     0.000    
+         METHANOL   N2         SRKKIJ/3     0.000    
+
+         N2         BUTANOL    SRKKIJ/1   -0.1160E-01
+         BUTANOL    N2         SRKKIJ/1   -0.1160E-01
+
+         N2         BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    N2         SRKKIJ/2     0.000    
+
+         N2         BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    N2         SRKKIJ/3     0.000    
+
+         N2         DIMET-01   SRKKIJ/1    0.8805    
+         DIMET-01   N2         SRKKIJ/1    0.8805    
+
+         N2         DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   N2         SRKKIJ/2     0.000    
+
+         N2         DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   N2         SRKKIJ/3     0.000    
+
+         N2         O2         SRKKIJ/1     1.379    
+         O2         N2         SRKKIJ/1     1.379    
+
+         N2         O2         SRKKIJ/2     0.000    
+         O2         N2         SRKKIJ/2     0.000    
+
+         N2         O2         SRKKIJ/3     0.000    
+         O2         N2         SRKKIJ/3     0.000    
+
+         N2         CO2        SRKKIJ/1     2.117    
+         CO2        N2         SRKKIJ/1     2.117    
+
+         N2         CO2        SRKKIJ/2     0.000    
+         CO2        N2         SRKKIJ/2     0.000    
+
+         N2         CO2        SRKKIJ/3     0.000    
+         CO2        N2         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 50  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING C2H6    
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         C2H6       C3H8       WILSON/2    -197.0    
+         C3H8       C2H6       WILSON/2     158.1    
+
+         C2H6       CO         WILSON/2    -217.5    
+         CO         C2H6       WILSON/2     225.1    
+
+         C2H6       METHANOL   WILSON/2    -199.0    
+         METHANOL   C2H6       WILSON/2    -872.8    
+
+         C2H6       BUTANOL    WILSON/2     190.1    
+         BUTANOL    C2H6       WILSON/2    -997.5    
+
+         C2H6       DIMET-01   WILSON/2    -5.422    
+         DIMET-01   C2H6       WILSON/2    -214.5    
+
+         C2H6       O2         WILSON/2    -205.3    
+         O2         C2H6       WILSON/2     214.2    
+
+         C2H6       CO2        WILSON/2    -148.5    
+         CO2        C2H6       WILSON/2     93.15    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         C2H6       C3H8       NRTL  /2    -182.6    
+         C3H8       C2H6       NRTL  /2     208.0    
+
+         C2H6       C3H8       NRTL  /3    0.3000    
+         C3H8       C2H6       NRTL  /3    0.3000    
+
+         C2H6       CO         NRTL  /2     653.6    
+         CO         C2H6       NRTL  /2    -457.2    
+
+         C2H6       CO         NRTL  /3    0.3000    
+         CO         C2H6       NRTL  /3    0.3000    
+
+         C2H6       METHANOL   NRTL  /2     914.1    
+         METHANOL   C2H6       NRTL  /2     116.8    
+
+         C2H6       METHANOL   NRTL  /3    0.3000    
+         METHANOL   C2H6       NRTL  /3    0.3000    
+
+         C2H6       BUTANOL    NRTL  /2     1080.    
+         BUTANOL    C2H6       NRTL  /2    -266.7    
+
+         C2H6       BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    C2H6       NRTL  /3    0.3000    
+
+         C2H6       DIMET-01   NRTL  /2     269.0    
+         DIMET-01   C2H6       NRTL  /2    -46.82    
+
+         C2H6       DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   C2H6       NRTL  /3    0.3000    
+
+         C2H6       O2         NRTL  /2     620.4    
+         O2         C2H6       NRTL  /2    -440.5    
+
+         C2H6       O2         NRTL  /3    0.3000    
+         O2         C2H6       NRTL  /3    0.3000    
+
+         C2H6       CO2        NRTL  /2    -122.5    
+         CO2        C2H6       NRTL  /2     174.3    
+
+         C2H6       CO2        NRTL  /3    0.3000    
+         CO2        C2H6       NRTL  /3    0.3000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 51  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         C2H6       C3H8       UNIQ  /2     54.53    
+         C3H8       C2H6       UNIQ  /2    -60.22    
+
+         C2H6       CO         UNIQ  /2     81.93    
+         CO         C2H6       UNIQ  /2    -45.36    
+
+         C2H6       METHANOL   UNIQ  /2    -697.2    
+         METHANOL   C2H6       UNIQ  /2    -16.51    
+
+         C2H6       BUTANOL    UNIQ  /2    -455.7    
+         BUTANOL    C2H6       UNIQ  /2     148.7    
+
+         C2H6       DIMET-01   UNIQ  /2    -116.7    
+         DIMET-01   C2H6       UNIQ  /2     1.877    
+
+         C2H6       O2         UNIQ  /2     37.44    
+         O2         C2H6       UNIQ  /2    -20.89    
+
+         C2H6       CO2        UNIQ  /2     23.52    
+         CO2        C2H6       UNIQ  /2    -55.70    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         C2H6       C3H8       SRKKIJ/1   -0.2645E-01
+         C3H8       C2H6       SRKKIJ/1   -0.2645E-01
+
+         C2H6       C3H8       SRKKIJ/2     0.000    
+         C3H8       C2H6       SRKKIJ/2     0.000    
+
+         C2H6       C3H8       SRKKIJ/3     0.000    
+         C3H8       C2H6       SRKKIJ/3     0.000    
+
+         C2H6       CO         SRKKIJ/1     1.637    
+         CO         C2H6       SRKKIJ/1     1.637    
+
+         C2H6       CO         SRKKIJ/2     0.000    
+         CO         C2H6       SRKKIJ/2     0.000    
+
+         C2H6       CO         SRKKIJ/3     0.000    
+         CO         C2H6       SRKKIJ/3     0.000    
+
+         C2H6       METHANOL   SRKKIJ/1   -0.4970E-01
+         METHANOL   C2H6       SRKKIJ/1   -0.4970E-01
+
+         C2H6       METHANOL   SRKKIJ/2     0.000    
+         METHANOL   C2H6       SRKKIJ/2     0.000    
+
+         C2H6       METHANOL   SRKKIJ/3     0.000    
+         METHANOL   C2H6       SRKKIJ/3     0.000    
+
+         C2H6       BUTANOL    SRKKIJ/1   -0.7045E-01
+         BUTANOL    C2H6       SRKKIJ/1   -0.7045E-01
+
+         C2H6       BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    C2H6       SRKKIJ/2     0.000    
+
+         C2H6       BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    C2H6       SRKKIJ/3     0.000    
+
+         C2H6       DIMET-01   SRKKIJ/1    0.3828E-01
+         DIMET-01   C2H6       SRKKIJ/1    0.3828E-01
+
+         C2H6       DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   C2H6       SRKKIJ/2     0.000    
+
+         C2H6       DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   C2H6       SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 52  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         C2H6       O2         SRKKIJ/1    0.7639    
+         O2         C2H6       SRKKIJ/1    0.7639    
+
+         C2H6       O2         SRKKIJ/2     0.000    
+         O2         C2H6       SRKKIJ/2     0.000    
+
+         C2H6       O2         SRKKIJ/3     0.000    
+         O2         C2H6       SRKKIJ/3     0.000    
+
+         C2H6       CO2        SRKKIJ/1    0.2844E-01
+         CO2        C2H6       SRKKIJ/1    0.2844E-01
+
+         C2H6       CO2        SRKKIJ/2     0.000    
+         CO2        C2H6       SRKKIJ/2     0.000    
+
+         C2H6       CO2        SRKKIJ/3     0.000    
+         CO2        C2H6       SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 53  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING C3H8    
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         C3H8       CO         WILSON/2    -301.6    
+         CO         C3H8       WILSON/2     312.5    
+
+         C3H8       METHANOL   WILSON/2    -325.7    
+         METHANOL   C3H8       WILSON/2    -796.5    
+
+         C3H8       BUTANOL    WILSON/2     87.84    
+         BUTANOL    C3H8       WILSON/2    -918.9    
+
+         C3H8       DIMET-01   WILSON/2    -101.6    
+         DIMET-01   C3H8       WILSON/2    -134.3    
+
+         C3H8       O2         WILSON/2    -288.5    
+         O2         C3H8       WILSON/2     301.8    
+
+         C3H8       CO2        WILSON/2    -8.383    
+         CO2        C3H8       WILSON/2     34.06    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         C3H8       CO         NRTL  /2     1022.    
+         CO         C3H8       NRTL  /2    -616.0    
+
+         C3H8       CO         NRTL  /3    0.3000    
+         CO         C3H8       NRTL  /3    0.3000    
+
+         C3H8       METHANOL   NRTL  /2     803.0    
+         METHANOL   C3H8       NRTL  /2     245.3    
+
+         C3H8       METHANOL   NRTL  /3    0.3000    
+         METHANOL   C3H8       NRTL  /3    0.3000    
+
+         C3H8       BUTANOL    NRTL  /2     1017.    
+         BUTANOL    C3H8       NRTL  /2    -168.9    
+
+         C3H8       BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    C3H8       NRTL  /3    0.3000    
+
+         C3H8       DIMET-01   NRTL  /2     139.3    
+         DIMET-01   C3H8       NRTL  /2     88.62    
+
+         C3H8       DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   C3H8       NRTL  /3    0.3000    
+
+         C3H8       O2         NRTL  /2     978.1    
+         O2         C3H8       NRTL  /2    -599.2    
+
+         C3H8       O2         NRTL  /3    0.3000    
+         O2         C3H8       NRTL  /3    0.3000    
+
+         C3H8       CO2        NRTL  /2    -48.81    
+         CO2        C3H8       NRTL  /2     23.57    
+
+         C3H8       CO2        NRTL  /3    0.3000    
+         CO2        C3H8       NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         C3H8       CO         UNIQ  /2     90.24    
+         CO         C3H8       UNIQ  /2    -41.14    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 54  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         C3H8       METHANOL   UNIQ  /2    -697.2    
+         METHANOL   C3H8       UNIQ  /2    -16.51    
+
+         C3H8       BUTANOL    UNIQ  /2    -448.8    
+         BUTANOL    C3H8       UNIQ  /2     137.8    
+
+         C3H8       DIMET-01   UNIQ  /2    -116.7    
+         DIMET-01   C3H8       UNIQ  /2     1.876    
+
+         C3H8       O2         UNIQ  /2     43.48    
+         O2         C3H8       UNIQ  /2    -22.65    
+
+         C3H8       CO2        UNIQ  /2     45.34    
+         CO2        C3H8       UNIQ  /2    -64.24    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         C3H8       CO         SRKKIJ/1    0.8290    
+         CO         C3H8       SRKKIJ/1    0.8290    
+
+         C3H8       CO         SRKKIJ/2     0.000    
+         CO         C3H8       SRKKIJ/2     0.000    
+
+         C3H8       CO         SRKKIJ/3     0.000    
+         CO         C3H8       SRKKIJ/3     0.000    
+
+         C3H8       METHANOL   SRKKIJ/1   -0.1877E-01
+         METHANOL   C3H8       SRKKIJ/1   -0.1877E-01
+
+         C3H8       METHANOL   SRKKIJ/2     0.000    
+         METHANOL   C3H8       SRKKIJ/2     0.000    
+
+         C3H8       METHANOL   SRKKIJ/3     0.000    
+         METHANOL   C3H8       SRKKIJ/3     0.000    
+
+         C3H8       BUTANOL    SRKKIJ/1   -0.9084E-02
+         BUTANOL    C3H8       SRKKIJ/1   -0.9084E-02
+
+         C3H8       BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    C3H8       SRKKIJ/2     0.000    
+
+         C3H8       BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    C3H8       SRKKIJ/3     0.000    
+
+         C3H8       DIMET-01   SRKKIJ/1    0.6891E-01
+         DIMET-01   C3H8       SRKKIJ/1    0.6891E-01
+
+         C3H8       DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   C3H8       SRKKIJ/2     0.000    
+
+         C3H8       DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   C3H8       SRKKIJ/3     0.000    
+
+         C3H8       O2         SRKKIJ/1    0.2767    
+         O2         C3H8       SRKKIJ/1    0.2767    
+
+         C3H8       O2         SRKKIJ/2     0.000    
+         O2         C3H8       SRKKIJ/2     0.000    
+
+         C3H8       O2         SRKKIJ/3     0.000    
+         O2         C3H8       SRKKIJ/3     0.000    
+
+         C3H8       CO2        SRKKIJ/1   -0.2526E-01
+         CO2        C3H8       SRKKIJ/1   -0.2526E-01
+
+         C3H8       CO2        SRKKIJ/2     0.000    
+         CO2        C3H8       SRKKIJ/2     0.000    
+
+         C3H8       CO2        SRKKIJ/3     0.000    
+         CO2        C3H8       SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 55  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING CO      
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         CO         METHANOL   WILSON/2    -500.1    
+         METHANOL   CO         WILSON/2     310.0    
+
+         CO         BUTANOL    WILSON/2     495.6    
+         BUTANOL    CO         WILSON/2    -98.25    
+
+         CO         DIMET-01   WILSON/2     278.9    
+         DIMET-01   CO         WILSON/2    -153.3    
+
+         CO         O2         WILSON/2    -17.05    
+         O2         CO         WILSON/2     16.69    
+
+         CO         CO2        WILSON/2     85.05    
+         CO2        CO         WILSON/2    -190.6    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         CO         METHANOL   NRTL  /2    -363.1    
+         METHANOL   CO         NRTL  /2     478.2    
+
+         CO         METHANOL   NRTL  /3    0.3000    
+         METHANOL   CO         NRTL  /3    0.3000    
+
+         CO         BUTANOL    NRTL  /2    -1248.    
+         BUTANOL    CO         NRTL  /2     3970.    
+
+         CO         BUTANOL    NRTL  /3    0.3000    
+         BUTANOL    CO         NRTL  /3    0.3000    
+
+         CO         DIMET-01   NRTL  /2    -669.7    
+         DIMET-01   CO         NRTL  /2     1155.    
+
+         CO         DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   CO         NRTL  /3    0.3000    
+
+         CO         O2         NRTL  /2    -18.80    
+         O2         CO         NRTL  /2     19.04    
+
+         CO         O2         NRTL  /3    0.3000    
+         O2         CO         NRTL  /3    0.3000    
+
+         CO         CO2        NRTL  /2     256.6    
+         CO2        CO         NRTL  /2    -142.4    
+
+         CO         CO2        NRTL  /3    0.3000    
+         CO2        CO         NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         CO         METHANOL   UNIQ  /2    -53.48    
+         METHANOL   CO         UNIQ  /2     80.17    
+
+         CO         BUTANOL    UNIQ  /2     82.36    
+         BUTANOL    CO         UNIQ  /2     165.3    
+
+         CO         DIMET-01   UNIQ  /2    -4.012    
+         DIMET-01   CO         UNIQ  /2     107.5    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 56  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         CO         O2         UNIQ  /2     15.81    
+         O2         CO         UNIQ  /2    -21.61    
+
+         CO         CO2        UNIQ  /2    -135.2    
+         CO2        CO         UNIQ  /2     55.28    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         CO         METHANOL   SRKKIJ/1   -0.3511    
+         METHANOL   CO         SRKKIJ/1   -0.3511    
+
+         CO         METHANOL   SRKKIJ/2     0.000    
+         METHANOL   CO         SRKKIJ/2     0.000    
+
+         CO         METHANOL   SRKKIJ/3     0.000    
+         METHANOL   CO         SRKKIJ/3     0.000    
+
+         CO         BUTANOL    SRKKIJ/1   -0.3685    
+         BUTANOL    CO         SRKKIJ/1   -0.3685    
+
+         CO         BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    CO         SRKKIJ/2     0.000    
+
+         CO         BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    CO         SRKKIJ/3     0.000    
+
+         CO         DIMET-01   SRKKIJ/1    0.3479    
+         DIMET-01   CO         SRKKIJ/1    0.3479    
+
+         CO         DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   CO         SRKKIJ/2     0.000    
+
+         CO         DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   CO         SRKKIJ/3     0.000    
+
+         CO         O2         SRKKIJ/1    0.6997    
+         O2         CO         SRKKIJ/1    0.6997    
+
+         CO         O2         SRKKIJ/2     0.000    
+         O2         CO         SRKKIJ/2     0.000    
+
+         CO         O2         SRKKIJ/3     0.000    
+         O2         CO         SRKKIJ/3     0.000    
+
+         CO         CO2        SRKKIJ/1     1.355    
+         CO2        CO         SRKKIJ/1     1.355    
+
+         CO         CO2        SRKKIJ/2     0.000    
+         CO2        CO         SRKKIJ/2     0.000    
+
+         CO         CO2        SRKKIJ/3     0.000    
+         CO2        CO         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 57  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING METHANOL
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         METHANOL   O2         WILSON/2     296.1    
+         O2         METHANOL   WILSON/2    -465.5    
+
+         METHANOL   CO2        WILSON/2    -95.93    
+         CO2        METHANOL   WILSON/2     19.68    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         METHANOL   O2         NRTL  /2     450.4    
+         O2         METHANOL   NRTL  /2    -346.7    
+
+         METHANOL   O2         NRTL  /3    0.3000    
+         O2         METHANOL   NRTL  /3    0.3000    
+
+         METHANOL   CO2        NRTL  /2    -48.68    
+         CO2        METHANOL   NRTL  /2     126.0    
+
+         METHANOL   CO2        NRTL  /3    0.3000    
+         CO2        METHANOL   NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         METHANOL   O2         UNIQ  /2     37.91    
+         O2         METHANOL   UNIQ  /2    -24.42    
+
+         METHANOL   CO2        UNIQ  /2   -0.5802    
+         CO2        METHANOL   UNIQ  /2    -53.19    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         METHANOL   BUTANOL    SRKKIJ/1   -0.6508E-02
+         BUTANOL    METHANOL   SRKKIJ/1   -0.6508E-02
+
+         METHANOL   BUTANOL    SRKKIJ/2     0.000    
+         BUTANOL    METHANOL   SRKKIJ/2     0.000    
+
+         METHANOL   BUTANOL    SRKKIJ/3     0.000    
+         BUTANOL    METHANOL   SRKKIJ/3     0.000    
+
+         METHANOL   DIMET-01   SRKKIJ/1   -0.5260E-01
+         DIMET-01   METHANOL   SRKKIJ/1   -0.5260E-01
+
+         METHANOL   DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   METHANOL   SRKKIJ/2     0.000    
+
+         METHANOL   DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   METHANOL   SRKKIJ/3     0.000    
+
+         METHANOL   O2         SRKKIJ/1   -0.3584    
+         O2         METHANOL   SRKKIJ/1   -0.3584    
+
+         METHANOL   O2         SRKKIJ/2     0.000    
+         O2         METHANOL   SRKKIJ/2     0.000    
+
+         METHANOL   O2         SRKKIJ/3     0.000    
+         O2         METHANOL   SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 58  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         METHANOL   CO2        SRKKIJ/1   -0.9533E-01
+         CO2        METHANOL   SRKKIJ/1   -0.9533E-01
+
+         METHANOL   CO2        SRKKIJ/2     0.000    
+         CO2        METHANOL   SRKKIJ/2     0.000    
+
+         METHANOL   CO2        SRKKIJ/3     0.000    
+         CO2        METHANOL   SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 59  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING BUTANOL 
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         BUTANOL    DIMET-01   WILSON/2    -284.6    
+         DIMET-01   BUTANOL    WILSON/2     110.2    
+
+         BUTANOL    O2         WILSON/2    -90.77    
+         O2         BUTANOL    WILSON/2     487.8    
+
+         BUTANOL    CO2        WILSON/2    -66.92    
+         CO2        BUTANOL    WILSON/2     361.2    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         BUTANOL    DIMET-01   NRTL  /2    -181.4    
+         DIMET-01   BUTANOL    NRTL  /2     369.0    
+
+         BUTANOL    DIMET-01   NRTL  /3    0.3000    
+         DIMET-01   BUTANOL    NRTL  /3    0.3000    
+
+         BUTANOL    O2         NRTL  /2     3794.    
+         O2         BUTANOL    NRTL  /2    -1225.    
+
+         BUTANOL    O2         NRTL  /3    0.3000    
+         O2         BUTANOL    NRTL  /3    0.3000    
+
+         BUTANOL    CO2        NRTL  /2     1964.    
+         CO2        BUTANOL    NRTL  /2    -908.3    
+
+         BUTANOL    CO2        NRTL  /3    0.3000    
+         CO2        BUTANOL    NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         BUTANOL    DIMET-01   UNIQ  /2     20.61    
+         DIMET-01   BUTANOL    UNIQ  /2    -83.34    
+
+         BUTANOL    O2         UNIQ  /2     103.3    
+         O2         BUTANOL    UNIQ  /2     129.1    
+
+         BUTANOL    CO2        UNIQ  /2     58.36    
+         CO2        BUTANOL    UNIQ  /2     88.73    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         BUTANOL    DIMET-01   SRKKIJ/1   -0.1317E-02
+         DIMET-01   BUTANOL    SRKKIJ/1   -0.1317E-02
+
+         BUTANOL    DIMET-01   SRKKIJ/2     0.000    
+         DIMET-01   BUTANOL    SRKKIJ/2     0.000    
+
+         BUTANOL    DIMET-01   SRKKIJ/3     0.000    
+         DIMET-01   BUTANOL    SRKKIJ/3     0.000    
+
+         BUTANOL    O2         SRKKIJ/1   -0.5096    
+         O2         BUTANOL    SRKKIJ/1   -0.5096    
+
+         BUTANOL    O2         SRKKIJ/2     0.000    
+         O2         BUTANOL    SRKKIJ/2     0.000    
+
+         BUTANOL    O2         SRKKIJ/3     0.000    
+         O2         BUTANOL    SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 60  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+         BUTANOL    CO2        SRKKIJ/1   -0.2091    
+         CO2        BUTANOL    SRKKIJ/1   -0.2091    
+
+         BUTANOL    CO2        SRKKIJ/2     0.000    
+         CO2        BUTANOL    SRKKIJ/2     0.000    
+
+         BUTANOL    CO2        SRKKIJ/3     0.000    
+         CO2        BUTANOL    SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 61  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING DIMET-01
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         DIMET-01   O2         WILSON/2    -145.7    
+         O2         DIMET-01   WILSON/2     270.7    
+
+         DIMET-01   CO2        WILSON/2    -177.0    
+         CO2        DIMET-01   WILSON/2     195.0    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         DIMET-01   O2         NRTL  /2     1121.    
+         O2         DIMET-01   NRTL  /2    -658.1    
+
+         DIMET-01   O2         NRTL  /3    0.3000    
+         O2         DIMET-01   NRTL  /3    0.3000    
+
+         DIMET-01   CO2        NRTL  /2     586.9    
+         CO2        DIMET-01   NRTL  /2    -423.5    
+
+         DIMET-01   CO2        NRTL  /3    0.3000    
+         CO2        DIMET-01   NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         DIMET-01   O2         UNIQ  /2     45.70    
+         O2         DIMET-01   UNIQ  /2     40.57    
+
+         DIMET-01   CO2        UNIQ  /2     64.54    
+         CO2        DIMET-01   UNIQ  /2    -37.99    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         DIMET-01   O2         SRKKIJ/1   -0.1297E-01
+         O2         DIMET-01   SRKKIJ/1   -0.1297E-01
+
+         DIMET-01   O2         SRKKIJ/2     0.000    
+         O2         DIMET-01   SRKKIJ/2     0.000    
+
+         DIMET-01   O2         SRKKIJ/3     0.000    
+         O2         DIMET-01   SRKKIJ/3     0.000    
+
+         DIMET-01   CO2        SRKKIJ/1   -0.6131E-01
+         CO2        DIMET-01   SRKKIJ/1   -0.6131E-01
+
+         DIMET-01   CO2        SRKKIJ/2     0.000    
+         CO2        DIMET-01   SRKKIJ/2     0.000    
+
+         DIMET-01   CO2        SRKKIJ/3     0.000    
+         CO2        DIMET-01   SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 62  
+                                                                                
+                      PROPERTY CONSTANT ESTIMATION SECTION                      
+
+ BINARY PARAMETERS (CONTINUED)                       
+
+
+     ---------------------------------------------------------------
+     FOR COMPONENT PAIRS CONTAINING O2      
+     ---------------------------------------------------------------
+
+                               PARAMETER    ESTIMATED     METHOD OF
+     DESCRIPTION               NAME         VALUE         ESTIMATION
+     -----------               -------      ---------     ----------
+
+
+     WILSON PARAMETERS                                    UNIFAC      
+         O2         CO2        WILSON/2     76.40    
+         CO2        O2         WILSON/2    -182.3    
+
+
+     NRTL PARAMETERS                                      UNIFAC      
+         O2         CO2        NRTL  /2     246.4    
+         CO2        O2         NRTL  /2    -132.3    
+
+         O2         CO2        NRTL  /3    0.3000    
+         CO2        O2         NRTL  /3    0.3000    
+
+
+     UNIQUAC PARAMETERS                                   UNIFAC      
+         O2         CO2        UNIQ  /2    -75.52    
+         CO2        O2         UNIQ  /2    -14.18    
+
+
+     ESSRK PARAMETERS                                     UNIFAC      
+         O2         CO2        SRKKIJ/1    0.6861    
+         CO2        O2         SRKKIJ/1    0.6861    
+
+         O2         CO2        SRKKIJ/2     0.000    
+         CO2        O2         SRKKIJ/2     0.000    
+
+         O2         CO2        SRKKIJ/3     0.000    
+         CO2        O2         SRKKIJ/3     0.000    
+
+ ASPEN PLUS   PLAT: WINDOWS   VER: 28.0                   06/03/2014  PAGE 63  
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * Properties estimation was completed normally                             *
+ *                                                                          *
+ ****************************************************************************
