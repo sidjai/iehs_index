@@ -13,7 +13,9 @@ fclose(fid);
 findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 raw = C{1};
 useSet = findLine(raw,'=')';
-isempty(strfind(raw,'='));
+comSet = findLine(raw,'%');
+
+useSet = useSet(~ismember(useSet,comSet));
 
 dirSet = findLine(raw,'direc');
 direc = raw{dirSet}(strfind(raw{dirSet},'=')+1:end);

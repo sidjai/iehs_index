@@ -9,393 +9,82 @@ function [u , s ] = loadDesign(cfg )
 % clear all;
 
 
-totdivMean = {'T','P','x','Phase','loc','time'};
-divMean = {{'T','rho','CP'},{'P'},{'xd','Activity','rho'},'','','',''};
-possChg = {'T','rho','CP','P','xd','Activity'};
-startLine = [2;4;2;2;3;2;3];
+% totdivMean = {'T','P','x','Phase','loc','time'};
+% divMean = {{'T','rho','CP'},{'P'},{'x','Activity','rho'},'','','',''};
+% possChg = {'T','rho','CP','P','x','Activity'};
+% startLine = [2;4;2;2;3;2;3];
 
 
 % [junk junk rawMat] = xlsread(cfg.AspenStreams,1);
 
 findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 %the variables that we want to extract from the xcel sheet Stream
-careVars={'Temperature','Pressure','Frac','Flow','Enthalpy', 'Density', 'MW','CP','GAMMA','FIGMX','TBUB','TDEW','DGMX','MUMX'};
-fields={'T','P','x','F','H','rho','MW','CP','Activity','fugacity','Tbub','Tdew','dGmix','viscous','Phase'};
-% labels{:,1}=txt{:,1};
-getVind = @(str) (findLine(careVars,str));
 
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-%Stream table
-%----------------------------------------------------------------
-%----------------------------------------------------------------\
-
-rawStm = xlsReadPretty(cfg.AspenStreams,1,'trim');
-%load up margins with the text on the left and headings for the top stuff
-rawStm = rawStm{1};
-margin = rawStm(:,1);
-headLen = find(cellfun('length', margin)>1,1);
-stmLen = size(rawStm,2)-1;
-margin = margin(headLen+1:end);
-valTable = rawStm(headLen+1:end,2:end);
-
-%load up the headings for the streams
-headings = rawStm(1:headLen,2:stmLen+1);
-for col= 2: (stmLen+1)
-    s(col-1).name = rawStm{1,col};
-    s(col-1).labels  = rawStm(1:headLen,col); 
-end
-careRef = zeros(length(margin),1);
-unitAsp = cell(length(margin),1);
-valuAsp = cell(length(margin),stmLen);
-
-%----------------------------------------------------------------
-%Figure out what the margins are refering to in terms of fields
-%----------------------------------------------------------------
-for j = 1:length(margin)
-    temp = cellfun(@(x) strfind(margin{j},x),careVars,'UniformOutput',0);
-    ind = find(cellfun('length',temp),1);
-    if isempty(ind) ...
-        || (ind==getVind('Flow') && isempty(strfind(margin{j},'otal')))
-        ind = 0;
-    end
-    careRef(j) = ind;
-end
-allSet = find(careRef)';
-fracSet = find(careRef==getVind('Frac'))';
-for fr = fracSet
-    if (~isempty(strfind(margin{fr},'apor'))...
-        || ~isempty(strfind(margin{fr},'iquid'))...
-        || ~isempty(strfind(margin{fr},'olid')))
-        
-        careRef(fr) = length(fields);
-    end
-end
-
-phaseSet = find(careRef==length(fields))';
-
-vertSet = find((careRef==getVind('Frac') ...
-        | careRef==getVind('GAMMA')))';
-
-horzSet = allSet(~ismember(allSet,union(vertSet, phaseSet)));
-%Go through different situations and return the value that should be
-%returned and the units associated with it.
-
-for c = horzSet
-    parsenum = regexp(margin{c},'\s');
-    unitAsp{c} =  margin{c}(parsenum(end)+1:end);
-end
-
-for dw = union(vertSet, phaseSet)
-    unitAsp{dw} = strtok(margin{dw});
-end
-
-%units all done
-%now do the actual values
-
-%get the values for the entries with multiple vertical entries
-
-for dw = vertSet
-    ele = dw+1;
-    %get the chemicals by their being no lowercase letters
-    while isempty(regexp(margin{ele},'[a-z]', 'once'))
-        for w = 1:stmLen
-            temp = valTable{ele,w};
-            if isempty(temp)
-                if ~isempty(strfind(margin{dw},'GAMMA'))
-                    temp = 1;
-                else
-                    temp = 0;
-                end
-            end
-                
-            valuAsp{dw,w}(1,ele-dw) = temp;
-        end
-        ele = ele+1;
-    end
-    
-end
-
-%As we have the number of elements, get the chem names
-ci = 1;
-for c = dw+1:ele-1
-    s(1).chemNames{ci,1} = margin{c};
-    ci=ci+1;
-end
-    
-
-%get the values for the other entries
-for rw = union(horzSet, phaseSet)
-    for w = 1:stmLen
-        valuAsp{rw,w} = valTable{rw,w};
-    end
-end
-
-%set everything into their places in the structure
-filledSet = cellfun(@(x)~isempty(x),valuAsp(allSet,:));
-for w = 1:stmLen
-    pCnt = zeros(length(fields),1);
-    
-    for asp = allSet(filledSet(:,w))
-        id = careRef(asp);
-        ref = fields{id};
-        pCnt(id) = pCnt(id) +1;
-        
-        s(w).(ref)(pCnt(id),:) =  valuAsp{asp,w};
-        if pCnt(id) == 1
-            s(w).(['unit' ref ]) = unitAsp{asp};
-        elseif pCnt(id) == 2
-            tem = s(w).(['unit' ref ]);
-            s(w).(['unit' ref ]) = cell(2,1);
-            s(w).(['unit' ref ]){1} =tem;
-            s(w).(['unit' ref ]){2} = unitAsp{asp};
-        else
-            s(w).(['unit' ref ]){pCnt(id)} = unitAsp{asp};
-        end
-    end
-end
-
-%Add some additional info
-
-%Change the CP units to whatever we see fit
-cpunits = {s.unitCP};
-filled = cpunits(cellfun(@(x)~isempty(x),cpunits));
-chSet = findLine(filled,'kg');
-for del = filled(chSet)
-    s(del).CP=s(del).CP .* s(del).MW(1);
-    for ei=1:length(s(del).unitCP)
-        s(del).unitCP{ei}=strrep(s(del).unitCP{ei},'kg','kmol');
-    end
-end
-
-for w = 1:stmLen
-    s(w).compList = find(s(w).x(1,:) > 10^-8);
-    s(w).numComp = length(s(w).compList);
-    
-    labels{w,1} = s(w).name;
-    
-    %make new flow fields that are useful
-    s(w).Fn=s(w).F(1);
-    s(w).Fm=s(w).F(2);
-    s(w).Fv=s(w).F(3);
-    
-    
-    
-    
-end
-    
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-%assign the unit parameters (BLOCKS) TXT
-%----------------------------------------------------------------
-%----------------------------------------------------------------
-
-
-
-fid = fopen(cfg.AspenBlocksName);
-C= textscan(fid, '%s', 'Delimiter', '\n');
-fclose(fid);
-
-report=strtrim(C{1});
-
-last=length(report);
-
-%open the class designation xcel sheet that assigns the models to classes
-rawDes = xlsReadPretty(cfg.ClassDesName,1);
-strow = findLine(rawDes{1}(1:end,1),'Model')+1;
-vesSet = strow:size(rawDes{1},1);
-
-vesInfo = struct;
-
-for vs = vesSet
-    dat = cell2mat(rawDes{1}(vs,[3,5:end]));
-    modelType = rawDes{1}{vs,1};
-    vesInfo.(modelType) = {dat(1),dat(2),dat(3:end)};
-end
-    
-% [junk models junk] = xlsread(cfg.ClassDesName,1,'A1:A50');
-% [cls] = xlsread(cfg.ClassDesName,1);
-% [failMat]= xlsread(cfg.ClassDesName,2);
-
-%define the boudaries for the units and parse identifying info
-begi=findLine(report,'BLOCK');
-
-%get rid of the instances of errors (has blocks in the line)
-beg = delLine(report,begi,'ERRORS',0);
-beg = delLine(report,beg,'IMBALANCE',0);
+vesselDict = getClassDes(cfg.ClassDesName);
+classVarDef = vesselDict.classVarDef;
+allchg = classVarDef(:,2);
 
 k=1;
-for ww=beg'
-    parse = textscan(report{ww},'BLOCK: %s MODEL: %s');
-    
-    u(k,1).name=parse{1}{1};
-    u(k,1).type=parse{2}{1};
-    
-    %asign models
-    infoCell = vesInfo.(u(k,1).type);
-    u(k,1).failbase = infoCell{1};
-    u(k,1).classFunc = infoCell{2};
-    u(k,1).classVar = infoCell{3}(~isnan(infoCell{3}));
-    
-    
-    %get the report to the next line
-    if k == length(beg)
-        fin = last;
-        
-    else
-        fin = beg(k+1)-1;
+for rw = 1:length(allchg)
+    cChg = allchg{rw};
+    for co = 1:length(cChg)
+        possChg{k,1} = cChg{co};
+        k=k+1;
     end
-    ie=1;
-    for h=ww:fin
-        u(k,1).report{ie,1}=report{h};
-        ie=ie+1;
-    end
-    k=k+1;
 end
 
-untLen=k-1;
+possChg = unique(possChg); %stop alphabetical order
+s = loadStreams(cfg.StreamTable);
+
+if (cfg.conceptDesFlag)
+    u = loadConceptBlocks(cfg.ConceptBlock,vesselDict,s);
+    
+else
+    u = loadAspenBlocks(cfg.AspenBlocksName,vesselDict ,{s.name});
+end
+
+untLen = length(u);
+
+%Do the overarching structure attributions, streams attaching to what
+transIn = {u.in};
+transOut = {u.out};
+mixSet = cellfun(@(x)length(x)>1,transIn);
+splitSet = cellfun(@(x)length(x)>1,transOut);
+
+
+
+for ms = 1:untLen
+    u(ms).multIn = mixSet(ms);
+    u(ms).multOut = splitSet(ms);
+    for sind = transIn{ms}
+        s(sind).to = ms;
+    end
+    
+    for sind = transOut{ms}
+        s(sind).from = ms;
+    end
+end
+
+prodSet = cellfun(@(x)isempty(x),{s.to});
+feedSet = cellfun(@(x)isempty(x),{s.from});
+for k = find(feedSet)'
+    s(k).from = 0;
+end
+
+for k = find(prodSet)'
+    s(k).to = 999;
+end
+
+for fk = find(splitSet)'
+    test = [u(fk).out',...
+        [s(u(fk).out(1)).Phase(1);s(u(fk).out(2)).Phase(1)]];
+    test = sortrows(test,2);
+    u(fk).outTop = test(1,1);
+    u(fk).outBot = test(2,1);
+end
 
 for n=1:untLen
     
-    % first make a list of all the variables that are changing due to the
-    % process unit type ie its class.
-%     divMean = {{'T','H','rho'},'P',{'xd','Activity','rho'}'','Phase','','',''};
-    
-    
-    
-    %get the flowrate of the vessel
-    stuff = findLine(u(n).report,'TOTAL BALANCE')+1;
-    
-    pmole = textscan(u(n).report{stuff},'MOLE (%s)%f%f%f%f');
-    pmass = textscan(u(n).report{stuff+1},'MASS (%s)%f');
-    penth = textscan(u(n).report{stuff+2},'ENTHALPY (%s)%f%f');
-    
-    if ~isempty(pmole{5})
-        u(n).dF= pmole{4};
-        u(n).Fout = [pmole{3}, pmass{2}];
-    end
-    
-    
-    %get generation and ouput terms if its a reactor
-%     if u(n).classFunc==4
-%         pars = textscan(u(n).report{stuff},'MOLE (%s)%f%f%f');
-%         u(n).dF = pars{4};
-%         u(n).Fout= [pars{3}, pmass{2}];
-%     else
-%         pars = textscan(u(n).report{stuff},'MOLE (%s)%f');
-%     end
-    u(n).Fn=pmole{2};
-    u(n).Fm=pmass{2};
-    
-    u(n).F = [pmole{2}; pmass{2}];
-%     u(n).report{stuff+1}
-%     pmole{1}
-%     pmass{1}
-    u(n).unitF = {pmole{1}{1} ; pmass{1}{1}};
-    
-    u(n).dH = penth{3}-penth{2};
-    u(n).unitdH = penth{1}{1};
-    
-    % get the stream I/O info
-    in = findLine(u(n).report,'INLET');
-    out = findLine(u(n).report,'OUTLET');
-    
-    in = delLine(u(n).report,in,':',1); %has to have a colon
-    in = delLine(u(n).report,in,'PRES',0); %can't be a pressure
-%     in = delLine(u(n).report,in,'TEMP',0);%can't be a temp
-    
-    out = delLine(u(n).report,out,':',1); %has to have a colon
-    out = delLine(u(n).report,out,'PRES',0); %can't be a press
-%     out = delLine(u(n).report,out,'TEMP',0);%can't be a temp
-    
-    
-    
-    lines = [in out'];
-    colon = strfind(u(n).report{in},':');
-    if length(out)==1
-        clout = strfind(u(n).report{out},':');
-        things = [colon clout];
-        flagSep=0;
-    else
-        numtop = strfind(u(n).report{out(1)},':');
-        numbot = strfind(u(n).report{out(2)},':');
-        things = [colon numtop numbot];
-        flagSep=1;
-    end
-    %match up the stream label with the stream number
-    
-    nin=1;
-    flagMix=0;
-    for th = things
-%         pare{nin} = textscan(u(n).report{lines(nin)}(th+1:end),'%s');
-        rem=u(n).report{lines(nin)}(th+1:end);
-        li=[];
-        while ~isempty(rem)
-            [tok, rem] = strtok(rem);
-%             li = [li findLine(labels, pare{nin}{1}{pr})];
-            
-%             findLine(labels, tok)
-            li = [li find(strcmpi(labels, tok),1)];
-        end
-            
-        
-%         for pr=1:length(pare{nin}{1})
-%             u(n).report{lines(nin)}
-%             
-%         end
-
-        if nin==1
-            u(n).in= li; %set the units plant structure
-            if length(li)>1
-                flagMix=1;
-            end
-            for er=li
-                if estVar(s(er),'to')
-                    s(er).to=n; %set the streams too
-                end
-            end
-        else %for the out variables
-            for er=li
-                if estVar(s(er),'from')
-                    s(er).from=n;
-                end
-            end
-            if flagSep
-                
-                if nin==2
-                    u(n).outTop = li;
-                else
-                    u(n).outBot = li;
-                end
-            
-                
-            elseif length(li)>1
-                flagSep=1;
-                if s(li(1)).Phase>s(li(2)).Phase
-                    u(n).outTop = li(1);
-                    u(n).outBot = li(2);
-                elseif s(li(1)).rho(1)<s(li(2)).rho(1)
-                    u(n).outTop = li(1);
-                    u(n).outBot = li(2);
-                else
-                    u(n).outTop = li(2);
-                    u(n).outBot = li(1);
-                end
-                
-            else
-                u(n).out = li;
-                
-            end
-        end
-        nin=nin+1;
-        
-    end
-    u(n).multOut = flagSep;
-    u(n).multIn = flagMix;
-    
-    if flagSep
-        u(n).out =[u(n).outTop, u(n).outBot];
-    end
     
    %parse the unit information
    want{2,1}={'LATE TEMP','OM TEMP','NET CON' , 'NET REB','ACTUAL EQUI','HEAT DUTY','TO FEED RATIO'}; %Mass transfer units
@@ -425,6 +114,7 @@ for n=1:untLen
 
     
     %find out which variable changes
+    
     possLen= length(possChg);
     out=u(n).out;
     in=u(n).in;
@@ -444,7 +134,7 @@ for n=1:untLen
         temp=u(n).classVar;
         j=1;
         for k=1:length(temp)
-            if ~isempty(divMean{temp(k)})
+            if ~isempty(classVarDef{temp(k),2})
                 divCh(j)=temp(k);
                 j=j+1;
             end
@@ -493,13 +183,13 @@ for n=1:untLen
         k=2;
         for a=1:length(schg)
             for d=divCh
-                chu=divMean{d};
+                chu = classVarDef{d,2};
                 chk=[];
                 for fc=1:length(chu)
                     chk(fc)=estVar(u(n),chu{fc});
                 end
                 if max(chk)==1
-                    des{1,k} = [des{1,1} ' w/ ' totdivMean{d} '= ' unitChg{a}];
+                    des{1,k} = [des{1,1} ' w/ ' classVarDef{d,1} '= ' unitChg{a}];
                     for ff=1:length(chu)
                         if chk(ff)
                             nu=find(strcmp(possChg,chu{ff}),1);
@@ -594,13 +284,7 @@ end
 
 
 %Go back through the streams and assign the streams with feed and product
-for su=1:length(s)
-    if estVar(s(su),'from')
-        s(su).from=0;
-    elseif estVar(s(su),'to')
-        s(su).to=999;
-    end
-end
+
 
 
 end
@@ -754,12 +438,363 @@ end
 
 end
 
-function [ s ] = loadAspenStreams(fullfile)
+function [ s ] = loadStreams(fullfile)
+%Load the stream list from an output of Aspen
+
+
+careVars = {'Temperature','Pressure','Frac','Flow','Enthalpy', 'Density', 'MW','CP','GAMMA','FIGMX','TBUB','TDEW','DGMX','MUMX'};
+
+careFields={'T','P','x','F','H','rho','MW','CP','Activity','fugacity','Tbub','Tdew','dGmix','viscous','Phase'};
+% labels{:,1}=txt{:,1};
+getVind = @(str) (findLine(careVars,str));
+
+
+rawStm = xlsReadPretty(fullfile,1,'trim');
+%load up margins with the text on the left and headings for the top stuff
+rawStm = rawStm{1};
+margin = rawStm(:,1);
+headLen = find(cellfun('length', margin)>1,1);
+stmLen = size(rawStm,2)-1;
+margin = margin(headLen+1:end);
+valTable = rawStm(headLen+1:end,2:end);
+
+%load up the headings for the streams
+headings = rawStm(1:headLen,2:stmLen+1);
+for col= 2: (stmLen+1)
+    s(col-1).name = rawStm{1,col};
+    s(col-1).labels  = rawStm(1:headLen,col); 
+end
+careRef = zeros(length(margin),1);
+unitAsp = cell(length(margin),1);
+valuAsp = cell(length(margin),stmLen);
+
+%----------------------------------------------------------------
+%Figure out what the margins are refering to in terms of fields
+%----------------------------------------------------------------
+for j = 1:length(margin)
+    temp = cellfun(@(x) strfind(margin{j},x),careVars,'UniformOutput',0);
+    ind = find(cellfun('length',temp),1);
+    if isempty(ind) ...
+        || (ind==getVind('Flow') && isempty(strfind(margin{j},'otal')))
+        ind = 0;
+    end
+    careRef(j) = ind;
+end
+allSet = find(careRef)';
+fracSet = find(careRef==getVind('Frac'))';
+for fr = fracSet
+    if (~isempty(strfind(margin{fr},'apor'))...
+        || ~isempty(strfind(margin{fr},'iquid'))...
+        || ~isempty(strfind(margin{fr},'olid')))
+        
+        careRef(fr) = length(careFields);
+    end
+end
+
+phaseSet = find(careRef==length(careFields))';
+
+vertSet = find((careRef==getVind('Frac') ...
+        | careRef==getVind('GAMMA')))';
+
+horzSet = allSet(~ismember(allSet,union(vertSet, phaseSet)));
+%Go through different situations and return the value that should be
+%returned and the units associated with it.
+
+for c = horzSet
+    parsenum = regexp(margin{c},'\s');
+    unitAsp{c} =  margin{c}(parsenum(end)+1:end);
+end
+
+for dw = union(vertSet, phaseSet)
+    unitAsp{dw} = strtok(margin{dw});
+end
+
+%units all done
+%now do the actual values
+
+%get the values for the entries with multiple vertical entries
+
+for dw = vertSet
+    ele = dw+1;
+    %get the chemicals by their being no lowercase letters
+    while isempty(regexp(margin{ele},'[a-z]', 'once'))
+        for w = 1:stmLen
+            temp = valTable{ele,w};
+            if isempty(temp)
+                if ~isempty(strfind(margin{dw},'GAMMA'))
+                    temp = 1;
+                else
+                    temp = 0;
+                end
+            end
+                
+            valuAsp{dw,w}(1,ele-dw) = temp;
+        end
+        ele = ele+1;
+    end
+    
+end
+
+%As we have the number of elements, get the chem names
+ci = 1;
+for c = dw+1:ele-1
+    s(1).chemNames{ci,1} = margin{c};
+    ci=ci+1;
+end
+    
+
+%get the values for the other entries
+for rw = union(horzSet, phaseSet)
+    for w = 1:stmLen
+        valuAsp{rw,w} = valTable{rw,w};
+    end
+end
+
+%set everything into their places in the structure
+filledSet = cellfun(@(x)~isempty(x),valuAsp(allSet,:));
+for w = 1:stmLen
+    pCnt = zeros(length(careFields),1);
+    
+    for asp = allSet(filledSet(:,w))
+        id = careRef(asp);
+        ref = careFields{id};
+        pCnt(id) = pCnt(id) +1;
+        
+        s(w).(ref)(pCnt(id),:) =  valuAsp{asp,w};
+        if pCnt(id) == 1
+            s(w).(['unit' ref ]) = unitAsp{asp};
+        elseif pCnt(id) == 2
+            tem = s(w).(['unit' ref ]);
+            s(w).(['unit' ref ]) = cell(2,1);
+            s(w).(['unit' ref ]){1} =tem;
+            s(w).(['unit' ref ]){2} = unitAsp{asp};
+        else
+            s(w).(['unit' ref ]){pCnt(id)} = unitAsp{asp};
+        end
+    end
+end
+
+%Add some additional info
+
+%Change the CP units to whatever we see fit
+cpunits = {s.unitCP};
+filled = cpunits(cellfun(@(x)~isempty(x),cpunits));
+chSet = findLine(filled,'kg');
+for del = filled(chSet)
+    s(del).CP=s(del).CP .* s(del).MW(1);
+    for ei=1:length(s(del).unitCP)
+        s(del).unitCP{ei}=strrep(s(del).unitCP{ei},'kg','kmol');
+    end
+end
+
+for w = 1:stmLen
+    s(w).compList = find(s(w).x(1,:) > 10^-8);
+    s(w).numComp = length(s(w).compList);
+    
+    labels{w,1} = s(w).name;
+    
+    %make new flow fields that are useful
+    s(w).Fn=s(w).F(1);
+    s(w).Fm=s(w).F(2);
+    s(w).Fv=s(w).F(3);
+    
+    %Change the 
+    
+    
+    
+end
+
+
+
+end
+
+function [ u ] = loadAspenBlocks(blockfile, vesInfo, stmNames)
+%Grab Aspen blocks text file
+
+fid = fopen(blockfile);
+C= textscan(fid, '%s', 'Delimiter', '\n');
+fclose(fid);
+
+fullReport=strtrim(C{1});
+
+
+
+%define the boudaries for the units and parse identifying info
+dotLine = findLine(fullReport,'-------------------------');
+
+blockEnd = [dotLine(2:end)-2; length(fullReport)];
+
+
+k = 1;
+for lind = dotLine'
+    title = cleanCstr(regexp(fullReport{lind-1},'(\w*[:])\s','split'));
+    
+    u(k,1).name = title{1};
+    u(k,1).type = title{2};
+    
+    %asign models
+    infoCell = vesInfo.(u(k,1).type);
+    u(k,1).failbase = infoCell{1};
+    u(k,1).classFunc = infoCell{2};
+    u(k,1).classVar = infoCell{3};
+    
+    indvRep = fullReport(lind-1:blockEnd(k));
+    
+    
+    %do in out streams in the report with a semicolon
+    
+    direction = {'in','out'};
+    for ty = 1:2
+        usedStm = parseStrwMargin(indvRep{ty+2},':');
+        u(k,1).(direction{ty}) = cellfun(...
+            @(us)find(strcmp(stmNames,us),1)...
+            ,usedStm);
+    end
+    
+    %Mass and Energy balances
+    baLine = findLine(indvRep,'TOTAL BALANCE')+1;
+    domain = {'Fn','Fm','dH'};
+    
+    balanceMat = cellfun(...
+        @(x) parseStrwMargin(x,''),...
+        indvRep(baLine:baLine+2),'UniformOutput',0);
+    balanceMat{1} = balanceMat{1}(1:4);
+    balanceMat = cat(1,balanceMat{:});
+    
+    %Reaction or change in moles
+    if (balanceMat{1,4}>.001)
+        u(k,1).dF = balanceMat{1,4};
+        u(k,1).Fout = [balanceMat{1:2,3}];
+    end
+    
+    mat = [balanceMat{1:2,2},balanceMat{3,4}];
+    
+    for ty = 1:3
+        u(k,1).(domain{ty}) = mat(ty);
+        u(k,1).(['unit' domain{ty}]) = balanceMat{ty,1};
+    end
+    
+    u(k,1).F = [balanceMat{1:2,2}]';
+    u(k,1).unitF = balanceMat(1:2,1);
+    
+    u(k,1).report = indvRep;
+    k=k+1;
+end
 
 
 
 
 end
+
+function [ dict ] = getClassDes(desName)
+%open the class designation xcel sheet that assigns the models to classes
+rawDes = xlsReadPretty(desName,2);
+strow = findLine(rawDes{1}(1:end,1),'Model')+1;
+
+vesSet = strow:size(rawDes{1},1);
+
+dict = struct;
+
+for vs = vesSet
+    dat = cell2mat(rawDes{1}(vs,[3,5:end]));
+    modelType = rawDes{1}{vs,1};
+    classVar = dat(3:end);
+    classVar = classVar(~isnan(classVar));
+    dict.(modelType) = {dat(1),dat(2),classVar};
+end
+strow = find(cellfun(@(x)...
+    ischar(x) && strcmp(x,'ClassVar'),...
+    rawDes{2}(1:end,1)))+1;
+    
+%Get the variable change definition from the second page
+rowSet = strow:size(rawDes{2},1);
+dict.classVarDef = rawDes{2}(rowSet,2);
+
+width = size(rawDes{2},2);
+for k = 1:length(rowSet)
+    cols = rawDes{2}(rowSet(k),3:width);
+    goodSet = cellfun(@(x)ischar(x),cols);
+    dict.classVarDef{k,2} = cols(goodSet);
+end
+
+end
+
+function [ u ] = loadConceptBlocks(blockfile, vesInfo,s)
+
+rawBlock =  xlsReadPretty(blockfile,1);
+rawBlock = rawBlock{1};
+strow = findLine(rawBlock(1:end,1),'Blocks')+1;
+
+fieldCol = findLine(rawBlock(1,1:end),'Field');
+
+
+u(1).name = rawBlock{strow,2};
+u(1).type = 'CONCEPT';
+extVar =struct('T',[],'P',[]);
+rows = strow:size(rawBlock,1);
+vars = rawBlock(rows,fieldCol);
+res = rawBlock(rows,2);
+extSet = cellfun(@(x)isfield(extVar,x),vars);
+for ex = find(extSet)'
+    res{ex} = res{ex} + [s(1).(vars{ex})];
+end
+
+for v = 1:length(vars)
+    u(1).(vars{v}) = res{v};
+end
+
+
+u(1).in = 1;
+u(1).out = 2;
+% 
+% u(1).T = s(1).T + rawBlock{strow+1,2};
+% u(1).P = s(1).P + rawBlock{strow+2,2};
+% u(1).dHreac = rawBlock{strow+3,2};
+% u(1).V = rawBlock{strow+4,2};
+
+%asign models
+infoCell = vesInfo.(u(1).type);
+u(1).failbase = infoCell{1};
+u(1).classFunc = infoCell{2};
+u(1).classVar = infoCell{3};
+
+end
+function [cstr] = cleanCstr ( cin )
+cin = cellfun(@(x) strtrim(x),cin,'UniformOutput', 0);
+goodSet = cellfun(@(x) ~isempty(x),cin);
+cstr = cin(goodSet);
+end
+
+function [parse] = parseStrwMargin(str, marg)
+
+%margin string ignored if it has a parenthesis
+
+parse = {};
+
+paren = strfind(str,')');
+if ~isempty(paren)
+    parse = regexp(str(1:paren),'\((\S*)','tokens');
+    parse = parse{1};
+    tok = str(paren+1:end);
+else
+    tok = str(regexp(str,marg,'end')+1:end);
+end
+
+add = regexp(tok,'(\S*)','tokens');
+
+parse = [parse,add{:}];
+parse = cleanCstr(parse);
+
+%find numbers
+numSet = cellfun(@(x)...
+           isempty([regexpi(x,'[a-df-z]?') regexpi(x,'[a-df-z0-9]-\S?')])...
+           ,parse);
+for n = find(numSet)
+    parse{n} = str2double(parse(n));
+end
+
+end
+
 function [val] = delLine(pot,lines,st,flag)
 
 exclude=findLine({pot{lines}},st);

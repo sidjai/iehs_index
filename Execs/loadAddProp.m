@@ -486,30 +486,30 @@ case 4
         tin=tin+s(in).F(1);
 
 
-        tx(in,:)=(s(in).F(1).*s(in).x(1,:));
+        tx(in,:) = (s(in).F(1).*s(in).x(1,:));
     end
-    Ftin=tin;
+    Ftin = tin;
 
     Fin=sum(tx,1);
     xin=Fin./Ftin;
     for out=sot
-        tout=tout+s(out).F(1);
-        temp(out,:)=s(out).F(1).*s(out).x(1,:);
+        tout = tout+s(out).F(1);
+        temp(out,:) = s(out).F(1).*s(out).x(1,:);
     end
-    Ftout=tout;
-    Fot=sum(temp,1);
-    xot=Fot./Ftout;
+    Ftout = tout;
+    Fot = sum(temp,1);
+    xot = Fot./Ftout;
 
 
 %         diff=(s(sot).F(1).*s(sot).x(1,:))-(s(sin).F(1).*s(sin).x(1,:));
-    diff=Fot-Fin;
+    diff = Fot-Fin;
     if ~estVar(u,'stoCel')
         stoic=zeros(chmLen,1);
         for r=1:length(u(n).stoCel)
-            temp(:,r)=getChem(chem,u(n).stoCel{r});
+            temp(:,r) = getChem(chem,u(n).stoCel{r});
 
-            lim(1,r)=findLine({chem.ID},u(nc).unitconv);
-            temp(:,r)=temp./abs(temp(lim(r)));
+            lim(1,r) = findLine({chem.ID},u(nc).unitconv);
+            temp(:,r) = temp./abs(temp(lim(r)));
         end
         stoic(:,1)=sum(temp,2);
 
@@ -522,10 +522,10 @@ case 4
 %                 temp=getChem(chem,u(n).inert);
 %             end
         
-        [junk,lim]=min(diff);
-        diff =abs(diff); %moles reacted
-        stoic(:,1)=diff./abs(diff(lim));
-        u(n).conv =diff(lim)/Fin(lim);
+        [junk,lim] = min(diff);
+        diff = abs(diff); %moles reacted
+        stoic(:,1) = diff./abs(diff(lim));
+        u(n).conv = diff(lim)/Fin(lim);
         phi = Fot./Fot(lim);
 
         
@@ -556,13 +556,18 @@ case 5
     tempA = (totFin*u(n).tau);
 
 
-
-    u(n).Vvapor=(tempA(1)/u(n).rho(1))*.25; % L
-    u(n).V = (tempA(1)/u(n).rho(1)) + u(n).Vvapor; %add vapor space in sizing
+    liq = (tempA(1)/u(n).rho(1));
+    u(n).Vvapor = liq*.25; % L
+    u(n).V = 1.25*liq; %add vapor space in sizing
 
     u(n).Amount = tempA;
 
 
+case 9
+    %Conceptual
+    u(n).tau = u(n).V*totFin(3);
+    u(n).Vvapor = u(n).V/1.25;
+    u(n).Amount = (totFin*u(n).tau);
 end
        
 
