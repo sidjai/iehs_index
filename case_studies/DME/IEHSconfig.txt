@@ -7,10 +7,10 @@ AspenBlocksName=DME blocks 1_1.txt
 CRWreport=DME CRW.txt
 outName=DME EHS3_1con.xlsx
 weightFile=DME weights.xlsx
- TESToutput = F:\EHSI\Test ouptut\DME\
+ TESToutput = TESToutput
 ConceptBlock = DME ConBlock.xlsx
 
-direc=G:/IEHS/case_studies/DME/
+direc=/home/computer/Documents/IEHS/iehs_index/case_studies/DME/
 
 %Flags for analysis type
 
@@ -19,7 +19,7 @@ conceptDesFlag = 1
 %do you want to output the excel sheet (lots of time)
 xsFlag=0
 %want to output the plot?
-plotFlag=0 
+plotFlag=0
 altFlag=0
 %user defined weights
 weightFlag=0

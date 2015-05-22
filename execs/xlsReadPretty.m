@@ -5,7 +5,7 @@ function [ dat ] = xlsReadPretty(varargin)
 %   if windows, uses vbscript
 %   if linux/mac, searches for libreoffice using unoconv --format  xls
 %   example.csv
-fullfile = varargin{1};
+fullpath = varargin{1};
 argLen = length(varargin);
 if argLen == 1
     numSheetsParsed = 9999;
@@ -15,20 +15,26 @@ end
 
 if argLen <= 2 
     stdin = {};
+    head = 0;
 else
     stdin = varargin(3:end);
+    if(isempty(findLine(stdin, 'header')))
+      head = 0;
+    else 
+      head = 2;
+    end
 end
 
 realWd = strrep(pwd,'\','/');
 
-ind = regexp(fullfile,'[.]');
-beg = fullfile(1:(ind(end)-1));
+ind = regexp(fullpath,'[.]');
+beg = fullpath(1:(ind(end)-1));
 
 
 if (isunix())
-	comd = ['ssconvert -S "' fullfile '" "' beg '%n.csv"'];
+	comd = ['ssconvert -S "' fullpath '" "' beg '%n.csv"'];
 else
-	comd = [realWd '/xls2csv.vbs "' fullfile '" ' int2str(numSheetsParsed)];
+	comd = [realWd '/xls2csv.vbs "' fullpath '" ' int2str(numSheetsParsed)];
 end
 
 [ranTest] = system(comd);
@@ -40,7 +46,7 @@ end
 csvFile = [beg num2str(ispc()) '.csv'];
 sh = 1;
 while(exist(csvFile, 'file'))
-  dat{sh}= csvReadPretty(csvFile);
+  dat{sh}= csvReadPretty(csvFile, head);
 	delete(csvFile)
 	
   %clean up
@@ -60,18 +66,18 @@ end
 
 end
 
-function [out] = csvReadPretty(csvPath)
+function [out] = csvReadPretty(csvPath, hd)
 	fid = fopen(csvPath,'r');
     parse = textscan(fid, '%s','delimiter','\n');
     parse = parse{1};
     fclose(fid);
-    for (row = 1:length(parse))
+    for (row = (hd+1):length(parse))
         line = [parse{row} ','];
         commas = regexp(line,',');
         col = 2;
         bef = commas(1);
         if bef~=1
-            out{row,1} = line(1:bef-1);
+            out{row-hd,1} = line(1:bef-1);
         end
         
         for ca = commas(2:end)

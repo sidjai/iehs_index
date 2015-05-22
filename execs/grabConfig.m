@@ -7,18 +7,17 @@ function [ input ] = grabConfig( config )
 %   Also grabs the global variables and templates that are useful
 
 fid = fopen(config);
-C= textscan(fid, '%s', 'Delimiter', '\n');
+C = textscan(fid, '%s', 'Delimiter', '\n');
 fclose(fid);
 
-findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 raw = C{1};
 useSet = findLine(raw,'=')';
 comSet = findLine(raw,'%');
 
 useSet = useSet(~ismember(useSet,comSet));
-
 dirSet = findLine(raw,'direc');
-direc = raw{dirSet}(strfind(raw{dirSet},'=')+1:end);
+direc = regexprep(raw{dirSet}, '\\', '/')
+direc = direc(strfind(direc,'=')+1:end);
 input.direc = direc;
 useSet = useSet(~ismember(useSet, dirSet));
 
@@ -26,6 +25,7 @@ for n = useSet
     [ref, val] = strtok(raw{n}, '=');
     ref = strtrim(ref);
     val = strtrim(val(2:end));
+    val = regexprep(val, '\\', '/');
     
     if (isempty(regexpi(val,'[a-z]','once')))
         val = str2double(val);
@@ -42,16 +42,15 @@ end
 %Gets location for the Global variable files
 workdir = pwd;
 input.IEHSdir = fileparts(workdir);
-input.AppendixName = [input.IEHSdir '\Templates\IO_notes.xlsx'];
-input.MasterChemListName = [input.IEHSdir '\GlobalVars\masterChemList.txt'];
-input.ClassDesName = [input.IEHSdir '\GlobalVars\classdesignations.xlsx'];
+input.AppendixName = [input.IEHSdir '/templates/IO_notes.xlsx'];
+input.MasterChemListName = [input.IEHSdir '/global_vars/masterChemList.txt'];
+input.ClassDesName = [input.IEHSdir '/global_vars/classdesignations.xlsx'];
 
 % load the appendix and templates
+app = xlsReadPretty(input.AppendixName, 999, 'header');
 for sh=2:4
-    [txt,txt,junk]=xlsread(input.AppendixName,sh,'A3:H30');
-    IOnotes{sh}=txt;
-    for pa=1:size(txt,1)
-        nte = find(~cellfun('isempty',txt(pa,:)),1,'last');
+    for pa=1:size(app,1)
+        nte = find(~cellfun('isempty',app(pa,:)),1,'last');
         if isempty(nte)
             lasts (pa,sh) = 0;
         else
@@ -59,8 +58,7 @@ for sh=2:4
         end
     end    
 end
-IOnotes{1}=lasts;
-input.IOnotes = IOnotes;
+input.IOnotes = {lasts, app{2:4}};
 
 end
 
