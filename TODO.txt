@@ -1,0 +1,16 @@
+Long term
+-Migrate to R
+-Develop output viewer
+-Develop GUI
+
+Mid term
+-Redo input procedures
+-populate process safety info with database info
+--integrate Rpubchem package or the sort to
+--integrate spiderchem API
+-Use diagram package to color a faux process flowsheet
+
+
+Short term
+-make sure it works for Octave
+-add more complete incode documentation

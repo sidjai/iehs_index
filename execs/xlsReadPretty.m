@@ -1,4 +1,4 @@
-function [ out ] = xlsReadPretty(varargin)
+function [ dat ] = xlsReadPretty(varargin)
 %xlsReadPretty Read xls documents by converting to csv
 %   numSheetsParsed is the second var, if it is not provided the program
 %   the next args are options for postprocessing
@@ -20,19 +20,48 @@ else
 end
 
 realWd = strrep(pwd,'\','/');
-comd = [realWd '/xls2csv.vbs "' fullfile '" ' int2str(numSheetsParsed)];
-[ranTest] = system(comd);
-if(logical(ranTest))
-    error('vbscript messed up')
-end
 
 ind = regexp(fullfile,'[.]');
 beg = fullfile(1:(ind(end)-1));
 
+
+if (isunix())
+	comd = ['ssconvert -S "' fullfile '" "' beg '%n.csv"'];
+else
+	comd = [realWd '/xls2csv.vbs "' fullfile '" ' int2str(numSheetsParsed)];
+end
+
+[ranTest] = system(comd);
+if(logical(ranTest))
+	error('convert xlsx to csv messed up')
+end
+
+
+csvFile = [beg num2str(ispc()) '.csv'];
 sh = 1;
-csvFile = [beg num2str(sh) '.csv'];
 while(exist(csvFile, 'file'))
-    fid = fopen(csvFile,'r');
+  dat{sh}= csvReadPretty(csvFile);
+	delete(csvFile)
+	
+  %clean up
+  %need numbers not strings so convert those that need it
+  dat{sh} = doOption(dat{sh},'EmptyisNaN');
+  dat{sh} = doOption(dat{sh},'OneSpaceIsEmpty');
+  dat{sh} = doOption(dat{sh},'NumsNotStrings');
+  %Do the optional utilities
+  for op = 1: length(stdin)
+      dat{sh} = doOption(dat{sh},stdin{op});
+  end
+  
+  sh = sh+1;
+	csvFile = [beg num2str(sh - isunix()) '.csv'];
+end
+
+
+end
+
+function [out] = csvReadPretty(csvPath)
+	fid = fopen(csvPath,'r');
     parse = textscan(fid, '%s','delimiter','\n');
     parse = parse{1};
     fclose(fid);
@@ -42,14 +71,14 @@ while(exist(csvFile, 'file'))
         col = 2;
         bef = commas(1);
         if bef~=1
-            out{sh}{row,1} = line(1:bef-1);
+            out{row,1} = line(1:bef-1);
         end
         
         for ca = commas(2:end)
             %if the commas are next to each other just add col
             
             if (bef+1 ~= ca)
-               out{sh}{row,col} = line(bef+1:ca-1);
+               out{row,col} = line(bef+1:ca-1);
                
             end
             col=col+1;
@@ -57,25 +86,11 @@ while(exist(csvFile, 'file'))
         end
         
     end
-    
-    %clean up
-    %need numbers not strings so convert those that need it
-    out{sh} = doOption(out{sh},'EmptyisNaN');
-    out{sh} = doOption(out{sh},'OneSpaceIsEmpty');
-    out{sh} = doOption(out{sh},'NumsNotStrings');
-    %Do the optional utilities
-    for op = 1: length(stdin)
-        out{sh} = doOption(out{sh},stdin{op});
-    end
-    delete(csvFile)
-
-    sh = sh+1;
-    csvFile = [beg num2str(sh) '.csv'];
-    
-end
 
 
 end
+
+
 function [cin] = doOption(cin,optionTag)
 
 switch optionTag
