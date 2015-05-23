@@ -48,17 +48,17 @@ sh = 1;
 while(exist(csvFile, 'file'))
   dat{sh}= csvReadPretty(csvFile, head);
 	delete(csvFile)
-	
-  %clean up
-  %need numbers not strings so convert those that need it
-  dat{sh} = doOption(dat{sh},'EmptyisNaN');
-  dat{sh} = doOption(dat{sh},'OneSpaceIsEmpty');
-  dat{sh} = doOption(dat{sh},'NumsNotStrings');
-  %Do the optional utilities
-  for op = 1: length(stdin)
-      dat{sh} = doOption(dat{sh},stdin{op});
+	if (~isempty(dat{sh}))
+    %clean up
+    %need numbers not strings so convert those that need it
+    dat{sh} = doOption(dat{sh},'EmptyisNaN');
+    dat{sh} = doOption(dat{sh},'OneSpaceIsEmpty');
+    dat{sh} = doOption(dat{sh},'NumsNotStrings');
+    %Do the optional utilities
+    for op = 1: length(stdin)
+        dat{sh} = doOption(dat{sh},stdin{op});
+    end
   end
-  
   sh = sh+1;
 	csvFile = [beg num2str(sh - isunix()) '.csv'];
 end
