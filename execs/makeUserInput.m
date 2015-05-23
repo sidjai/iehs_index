@@ -17,48 +17,48 @@ des{1}='Safety info wkst';
 des{2}='Unit Alterations wkst';
 des{3}='User weight wkst';
 %%%%%%%%%%%%%%
-%Check if the files are there and filled 
+%Check if the files are there and filled
 %%%%%%%%%%%%%%
 
 for i=1:3
     info=dir(name{i});
     flag(i)=isempty(info);
-    
-    
-    
+
+
+
     if flag(i)
         filled(i)=0;
     else
         %look into the file and see if it hasn't been filled
-        [nums,junk,raw]= xlsread(name{i},1);
+        nums= xlsReadPretty(name{i},1);
         switch i
-          case 1 
+          case 1
             %Criteria for filled: Safety info
                 %whether the boiling point is filled
             [junk indVal junk indField]=findColNums(raw);
             inTb=findField(raw,'Tb',indField);
-            temp = raw{inTb,indVal}; 
+            temp = raw{inTb,indVal};
             if (isempty(temp) ||  isnan(temp))
                 filled(1)=0;
             else
                 filled(1)=1;
             end
 
-                
-        
-           
-            
+
+
+
+
           case 2
             %Criteria for filled: Unit Alterations
                 %If anything is turned on or off
             boo=nums(:,end);
-            
+
             if cfg.altFlag
                 filled(2)=max(boo);
             else
                 filled(2)=1;
             end
-            
+
             %Also parse the data
             if filled(2) && cfg.altFlag
                 for n=1:size(u,1)
@@ -69,10 +69,10 @@ for i=1:3
                     u(n).altFlag=0;
                 end
             end
-            
-           
-            
-          case 3 
+
+
+
+          case 3
             %Unit weights
             %criteria: if anything is not =1
             for ws=1:3
@@ -84,32 +84,32 @@ for i=1:3
                 fillTemp(ws,1)=~isempty(find(rawWeight{ws}~=1,1));
             end
             if cfg.weightFlag
-                
+
                 filled(3)=max(fillTemp);
             else
                 filled(3)=1;
             end
-            
+
             %also parse the weights
             if filled(3) && cfg.weightFlag
                 %ordered by combination steps
                 %1)SecEff add, EDP; 2)Agro chems, EDPAchems; 3)Mix add, MDP
                 %4)Vessel add, CDP; 6)Agro units, CDPAunits; 7)UUs add, IDP
                 weight = cell(6,1);
-                
+
                 if fillTemp(1)
                     weight{2}=numNonz(rawWeight{1});
 %                     unitweight{2}='Chem';
-                    
+
                 end
-                
+
                 if fillTemp(2)
                     for type=1:4
                         if ~isempty(find(rawWeight{2}(:,type)~=1,1))
                             avgfied = numNonz(rawWeight{2});
                             switch type
                                 case 1
-                                    
+
                                     weight{1}=avgfied(:,1);
 %                                     unitweight{1}='Add SecEffs';
                                 case 2
@@ -120,35 +120,35 @@ for i=1:3
                                     weight{6}=avgfied(:,4);
                             end
                         end
-                        
+
                     end
-                    
-                    
+
+
                 end
-                    
+
                 if fillTemp(3)
                     weight{5}=numNonz(rawWeight{3});
 %                     unitweight{5}='Unit';
                 end
-                
-                
+
+
                 u(1).userWeights=weight;
-                
+
             else
                 u(1).userWeights=0;
             end
-                
-            
-           
+
+
+
         end
-        
+
     end
-    
+
     if i==2 && cfg.altFlag==0
         flag(2)=0;
         filled(2)=1;
     end
-    
+
     if flag(i)
         msg{i,1} = ['A new ' des{i} ' has been created and partially filled' char(10) 'located at ' name{i} char(10) 'go fill in the rest before proceeding'];
     else
@@ -158,9 +158,9 @@ for i=1:3
             msg{i,1}=[des{i} ' is filled and ready to go'];
         end
     end
-    
-                
-           
+
+
+
 end
 
 % Find out if all files are ready to go.
@@ -169,7 +169,7 @@ if ~max(flag) && min(filled)
     allclear=1;
 %     msg='All clear: Safety file and Alt wkst are ready to go';
 end
-    
+
 %check to see if there is a database list
 
 check = dir(cfg.MasterChemListName);
@@ -192,9 +192,9 @@ if prevFlag
 else
     ind=zeros(1,chmLen);
 end
-    
 
-    
+
+
 %Make the sheets that need to be made
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -202,15 +202,15 @@ end
 %%%%%%%%%%%%%%%%%%%%%
 if flag(1)
 %     [junk junk raw]=xlsread('safetyInfoTemplate.xltx');
-    
+
     [indVar indVal indUnit indField]=findColNums(cfg.IOnotes{4});
 
     for c=1:chmLen
-        
-       
+
+
 
         %Check the database list to see if it is already done
-        
+
         if ind(c)>0
             Csheet{c}=xlsread(master{2}{ind(c)},master{3}{ind(c)});
         else
@@ -223,22 +223,22 @@ if flag(1)
             ind=findField(cfg.IOnotes{4},'formula',indField);
             Csheet{c}{ind,indVal}=chem(c).Formula;
         end
-        
+
 
 
     end
 
     for c=1:chmLen
         if c<4
-            xlswrite(cfg.InfoWkstFile,Csheet{c},c)
+            xlsWritePretty(cfg.InfoWkstFile,Csheet{c},c)
         else
-            xlswrite(cfg.InfoWkstFile,Csheet{c},labels{c})
+            xlsWritePretty(cfg.InfoWkstFile,Csheet{c},labels{c})
         end
     end
 
 
 elseif filled(1)
-    
+
     %add the safety sheets to the database list
     if prevFlag
         fid = fopen(cfg.MasterChemListName,'at');
@@ -246,7 +246,7 @@ elseif filled(1)
     else
         fid = fopen(cfg.MasterChemListName,'wt');
     end
-    
+
     for c=1:length(chem)
         if ind(c)==0
 %             safe=strrep(safetyfile, '\','\\');
@@ -254,7 +254,7 @@ elseif filled(1)
         end
     end
     fclose(fid);
-    
+
 end
 
 
@@ -262,10 +262,10 @@ end
 %Make the Unit Alterations sheet
 %%%%%%%%%%%%%%%%%%
 if flag(2)
-    
+
 
     %header
-    
+
     Usheet={'Number','Name','Type','Input','','Output','','','Any Alterations?'};
 %     Usheet{2,1} ='Whole design';
 %     Usheet{2,7} =1;
@@ -276,17 +276,17 @@ if flag(2)
         Usheet{n+add,3}=u(n).type;
         Usheet{n+add,4}=strrep(u(n).Indes,'Input: ','');
         Usheet{n+add,6}=strrep(u(n).Outdes,'Output: ','');
-        
+
         Usheet{n+add,9}=0;
-        
-        
+
+
 
 
 
     end
 
 
-    xlswrite(cfg.unitAlterations,Usheet,1)
+    xlsWritePretty(cfg.unitAlterations,Usheet,1)
 end
 
 
@@ -295,50 +295,50 @@ end
 %%%%%%%%%%%%%%%%%%
 if flag(3)
     %4 sheets
-    
+
     %1)chem weights
     Wsheet{1}=[{''};cfg.parameters'];
-    
+
     for c=1:chmLen
         Wsheet{1}{1,1+c}=chem(c).ID;
         %Fill it with the initial weights to be used (1)
         for p=2:parLen+1
-            
+
             Wsheet{1}{p,1+c}=1;
         end
     end
-    
+
     %2)agro step for all the methods
     Wsheet{2}=[{''},p',{ones(parLen,3)}];
     Meth ={'SecEff','Mix','Vessel'};
     for ag=1:3
         Wsheet{2}{1,1+ag} = Meth{ag};
         for p=2:parLen+1
-            
+
             Wsheet{2}{p,1+ag}=1;
         end
     end
-    
+
     %3)unit weights
     Wsheet{3}=[{''};p'];
-    
+
     for n=1:untLen
         Wsheet{3}{1,1+n}=u(n).name;
         %Fill it with the initial weights to be used (1)
         for p=2:parLen+1
-            
+
             Wsheet{3}{p,1+n}=1;
         end
     end
-    
+
     %4)overall control??? (mass weight etc)
-    
-        
+
+
     for ws =1:length(Wsheet)
         xlswrite(cfg.weightFile,Wsheet,ws)
     end
-    
-    
+
+
 end
 
 
@@ -383,7 +383,7 @@ while ind< size(raw,1)
         ind=ind+1;
     end
 end
-    
+
 
 
 end

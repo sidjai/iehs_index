@@ -7,7 +7,7 @@ AspenBlocksName=DME blocks 1_1.txt
 CRWreport=DME CRW.txt
 outName=DME EHS3_1con.xlsx
 weightFile=DME weights.xlsx
- TESToutput = TESToutput
+ TESToutput = TESToutput/
 ConceptBlock = DME ConBlock.xlsx
 
 direc=/home/computer/Documents/IEHS/iehs_index/case_studies/DME/
