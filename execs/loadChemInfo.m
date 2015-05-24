@@ -48,47 +48,47 @@ for c=1:chmLen
     iue=1;
     for par = 1:length(estNames)
         temp = findLine(chem(c).report,estNames{par});
-        neg = findLine(chem(c).report, 'AT');
+        
+        neg = findLine(chem(c).report, 'AT ');
+        negneg = findLine(chem(c).report, 'HEAT ');
+        neg = neg(~ismember(neg,negneg));
         temp = temp(~ismember(temp,neg));
         if ~isempty(temp)
-            uwe=strfind(chem(c).report{temp},estNames{par})+length(estNames{par});
+            uwe = strfind(chem(c).report{temp},estNames{par})+length(estNames{par});
 
             inds(iue,:) =[par, temp, uwe];
-            iue=iue+1;
+            iue = iue+1;
         end
     end
 
-    for in=1:size(inds,1)
-        var=estFields{inds(in,1)};
+    for in = 1:size(inds,1)
+        var = estFields{inds(in,1)};
 
-        text=chem(c).report{inds(in,2)};
-        ad=1;
-        rightc=strfind(text,')');
+        text = chem(c).report{inds(in,2)};
+        ad = 1;
+        rightc = regexp(text,'\)') + 1;
 
         %if the parameter is temperature dependent, get all the constants
         while ~isempty(rightc)
-            if ad ==1;
-                text=text(rightc:end);
-                parse = textscan(text,') %f %s %*s');
-                chem(c).(['unit' var]) = parse{2}{1};
-            else
-                parse = textscan(text,') %f %*s');
+            text = text(rightc:end);
+            parse = splitWhite(text);
+            if ad == 1;
+                chem(c).(['unit' var]) = parse{2};
             end
 
             chem(c).(var)(ad,1) = parse{1};
 
             text = chem(c).report{inds(in,2)+ad};
-            rightc=strfind(text,')');
-            text=text(rightc:end);
-            ad=ad+1;
+            rightc = regexp(text,'\)') + 1;
+            ad = ad+1;
         end
         %if its a pure component just get the variable and units
         if ad==1
             text=text(inds(in,3):end); %get text from the var name to the end
-            parse = textscan(text,'%f %s %*s');
-            val= parse{1};
+            parse = splitWhite(text);
+            val = parse{1};
 
-            unitName= parse{2}{1};
+            unitName = parse{2};
 
             if strcmp(unitName,'J/KMOL')
                 chem(c).(var) =val/1000;
@@ -173,15 +173,15 @@ end
 end
 
 function [val] = findMatch(str,cell)
-val=0;
-k=1;
-while val == 0 && k <=length(cell)
-    temp = strfind(str,cell{k});
-    if isempty(temp)
-        k = k+1;
-    else
-        val = k;
-    end
+  val=0;
+  k=1;
+  while val == 0 && k <=length(cell)
+      temp = strfind(str,cell{k});
+      if isempty(temp)
+          k = k+1;
+      else
+          val = k;
+      end
 
-end
+  end
 end
