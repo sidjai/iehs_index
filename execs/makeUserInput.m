@@ -30,7 +30,7 @@ for i=1:3
         filled(i)=0;
     else
         %look into the file and see if it hasn't been filled
-        nums= xlsReadPretty(name{i},1);
+        raw = xlsReadPretty(name{i},1){1};
         switch i
           case 1
             %Criteria for filled: Safety info
@@ -51,22 +51,30 @@ for i=1:3
           case 2
             %Criteria for filled: Unit Alterations
                 %If anything is turned on or off
-            boo=nums(:,end);
-
+            altLogVec =[];
+            hi = 1;
+            while (isempty(altLogVec) && hi < size(raw,2))
+                if(ischar(raw{1,hi}) && ...
+                 ~isempty(strfind(raw{1,hi}, 'Any')))
+                    altLogVec = [raw{2:end,hi}];
+                end
+                hi = hi + 1;
+            end
+            
             if cfg.altFlag
-                filled(2)=max(boo);
+                filled(2) = max(altLogVec);
             else
-                filled(2)=1;
+                filled(2) = 1;
             end
 
             %Also parse the data
             if filled(2) && cfg.altFlag
                 for n=1:size(u,1)
-                    u(n).altFlag=boo(n);
+                    u(n).altFlag = altLogVec(n);
                 end
             else
                 for n=1:size(u,1)
-                    u(n).altFlag=0;
+                    u(n).altFlag = 0;
                 end
             end
 
@@ -75,16 +83,13 @@ for i=1:3
           case 3
             %Unit weights
             %criteria: if anything is not =1
+            
+            rawWeight = xlsReadPretty(name{i}, 3);
             for ws=1:3
-                if ws ==1
-                    rawWeight{1}=nums;
-                else
-                    rawWeight{ws}=xlsread(name{i},ws);
-                end
                 fillTemp(ws,1)=~isempty(find(rawWeight{ws}~=1,1));
             end
+            
             if cfg.weightFlag
-
                 filled(3)=max(fillTemp);
             else
                 filled(3)=1;
