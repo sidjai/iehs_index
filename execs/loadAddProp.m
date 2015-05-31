@@ -8,8 +8,7 @@ function [ chem, u,s] = loadAddProp( chem, u, s,par )
 %   dim(u): n->(n,# of different possible changes)
 %   Also contains sizing calculations for the units in a function below
 
-findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
-dH=@(T,ref,CP)(ref+CP*(T-25)); 
+dH=@(T,ref,CP)(ref+CP*(T-25));
 untLen=size(u,1);
 parLen=length(par);
 chmLen=length(chem);
@@ -20,27 +19,27 @@ u(1).chemNames={chem.Name};
 
 for w = 1:length(s)
     chemNums=s(w).compList;
-    
+
     if estVar(s(w),'MW')
         s(w).MW= s(w).x(1,chemNums) * [chem(chemNums).MW]';
     end
-    
+
     if estVar(s(w),'CP')
         if s(w).Phase(1)>0
             vr='CPG';
         else
             vr='CPL';
         end
-        
+
         temp=0;
         for ch=chemNums
             temp = s(w).x(1,ch)*chem(ch).(vr)(s(w).T+273.15)+temp;
         end
         s(w).CP=temp;
-        
+
 
     end
-    
+
     if estVar(s(w),'viscous')
         s(w).viscous= s(w).x(1,chemNums) * [chem(chemNums).muv]';
     end
@@ -56,26 +55,26 @@ possChg = {'T','rho','CP','P','x','Activity'};
 %     if min(u(n).class{2}>3)
 
 for n = 1:untLen
-    
+
     %Make a combined stream for all units with multiple inlets
-    
+
     if u(n).multIn
         in=length(s)+1;
         u(n).inPsu= in;
         s(in)=crossStream(s,u(n).in);
-        
+
     else
         in=u(n).in;
     end
-    
+
     u(n).Pin=s(in).P;
-    
+
     %%%%%%%%%
     %Change the failure rates
     %%%%%%%%%
-    
+
     %max fail for base case
-    
+
     if u(n).P>2
         highP=5*10^-6;
     else
@@ -88,7 +87,7 @@ for n = 1:untLen
     else
         highT=100*10^-6;
     end
-    
+
     %adjust compressors base fail rate
     if u(n).classFunc==3 && u(n).flagCompr
         if u(n).power<1000
@@ -99,32 +98,32 @@ for n = 1:untLen
             u(n).fail=2433.02*10^-6;
         end
     end
-    
+
     u(n).failbaseTM=highT;
     u(n).failbasePM=highP;
 
     % Adjust for the model alterations
-%     u(n).failadj=u(n).failbase*exp(a*u(n).failbase+b); 
+%     u(n).failadj=u(n).failbase*exp(a*u(n).failbase+b);
     detectBase=[.2;.4;.3;.1;.5;.2;.3;.2;.3;.3;.7;.3;.3]; %composition or amount gets a .3
-    
-    
+
+
     if u(n).altFlag>0
-        
+
         %Make the designation string
         dispDes{1,1}=['Unit ' num2str(n) '(' u(n).name ')'];
         dispDes{2,1}=[u(n).type 'T=' num2str(u(n).T) 'C , P=' num2str(u(n).P) 'atm'];
         dispDes{3,1}=u(n).Indes;
         dispDes{4,1}=u(n).Outdes;
-        
+
         %make the GUI and get the user input
         ui = loadAlterations(u(n).altFlag,dispDes,par);
-        
+
         %intialize the base armor
         armor{1}=zeros(2,1); %[max T; maxP]
         armor{2}=0; %base fail rate
         armor{3}=zeros(parLen,1); %[detection(paras)]
         armor{4}=zeros(parLen,1); %[consequences(paras)]
-        
+
         %go through all the alterations and add up effects
         for a = 1: u(n).altFlag
             for d = 1:length(ui{1,a})
@@ -133,36 +132,36 @@ for n = 1:untLen
                 else
                     temp=1;
                 end
-                
+
                 for k = 1:temp
-                    
+
                     armor{ui{1,a}(d)}(ui{3,a}(k)) = armor{ui{1,a}(d)}(ui{3,a}(k))...
                         +(ui{4,a}*ui{5,a}*ui{6,a});
                 end
             end
-            
-            
+
+
 
         end
-        
-        
+
+
 
 
         u(n).failadj = (1-indize(armor{2}))*u(n).failbase;
-        
-            
+
+
         u(n).failadjTM = (1-indize(armor{1}(1)))*highT;
         u(n).failadjPM = (1-indize(armor{1}(2)))*highP;
-        
+
         for p=1:parLen
-            
+
             u(n).detect(p,1) = detectBase(p)-indize(armor{3}(p))/2;
-            
+
             u(n).armorConq(p,1) = (indize(armor{4}(p))/2);
         end
-        
-        
-        
+
+
+
 %         [u(n).failadj,u(n).failadjTM, u(n).failadjPM] = ...
 %             loadAlterations(u(n).flagAlt,dispDes,u(n).failbase,u(n).failbaseTM, u(n).failbasePM);
     else
@@ -170,85 +169,85 @@ for n = 1:untLen
         u(n).failadj=u(n).failbase;
         u(n).failadjTM=highT;
         u(n).failadjPM=highP;
-        
+
         u(n).detect = detectBase;
         u(n).armorConq =zeros(parLen,1);
     end
 
-    
-    
+
+
     %%%%%%%%%%%%%%%%%%%%%%%
     % do the different conditions within the unit
     %%%%%%%%%%%%%%%%%%%%%%%
-    
+
     base=find(u(n).chg(:,1),1);
     %don't want to average every field just those that change
     if base < 0
         base = u(n).out(1);
     end
-        
-        
+
+
     for ch=1:u(n).numCon
-        
+
         if ch~=1
             u(n,ch)=u(n);
         end
-        
+
         nc = sub2ind(size(u),n,ch);
         u(nc).des=u(n).maDes{ch};
-    
+
         % Assign the variables that potentially can change
-        
+
         [u] = assignVar(possChg,u(n).chg(:,ch) ,u,nc,s);
-        
+
         %Do the special cases that require some attention
-        
+
 %         u(nc).fail =
 %         augfailTP(u(nc).T,u(nc).P,u(nc).failadj,1*10^-6,.1*10^-6,u(n).classFunc) ;
         chBase = find(u(n).chg(:,ch)~=base,1);
-        if isempty(chBase) || chBase < 0 
+        if isempty(chBase) || chBase < 0
             chBase = base;
         end
         u(nc).dH=s(chBase).H-s(in).H;
-       
-        
+
+
         u(nc).Pout = u(nc).P;
         if  ch~=1 && u(n).classFunc==4 && estVar(u(n), 'dHreac')
-            
+
             temp=(u(nc).dH+u(nc).duty)/(u(nc).F(1)*u(nc).conv);
             temp=4184*temp*3600;
             u(nc).dHreac=temp;
         end
-        
+
         % Assign the rest of the variables
-        
+
         potFields = fieldnames(s(base));
 %         extFields = fieldnames(u(nc));
         exclude = {'labels','from','to'};
         lenPot=length(potFields);
         Bpot = ones(lenPot,1).*base;
-        
+
         for p = 1:lenPot
             var = potFields{p};
 %             temp=find(strcmp(extFields, var),1);
-            
-            
+
+
             if (~estVar(u(nc), var)) ...
                     || ~isempty(find(strcmp(exclude,var),1))
                 Bpot(p)=0;
             end
         end
-        
+
         [u] = assignVar(potFields,Bpot ,u,nc,s);
-        
+
     %Miscellaneous changes to the units as well as sizing.
-    
-           
+
+
     %change the unit chemical list to represent the new conditions.
         %if its below 10-10 its not a chemical in the unit
     u(n).compList = find(u(n).x(1,:) > 10^-8);
     u(n).numComp = length(u(n).compList);
-        
+
     if ch==1
         %do sizing calculations the first time through
 
@@ -257,7 +256,7 @@ for n = 1:untLen
 %         u(n).Fv=pmass{2}*u(n).rho(1)*(1000/60);
         u(n).F(3)=u(n).Fv;
         u(n).unitF{3}='L/MIN';
-        
+
         %Now size the first unit then assign it to all the alternatives
 
         u = sizing(u,n,s);
@@ -267,7 +266,7 @@ end
 
 
 
-   
+
 
 end
 
@@ -275,7 +274,7 @@ function [out] = indize(val)
 if val ==0
     out=0;
 else
-    
+
     temp=sort([-1,1,(1/log10(25))*log10(val)]);
     out=temp(2);
 end
@@ -305,7 +304,7 @@ for p=1:length(vars)
                 sec = u(n).in(1);
             end
             u(n).(vars{p}) = (s(fir).(vars{p})+s(sec).(vars{p}))/2;
-        end 
+        end
     end
 end
 
@@ -347,18 +346,18 @@ for si=comb
     tr(2)= tr(2)+s(si).rho(2).*xF(si,2);
     tMW = tMW+s(si).MW*xF(si,1);
     tCP = tCP + s(si).CP*xF(si,2);
-    
-%     
+
+%
 %     tP= tP+s(si).P*s(si).F(3);
 %     tH= tH+s(si).H.*s(si).F;
 %     tx(1)= tx+s(si).x.*s(si).F(1);
 %     tx(2)=tx+s(si).x.*s(si).F(2);
-    
+
 %     for type=1:3
 %         tH(type)= tH(type)+s(si).H(type)*s(si).F(type);
 %     end
 
-    
+
 end
 
 
@@ -378,7 +377,7 @@ mix.T=mix.H(1)/mix.CP;
 
 
 end
-            
+
 
 function [u ] = sizing(u,n,s)
 
@@ -419,7 +418,7 @@ case 2
         %2 feet per stage then 15% of the stages for the space at
         %top and bottom
 
-        H=2.3*u(n).stages; 
+        H=2.3*u(n).stages;
         u(n).V=area*H;
     else
         %flash so use 5 feet (3+1+diameter of feed) + the liquid
@@ -432,7 +431,7 @@ case 2
     end
 
     u(n).Amount=u(n).rho.*(u(n).V*1000)*1000;
-    
+
     u(n).tau = u(n).V/totFin(3);
 
 case 3
@@ -450,7 +449,7 @@ case 3
         %Q=UAT with U coming from the average for organic and steam
         %/water
 
-        u(n).SurArea=4.184*abs(u(n).duty)/((100*5.673)*u(n).dTLM); 
+        u(n).SurArea=4.184*abs(u(n).duty)/((100*5.673)*u(n).dTLM);
         %pipe W is around 7.5*L
         u(n).V = 1000*(pi*(7.5/4)*(u(n).SurArea/(pi*7.5))^(1.5));
         u(n).Vvapor= 0;
@@ -461,7 +460,7 @@ case 3
         u(n).Amount(1)= u(n).Amount(2)/u(n).MW(1);
     else
         %Compressor
-        
+
         u(n).tau = 5/60; %5 seconds -> minutes
 
         tempA = (totFin*u(n).tau);
@@ -475,9 +474,9 @@ case 3
 
     end
 
-case 4 
+case 4
     %Reactors
-    
+
 
     tin=0;
     tout=0;
@@ -513,7 +512,7 @@ case 4
         end
         stoic(:,1)=sum(temp,2);
 
-        
+
     else
         %get the stoic matrix through other means
         %glhf
@@ -521,19 +520,19 @@ case 4
 %             if ~estVar(u(n), 'inert')
 %                 temp=getChem(chem,u(n).inert);
 %             end
-        
+
         [junk,lim] = min(diff);
         diff = abs(diff); %moles reacted
         stoic(:,1) = diff./abs(diff(lim));
         u(n).conv = diff(lim)/Fin(lim);
         phi = Fot./Fot(lim);
 
-        
+
 
 
     end
-    
-    
+
+
     if estVar(u, 'dHreac')
         reacEng=(u(n).dH+u(n).duty)/(u(n).F(1)*u(n).conv);
         reacEng=4184*reacEng*3600;
@@ -541,13 +540,13 @@ case 4
     end
 
     SA=abs(u(n).duty)/265000; %min heat out through a hexchanger
-    
+
     u(n).V=SA*0.05*1000; %ID of .1m volume in L
     u(n).Vvapor=u(n).Phase(1) * u(n).V;
     u(n).Amount(2)=u(n).V*u(n).rho(1);
     u(n).Amount(1)=u(n).Amount(2)*u(n).MW(1);
     u(n).tau = u(n).V*totFin(3);
-    
+
 
 case 5
     %Transport
@@ -569,7 +568,7 @@ case 9
     u(n).Vvapor = u(n).V/1.25;
     u(n).Amount = (totFin*u(n).tau);
 end
-       
+
 
 
 end
@@ -584,7 +583,7 @@ if n~=0
 if u(n).chgFlag
     %Appropiately assign stream val to the right units that change
     ch=1;
-    
+
     while (ch<=numChg && ~estVar(u(n,ch),'name'))
         %Test to see if the stream is right
         if u(n).multOut
@@ -608,7 +607,7 @@ if u(n).chgFlag
                 req{2,2}= 0;
             end
         end
-        
+
         %Take the requirements and use it on the designation of the unit
         flag=1;
         r=1;
@@ -619,23 +618,23 @@ if u(n).chgFlag
             end
             r=r+1;
         end
-        
+
         %ifthe unit does use the stream then set it equal to the var
         if flag
             u(n,ch).(var)=val;
         end
-        
+
         ch=ch+1;
     end
-    
-    
+
+
 else
     %just assign the stream val to the units 1:1
     if estVar(u(n),var)
         u(n).(var)=val;
     end
-    
-    
+
+
 end
 end
 end

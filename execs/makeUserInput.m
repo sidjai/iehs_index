@@ -60,7 +60,7 @@ for i=1:3
                 end
                 hi = hi + 1;
             end
-            
+
             if cfg.altFlag
                 filled(2) = max(altLogVec);
             else
@@ -83,12 +83,12 @@ for i=1:3
           case 3
             %Unit weights
             %criteria: if anything is not =1
-            
+
             rawWeight = xlsReadPretty(name{i}, 3);
             for ws=1:3
                 fillTemp(ws,1)=~isempty(find(rawWeight{ws}~=1,1));
             end
-            
+
             if cfg.weightFlag
                 filled(3)=max(fillTemp);
             else
@@ -358,23 +358,6 @@ end
 
 end
 
-function [indVar indVal indUnit indField] = findColNums(raw)
-for h=1:size(raw,2)
-    if (ischar(raw{1,h}) || ~isnan(raw{1,h}))
-        if ~isempty(strfind(raw{1,h},'ble'))
-            indVar=h;
-        elseif ~isempty(strfind(raw{1,h},'alue'))
-            indVal=h;
-        elseif ~isempty(strfind(raw{1,h},'nit'))
-            indUnit=h;
-        elseif ~isempty(strfind(raw{1,h},'ield'))
-            indField=h;
-        end
-    end
-end
-
-
-end
 
 function [val] = findField(raw, field, indField )
 

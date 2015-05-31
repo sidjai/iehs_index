@@ -13,14 +13,14 @@ else
     numSheetsParsed = varargin{2};
 end
 
-if argLen <= 2 
+if argLen <= 2
     stdin = {};
     head = 0;
 else
     stdin = varargin(3:end);
     if(isempty(findLine(stdin, 'header')))
       head = 0;
-    else 
+    else
       head = 2;
     end
 end
@@ -79,18 +79,18 @@ function [out] = csvReadPretty(csvPath, hd)
         if bef~=1
             out{row-hd,1} = line(1:bef-1);
         end
-        
+
         for ca = commas(2:end)
             %if the commas are next to each other just add col
-            
+
             if (bef+1 ~= ca)
                out{row,col} = line(bef+1:ca-1);
-               
+
             end
             col=col+1;
             bef = ca;
         end
-        
+
     end
 
 
@@ -103,7 +103,7 @@ switch optionTag
     case 'trim'
         badSet = cellfun(@(x)ischar(x),cin);
         cin(badSet) = strtrim(cin(badSet));
-        
+
     case 'NumsNotStrings'
         badSet = cellfun(@(x)...
            ischar(x) && ~isempty(x)...
@@ -117,6 +117,11 @@ switch optionTag
     case 'OneSpaceIsEmpty'
         oneSet = cellfun(@(x)( length(x) == 1 && ~isnan(x)),cin);
         cin(oneSet) = strrep(cin(oneSet),' ','');
+
+    case 'NoLiteralQuote'
+        badSet = cellfun(@(x)...
+          ischar(x) && regexp(x, """"),cin);
+        cin(badSet) = regexprep(cin(badSet), """", '');
 end
 
 
