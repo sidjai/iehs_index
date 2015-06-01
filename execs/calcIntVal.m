@@ -30,7 +30,7 @@ noncombust = [2;44;100;37;98;38;39];
 oxidizers = [2;44];
 organics = [33;47;17;27;32;42;20;30];
 
-   
+
 
 simple = @(c)(find(chemNums==c,1));
 
@@ -46,11 +46,11 @@ for c=chemNums
     u(n).vapAmount(k,1)=u(n).ppar(c,1)*u(n).Vvapor/(.08206* Tk);
     temp=temp+u(n).ppar(c,1);
     temptb=temptb+chem(c).Tb;
-    
-    
+
+
     %Add up all the combustion energies for the tank
     tempw= tempw+u(n).x(1,c)*u(n).Amount(1)*chem(c).dHburn;
-        
+
     k=k+1;
 end
 avgTb=temptb/chmLen;
@@ -74,10 +74,10 @@ temp=0;
 %     else
 %         Tguess=((1-result)*Tguess)+Tguess;
 %     end
-%         
+%
 %     result=0;
 %     for cc=chemNums
-%         
+%
 %         tek=chem(c).Psat(Tguess)/P;
 %         result=result+tek*u(n).x(1,c);
 %     end
@@ -92,7 +92,7 @@ temp=0;
 k=0;
 ycomb=zeros(length(chem),1);
 for c=chemNums;
-    
+
     if chem(c).flagFuel
         ycomb(c,1)=u(n).ytheo(c);
     else
@@ -101,12 +101,12 @@ for c=chemNums;
     end
 end
     ycomb=ycomb/(chmLen-k);
-    
 
-            
-        
-    
-%%%%%%%%%%%%%%%%%%%%           
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
 % Individual Values
 %%%%%%%%%%%%%%%%%%%%
 
@@ -117,17 +117,17 @@ for c=chemNums
 pa=1;
     if u(n).Phase(1)>0
         %gas dispersion
-        
+
         potVal{pa,1}(1,k)=chVal(.5+((18/chem(c).MW(1))^(.5))...
             *(1.18/chem(c).rho(1))*(abs(chem(c).bouy))^...
             (.5*sign(chem(c).bouy)));
-        
+
     end
-    
+
     if u(n).Phase(1)<1
         %liquid or two phase flow release
         fv=real(u(n).CP(1)*(T-chem(c).Tb)/chem(c).dHvap(Tk));
-        if (P>1 && u(n).T>chem(c).Tb) 
+        if (P>1 && u(n).T>chem(c).Tb)
             %flashing liquid
 %             u(n).value(1,k)=.4*(1+fv);
             potVal{pa,1}(2,k)=.4*(1+fv);
@@ -137,14 +137,14 @@ pa=1;
 %             potVal{pa,1}(2,k)=min(.4+.004*((18/chem(c).MW)^(1/3)*(u(n).psat(c)-u(n).ppar(c))/P),0.8);
             potVal{pa,1}(3,k)=chVal(min(0.6,0.2 + (.4*u(n).Kval(c)/50)...
                 *(1/u(n).viscous(end))));
-            
+
         end
     else
         %gas release so use chocked flow
 %         if ~isempty(strfind(u(n).P{2},'psi'))
-%             
+%
 %         end
-        
+
 %         potVal{pa,1}(2,k)=chVal(.8+(u(n).ppar(c)*.02));
     end
     if chem(c).hflag==1
@@ -166,28 +166,28 @@ pa=2;
     else
         chem(c).FlashPred=((chem(c).Tb+273.15)*(.726-.0000715*...
             (chem(c).dHburn*1000/chem(c).dHvap(300))))-273.15;
-        
+
         potVal{pa,1}(3,k)=chVal(1-(chem(c).FlashPred-T)*.5/100);
-    
+
     end
-    
+
     Cst=100/(1+(chem(c).oxyStoic/.21));
     if estVar(chem(c),'LFL')
         chem(c).LFL=.55*Cst;
     end
-    
+
     if estVar(chem(c),'UFL')
         chem(c).UFL=3.5*Cst;
     end
-    
+
     LFLtemp=chem(c).LFL-(0.75/(chem(c).dHburn*(10^-6)/4.184))*(T-25);
-    
-    
+
+
         potVal{pa,1}(2,k)= chVal(1-LFLtemp/15);
-    %Mix- 
-       
-    
-    
+    %Mix-
+
+
+
     %Oxygen
     if ~estVar(chem(c),'LOC')
         potVal{pa,1}(3,k)=chVal(1-(chem(c).LOC-5)/25);
@@ -198,16 +198,16 @@ pa=2;
         %or use 6-16 if you know UFL
         %chem(u).LOC=((LFL+1.11*UFL)/2.11)*(.21*(100-UFL))/UFL
         end
-        
+
     end
-    
+
     if chem(c).hflag==1
         potVal{pa,1}(4,k)=chem(c).hval(pa);
     end
-    
+
 %     potVal{pa,1}(:,k)=[mean(valFuel);mean(valOxy)];
 %     value(2,k)=chkLowLimit([valFuel,valOxy]);
-    
+
 %Acute Toxicity
 
 pa=3;
@@ -223,34 +223,34 @@ pa=3;
         potVal{pa,1}(3,k)=chVal(1-.5*log10(chem(c).LCInhal/100));
 %         potVal{pa,1}(2,k)=.6560-.3212*log10(chem(c).LD);
     end
-    
+
     if chem(c).hflag==1
         potVal{pa,1}(4,k)=chem(c).hval(pa);
     end
-    
+
 %Prob Runaway Decomp
 
 pa=4;
-    
+
 %     valAdTime= sdfdsf; %Add the calorimetery input
     if ~estVar(chem(c),'AIT')
         potVal{pa,1}(3,k)=chVal(1-(chem(c).AIT-T)/200);
     elseif chem(c).hflag==1
         potVal{pa,1}(2,k)=chem(c).hval(pa);
     end
-    
+
 %     varChoice='';
     dHInd=[0,0,0,0];
-        
+
     energy={'dHreac','dHdecomp','dHburn','dGform'};
     for er=1:length(energy)
-        if ~estVar(chem(c),energy{er}) 
+        if ~estVar(chem(c),energy{er})
             dHInd(er)=1;
         end
     end
-    
+
     if estVar(u(n),'dTad') || c>length(u(n).dTad) || u(n).dTad(c)==0
-       
+
         vInd= find(dHInd,1);
         if ~isempty(vInd)
 %             u(n).dTad(1,c)=-chem(c).(energy{vInd})*u(n).x(1,c)*u(n).Amount(1)...
@@ -261,52 +261,52 @@ pa=4;
             u(n).dTad(1,c)=10^-10;
         end
     end
-    
+
     asdf(1)=chVal((1/.6)*log10(abs(u(n).dTad(1,c))/25));
-    
+
     %Self reactivity CRW
-    
+
     asdf(2)=chem(1).ReacMat(c,c)+chem(1).GasMat(c,c);
 
 
     [potVal{pa,1}(1,k),jhk]=max(asdf);
-        
+
     flagMax(pa,1)=jhk-1;
-        
+
         % Estimate AIT maybe?
 %         potVal{pa,1}(1,k)=valAdTime;
-   
+
 
 %Expected damage
 pa=5;
-    
+
 
     for hi=find(dHInd)
         potVal{pa,1}(hi,k)=chVal((1/50)*...
             ProbTNT(TNTeq(chem,u,c,n,energy{hi})/300,15));
     end
-    
+
     if chem(c).hflag==1
         potVal{pa,1}(5,k)=chem(c).hval(pa);
     end
-    
+
 
 %Explosion
 pa=6;
     %If contains all C,H,N,O, Use Oxygen content
-    
+
      if ~estVar(chem(c),'velsu')
-         
+
          potVal{pa,1}(1,k)=chVal((chem(c).velsu/50)-.9);
      end
-    
-    
+
+
      if ~estVar(chem(c),'dHexp')
          potVal{pa,1}(2,k)=chVal((1/50)*...
             ProbTNT(TNTeq(chem,u,c,n,energy{hi})/300,15));
      end
-    
-     
+
+
     if ~estVar(chem(c),'oxyCont') && chem(c).contCHNO==1
         if chem(c).oxyCont(1)>0
             potVal{pa,1}(4,k)=2-chem(c).oxyCont/80;
@@ -314,31 +314,31 @@ pa=6;
             potVal{pa,1}(4,k)=2+chem(c).oxyCont/120;
         end
     end
-    
-        
+
+
     if chem(c).hflag==1
         potVal{pa,1}(5,k)=chem(c).hval(pa);
     end
-    
-%HEALTH    
+
+%HEALTH
 %Irritation
 pa=7;
-    
+
     %DOT classification
-    if ~estVar(chem(c),'LFL')
+    if ~estVar(chem(c),'LFL') && ~estVar(chem(c),'DOT')
         if ~isempty(strfind(chem(c).DOT,'rrit'))
             potVal{pa,1}(1,k)=(1);
         end
     end
-    
+
     if chem(c).hflag==1
         potVal{pa,1}(2,k)=chem(c).hval(pa);
     end
-        
+
     if ~estVar(chem(c), 'pH')
         potVal{pa,1}(3,k)=chVal((abs(chem(c).pH-7)-2)/5);
     end
-    
+
     if ~estVar(chem(c),'Ldderm')
         if chem(c).Ldderm==0
             potVal{pa,1}(4,k)=chVal(0);
@@ -350,26 +350,26 @@ pa=7;
     %Test Output
     %pH
     %LD50 dermal
-    
-    
+
+
 %Chronic Toxicity
 pa=8;
-    
+
     if ~estVar(chem(c),'TLV')
         potVal{pa,1}(1,k)=1-log10(chem(c).TLV)/3;
     end
-    
+
 
 
     %TLA-TWA MSDS or ACGIH
     %REL-NIOSH
-   
+
     %TEST output
-    
+
     if chem(c).hflag==1
         potVal{pa,1}(3,k)=chem(c).hval(pa);
     end
-    
+
 %ENVIROMENT
 %Water effects
 pa=9;
@@ -383,19 +383,19 @@ pa=9;
     if ~estVar(chem(c),'IGC50')
         potVal{pa,1}(3,k)=chVal(chem(c).IGC50/5);
     end
-    
-    
+
+
     if chem(c).hflag
         potVal{pa,1}(4,k)=chem(c).hval(pa);
-    end    
+    end
 
     %LC50 mg/l
     %TEST Output
     %DOT dangerous to marine life symbol
     %R- Codes
-    
+
 %Air effects
-pa=10;    
+pa=10;
     %ERPG-2
     if ~estVar(chem(c),'ERPG2')
         potVal{pa,1}(1,k)=1-log10(chem(c).ERPG2/5)/3;
@@ -408,7 +408,7 @@ pa=10;
     if chem(c).hflag
         potVal{pa,1}(3,k)=chem(c).hval(pa);
     end
-    
+
     if length(potVal)>7
         if ~isempty(potVal{8}) && size(potVal{8},2)>=k
             potVal{pa ,1}(4,k)=max(potVal{8,1}(:,k));
@@ -417,24 +417,24 @@ pa=10;
         end
     end
 %Solid effects
-pa=11;    
+pa=11;
     %Yes or no
     potVal{pa,1}(1,k)=chVal(0);
-    
+
 %Bioaccumalation
 pa=12;
 
     if ~estVar(chem(c),'BCFreal')
         potVal{pa,1}(1,k)=chVal(0.5*(chem(c).BCFreal)-1);
     elseif ~estVar(chem(c),'BCFpred')
-        
+
         potVal{pa,1}(2,k)=chVal(0.5*(chem(c).BCFpred)-1);
     end
-    
+
     if ~estVar(chem(c),'Kow')
         potVal{pa,1}(3,k)=chVal(0.5*(chem(c).Kow)-1.5);
     end
-    
+
     if chem(c).hflag
         potVal{pa,1}(4,k)=chem(c).hval(pa);
     end
@@ -448,15 +448,15 @@ pa=13;
     if ~estVar(chem(c),'Percistency')
         potVal{pa,1}(1,k)=chVal(.5*log10(chem(c).Percistency));
     end
-    
-    %persistency Ecotox 
-    
+
+    %persistency Ecotox
+
     if ~estVar(chem(c),'Halflifereal')
         potVal{pa,1}(2,k)=.5*log10(chem(c).Halflifereal);
     end
     %Halflife -obs
     %halflife -literature
-    
+
     if ~estVar(chem(c),'OCED')
         %learn what OCED is
 %         potVal{pa,1}(3,k)=1-1.1*log10(chem(c).OCED/20);
@@ -468,7 +468,7 @@ pa=13;
     if chem(c).hflag==1
         potVal{pa,1}(4,k)=chem(c).hval(pa);
     end
-    
+
     %just as a place holder
     maxFlag(pa,1)=0;
     potVal{pa,1}=0;
@@ -483,11 +483,11 @@ IntVal = zeros(paraLen, chmLen);
 for pw = 1:paraLen
     diff=size(potVal{pw},2);
     if diff~=chmLen;
-        
+
         for err=diff+1:chmLen
             IntValJust{pw,err}='no data';
         end
-                
+
     end
     for dd=1:diff
         tr=find(potVal{pw}(:,dd),1);
@@ -532,7 +532,7 @@ for c = chemNums
     else
         fate(9,k)=IntVal(12,k)*IntVal(9,k);
     end
-    
+
     %fire, explosion and irritation are affected by mobility
     %toxcity is very effected by mobility.
     for pe = [2,3,6,7,8]
@@ -541,13 +541,13 @@ for c = chemNums
         else
             fate(pe,k) = IntVal(1,k)*IntVal(pe,k);
         end
-        
+
     end
-    
+
     %Reaction potential and reaction probability are affected if both exist
     fate(4,k)= IntVal(4,k)*IntVal(5,k);
     fate(5,k)= IntVal(4,k)*IntVal(5,k);
-    
+
     k=k+1;
 end
 
@@ -577,21 +577,21 @@ pa=1;
     %otherwise get the inverse molar masses (MM-1+MM2-1...)^.5
     %what if modeled as a puff? here finds an effective mobility
     temp=0;
-    
+
     for ch=chemNums
         temp=temp+1/chem(ch).MW(1);
-        
+
     end
 
     potmix(pa,1)=chVal(((temp/(chmLen/18))^.5)-1);
-    
+
     %delf
     %Anything that requires filling (aerosol)- check var=flowrate in
     %Phase change or interaction between flows - checkvar= delH vap
     %Change in temperature or pressure (greater than 40 deg breaks heat)
     %Corrosion
-    
-%fire 
+
+%fire
 pa=2;
 
     %Use componnent with lowest flash
@@ -599,7 +599,7 @@ pa=2;
     %2)psatmix=psatflash/x
     %3)Antoine (psatmix)->Tflash mixture
     %4)a*(Tflashmix/Tflash)+b
-    
+
     %Fuel + oxidizer
     fuel=0;
     oxid=0;
@@ -610,18 +610,18 @@ pa=2;
     potmix(pa,1)=chVal(2*fuel*oxid);
     %Use Le chatliers principle to get LFLmix (combustible basis mole
     %fraction in air 1/(ycom/LFL)
-    
-    
-    
-    
-    
+
+
+
+
+
     %effective combustion energy
 %     [chem.dHburn]*ydiff
     u(n).LFLmixburn=(11200*100*4.184/-([chem(chemNums).dHburn]*yt));
     potmix(pa,2)=chVal((u(n).LFLmixburn-mean([chem(chemNums).LFL]))/5,999);
-    
+
     if ~max(estVar(chem, 'LFL'))
-        
+
         temp=0;
         for ch=chemNums;
             temp=temp+ycomb(ch)/chem(ch).LFL;
@@ -629,22 +629,22 @@ pa=2;
         u(n).LFLmix=1/temp;
         potmix(pa,3)=chVal(1-(1/(15*temp)));
     end
-    
+
 %     mix(pa,1)=max(potmix(pa,:));
     %continue to get the index as before then reduce it so it can be used
     %as a penalty
-    
+
     %average both values to get a final penalty
-    
+
     %delf
     %
     %Corrosion
-    
+
 %Acute Toxicity
 pa=3;
 
-    %p87 Use a flash calculation with roults law to get a mixture value of 
-   
+    %p87 Use a flash calculation with roults law to get a mixture value of
+
     la=estVar(chem, 'TLVc');
     la=[la(chemNums)];
     if max(la)
@@ -652,13 +652,13 @@ pa=3;
             chem(chemNums(li)).TLVc=10*(10^(4*(1-IntVal(pa,li))));
         end
     end
-    
+
     %Exposure
-    
+
     u(n).acExposure=(1./([chem(chemNums).TLVc]))*u(n).relExp{1};
 %     u(n).acExposure=((10^6)/5000)*yWeight(chem, u ,n, 3 , 'TLVc', 'all');
     potmix(pa,1)=chVal(.5*(u(n).acExposure-1),999);
-    
+
     %Le chatliers LFLmix
     temp=0;
     for ch=chemNums;
@@ -677,12 +677,12 @@ pa=3;
 %         end
 %         mix(pa,1)=1/temp;
 %     end
-    
+
     %delf
     %
     %Corrosion
-    
-    
+
+
 %Prob Runaway Decomp
 pa=4;
 
@@ -694,13 +694,13 @@ pa=4;
             exclude=[exclude simple(eq)];
         end
     end
-    
+
     if ~isempty(exclude)
         for hu=exclude
             lo(hu,:)=zeros(1,chmLen);
             lo(:,hu)=zeros(chmLen,1);
         end
-            
+
 %         for re=1:length(lo)
 %             for ce=1:length(lo)
 %                 if mat(re,ce)==1
@@ -711,24 +711,24 @@ pa=4;
 %             end
 %         end
 
-        
+
     end
-    
+
     numBox= length(find(lo==1));
     lo=logical(lo);
     u(n).CRWMat=chem(1).ReacMat(lo)+chem(1).GasMat(lo);
     potmix(pa,1)=chVal(((sum(u(n).CRWMat))/numBox)-0.2,999);
-    
+
     %UU
     %Combine all the heat of combustion of the surrounding units to
     %simulate an external fire leading to a BLEVE
-    
+
 %Expected damage
 pa=5;
-    
+
 %Explosion
 pa=6;
-    
+
     %mixture fundamental burning velocity
     la=estVar(chem, 'velsu');
     la=[la(chemNums)];
@@ -737,9 +737,9 @@ pa=6;
 %             chem(c).velsu/50)-.9);
             chem(chemNums(li)).velsu=(IntVal(pa,li)+.9)*50;
         end
-        
+
     end
-    
+
     temp=[];
     res=yWeight(chem,u,n,2,'MW','Fuel');
     nums=[find(res{1})]';
@@ -753,50 +753,50 @@ pa=6;
                 (P)^(-.17*eqv^(.5*sign(eqv)));
             k=k+1;
         end
-        
+
         u(n).velsumix=(temp*u(n).ytheo(res{1}));
         potmix(pa,1)=chVal((u(n).velsumix-mean([chem(res{1}).velsu]))/50,999);
     end
-        
-    
-            
-            
+
+
+
+
     %Use delGibbsmixture (gg)
-    
+
     %delf: use mechanical explosions / confined space /missile damage
     %potential
-    
-    
+
+
     %delf
     %Turbulence of mixture CSTRs, Extractors etc
     %Pressure
     %Corrosion
-    
+
     %BLEVE pot -if Tb<T gamma heat capacity ratio * vapor space
-    %flash mixture 
-    
+    %flash mixture
+
     %POIUHGSPIG NEED: Vvapor, totmoles, Ewithstand (how much energy can the
     %vessel withstand...Alternative just use the second pressure with hte
     %pressure rating)...or use P/Psec ratio as the indicator
-    
+
 
 %     tol=.05;
 %     flag=0;
 % result=0;
 % while abs(1-result)>tol
 %     if result==0
-%         
+%
 %     else
 %         Vguess=((1-result)*Vguess)/10+Vguess;
-%         if Vguess < 10^-10 
+%         if Vguess < 10^-10
 %             Vguess =.9;
 %         end
 %         result=0;
 %     end
-%         
-    
+%
+
 %     for cc=chemNums
-%         
+%
 %         tek=u(n).psat(cc)/P;
 %         result=result+(tek*u(n).x(1,cc))/(1+Vguess*(tek-1));
 %     end
@@ -830,21 +830,21 @@ pa=6;
     %UU
     %Combine all the heat of combustion of the surrounding units to
     %simulate an external fire leading to a BLEVE
-    
-%HEALTH    
+
+%HEALTH
 %Irritation
 pa=7;
-    
+
     %DOT classification
     %EC classification
     %Test Output
     %pH
     %LD50 dermal
     %Mix- combined pH? Combined effect?
-    
+
 %Chronic Toxicity
-pa=8; 
-    
+pa=8;
+
     %Mix the TLV to get a TLV for the whole mixture
     la=estVar(chem, 'TLV');
     la=[la(chemNums)];
@@ -853,12 +853,12 @@ pa=8;
             chem(chemNums(li)).TLV=10^((1-IntVal(pa,li))*3);
         end
     end
-    
+
     %Exposure
     u(n).chExposure=(1./([chem(chemNums).TLV]))*u(n).relExp{2};
 %     u(n).chExposure=((10^6)/500)*yWeight(chem, u ,n, 3 , 'TLV', 'all');
     potmix(pa,1)=chVal(.5*(u(n).chExposure-1),999);
-    
+
     %Le chatliers LFLmix
     temp=0;
     for ch=chemNums;
@@ -867,9 +867,10 @@ pa=8;
     end
     if temp>0 && ~isnan(temp)
         u(n).TLVmix=1/temp;
+        potmix(pa,2)=chVal(1-(log10(u(n).TLVmix)/3),999);
     end
-    
-    potmix(pa,2)=chVal(1-(log10(u(n).TLVmix)/3),999);
+
+
 %         potmix(pa,1)=chVal(-(u(n).TLVmix-mean([chem(chemNums).TLV]))/50,999);
 %     else
 %         temp = 0;
@@ -882,7 +883,7 @@ pa=8;
 %             mix(pa,1)=1/temp;
 %         end
 %     end
-    
+
 %ENVIROMENT
 %Water effects
 pa=9;
@@ -892,17 +893,17 @@ pa=9;
     %DOT dangerous to marine life symbol
     %R- Codes
     %Mix- check EcoTox for datam
-    
+
 %Air effects
-pa=10;    
-    
+pa=10;
+
     %ERPG-2
     %chronic tox index
-    
-    
-    
+
+
+
 %Solid effects
-pa=11;    
+pa=11;
     %Yes or no
 
 %Bioaccumalation
@@ -915,7 +916,7 @@ pa=12;
 %Degredation
 pa=13;
 
-    %persistency Ecotox 
+    %persistency Ecotox
     %Halflife -obs
     %halflife -literature
     %OCED biodegradability after 28 days
@@ -923,14 +924,14 @@ pa=13;
     %
     %
     potmix(pa,1)=0; %place holder
-% 
+%
 %     mix=max(potmix,[],2);
 %     [junk,junk,lo]=find(potmix);
 
     for pi=1:pa
 %         [temp in]=max(nonzeros(potmix(pi,:)));
         [junk in temp]=find(potmix(pi,:),1);
-            
+
 
         if isempty(temp)
             mix(pi,1)=0;
@@ -940,44 +941,44 @@ pa=13;
             mixJust{pi,1}=justify{3}{pi,in};
         end
     end
-    
-%%%%%%%%    
-%VESSEL 
+
+%%%%%%%%
+%VESSEL
 %%%%%%%%.
-    
-%Fail rate, f 
+
+%Fail rate, f
 a=1;% get these from user input showing how different their technologies are compared to the ones in the literature.
 b=.1; %nominal value
 c=1; %from the average fail rate of the industry
 failBar= a*log10(u(n).failbase/c)+b;
-    
-%delf, change in failure rate of the system 
+
+%delf, change in failure rate of the system
 
 %temperature
 pf=1;
-    
+
     if u(n).classFunc ==3
         %reactor so temperature is a big indicator of bad things
         mult=1.2;
     else
         mult=1;
     end
-    
+
 %     delf(pf,1)=chVal(mult*log10(max(25-T, T-100)/25),1);
-    
-    
+
+
 %Pressure
 pf=2;
     % use thermodynamic availability from Crowl "calc the engery of
         %its most conservative and allows for heat loss to the enviro
     MechExp = (P*u(n).V*(log(P)-(1-1/P)))/101.325; %Joules
-    expansion(1)=.001304*P*101.325*u(n).V; 
+    expansion(1)=.001304*P*101.325*u(n).V;
     expansion(2)=1/(Tk*1000) * (P-mean(u(n).ppar))^2 *u(n).V;
 %     delf(pf,1)=chVal(0.9*log10(.05*MechExp/300000)-1,1); %2000 of mechExp is about 1 ton of TNT
-    
 
-    
-    
+
+
+
 %Alternative
 if u(n).multIn
     in=u(n).inPsu;
@@ -991,13 +992,13 @@ end
 if u(n).classFunc~=3
     %mixers, seps, transport and reactors
     %Atmospheric vs refrig vs pressurized
-    
+
     [u(n).fail u(n).df]= augfailTP(u(n).T,u(n).P,u(n).V,u(n).failadj,u(n).failadjTM,u(n).failadjPM) ;
 else
     if u(n).classVar(1)==1
         %heater
         %temp range
-        
+
 
         vin=sort([(1+log10(u(n).dTLM/40)),.8,.4]);
         u(n).fail=u(n).failadj*vin(2);
@@ -1008,15 +1009,15 @@ else
     else
         %compressor
         %power req.
-        
+
         u(n).df(1)=0;
         u(n).df(2)=0;
     end
 end
-    
-    
-    
-    
+
+
+
+
 %delfDanger, turning delf into dangerous properties
 % lossCont = delf(1)+delf(2);
 
@@ -1062,13 +1063,13 @@ u(n).Vessel = u(n).lossCont.*u(n).detect.*(conq-u(n).armorConq);
     u(n).IntValRaw=IntValRaw;
     u(n).fateRaw=fateRaw;
     u(n).edpRaw=edpRaw;
-    
-    clear IntVal IntValJust potVal fate mix mixJust potmix failBar delf...
-        delfDanger IntValRaw fateRaw edp edpRaw conq;
+
+    clear('IntVal', 'IntValJust', 'potVal', 'fate', 'mix', 'mixJust', 'potmix', 'failBar',...
+        'IntValRaw', 'fateRaw', 'edp', 'edpRaw', 'conq');
 
 
 
-%     
+%
 %     plant.u(num)=new;
 %     plant.chem=chem;
 end
@@ -1083,7 +1084,7 @@ if strcmp(subset,'all')
     end
 else
     for ie=chmNums
-        
+
         if chem(ie).(['flag' subset])
             lo(ie)=1;
         end
@@ -1105,8 +1106,8 @@ for li=[find(lo)]'
     temp(k)=chem(li).(var)^exp;
     k=k+1;
 end
-    
-   
+
+
     res= temp*[u(n).ytheo(lo)];
 %     temp=temp+((chem(li).(var))^exp)*u(n).ytheo(li);
 
@@ -1125,7 +1126,7 @@ end
 function val = mixFlash (u,Vguess)
 result =0;
 for cc=u.compList
-        
+
         tek=u.psat(cc)/u.P;
         result=result+(tek*u.x(1,cc))/(1+Vguess*(tek-1));
 end
@@ -1178,30 +1179,30 @@ if flag
 else
     temp = sort([10^-10,in,1]);
     val= temp(2);
-    
+
 end
 end
 
 
 
-% 
-% 
+%
+%
 %  function [val]=antoine(input,constants,type)
 %  %antoine Get saturated pres. or temp. according to NIST
 %  %  log10(P) = A ? (B / (T + C))
 % %   val is the output in bar or T
 % %   T is in Kelvin
 % %   P is in bar
-% % 
+% %
 % % A=[13.7819,13.9320,14.0579,4.19927];
 % % B=[2726.81,3056.96,3331.45,1569.622];
 % % C=[27.572,217.625,214.627,-63.572];
-% 
+%
 % A=constants(1);
 % B=constants(2);
 % C=constants(3);
-% 
-% %figure out if user wants P or T out 
+%
+% %figure out if user wants P or T out
 % if ~isempty(strfind(type,'T')) || ~isempty(strfind(type,'t'))
 %     flag=0;
 %     if ~isempty(strfind(type,'C'))
@@ -1213,7 +1214,7 @@ end
 %     P=input;
 %     flag=1;
 % end
-% 
+%
 % %use antoine eq to get the unknown variable
 % if flag==0
 %     val=10^(A-(B/(T+C)));
@@ -1222,11 +1223,11 @@ end
 % end
 % %  end
 
-% 
+%
 % function [val]= chkLowLimit (val)
 % val=max(val);
 % if val <0
 %     val=0;
 % end
-% 
+%
 % end
