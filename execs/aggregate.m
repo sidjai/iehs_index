@@ -5,7 +5,7 @@ function [out tsum] = aggregate(varargin)
 %   second is the unit structure
 %   third is the streams if you want to aggregate the units together or a
 %   unit number, n , to signify the unit you want to aggregate.
-%   
+%
 %   Looks at the userweights provided in unitAlteration worksheet that got
 %   parsed
 %   Outputs a group of cells that define the different steps in the unit
@@ -21,13 +21,12 @@ paraNames = varargin{4};
 if isstruct(varargin{3})
     s=varargin{3};
     flagu=1;
-    
+
 else
     n = varargin{3};
     flagu=0;
 end
 
-findLine = @(c , string) (find(~cellfun('isempty', strfind(c,string))));
 hierarchy = {'edp'; 'mdp';'cdp';'idp'};
 add = {'mix';'Vessel'; 'UUs'};
 agroType = {'Average','Best Case','Worst case'};
@@ -47,9 +46,9 @@ unitLen = size(u,1);
 
 %condition / chem agro
 
-%do the quick and dirty version first 
+%do the quick and dirty version first
 if ~isempty(strfind(varargin{1},'quick'))
-    
+
     tmdp = mean(u(n).edp,2)+ u(n).mix;
     tcdp = tmdp + u(n).Vessel;
     out = {u(n).edp, tmdp, tcdp};
@@ -58,7 +57,7 @@ if ~isempty(strfind(varargin{1},'quick'))
     end
     tsum = 'quick';
 else
-    
+
     if ~flagu
         %single unit aggregation (minus Hotspot)
         for agr=1:3
@@ -66,24 +65,24 @@ else
             %chemical weights
             [tmdp(:,agr), tsum{agr}] = doWeight(u(n).IntVal,agr,2,paraNames,chemNames);
             tmdp(:,agr) = tmdp(:,agr)+u(n).mix;
-            
+
             tcdp(:,agr) = tmdp(:,agr)+u(n).Vessel;
         end
-        
+
         if iscell(W)
             %do the user generated weights
             %1)SecEff add, EDP; 2)Agro chems, EDPAchems; 3)Mix add, MDP
             %4)Vessel add, CDP; 5) add Hotspot, UDP 6)Agro units, UDPAunits; 7)UUs add, IDP
-            
+
             %redo to parse which weights are used
             tedp = u(n).IntVal+(W{1}.*u(n).fate);
             tmdp(:,4) = W{2}.*(tedp(4)) + W{3}.*u(n).mix;
             tcdp(:,4) = tmdp(:,4)+ W{4}.*u(n).Vessel;
 %             out = {tedp, tmdp, tcdp};
-            
+
         end
         out ={tedp,tmdp,tcdp};
-        
+
         %add previously calc'ed Hotspot val
         if ~isempty(strfind(varargin{1},'unit'))
             for h=1:size(tcdp,2)
@@ -91,40 +90,45 @@ else
                     out{4}(:,h) = tcdp(:,h)+W{5}.*u(n).HotSpot;
                 else
                     out{4}(:,h) = tcdp(:,h)+u(n).HotSpot;
-                    
+
                 end
-                   
+
             end
         end
-    
-    
-        
+
+
+
     else
         %unit aggregation
         UUs = [s.UUavgdev];
-        
+
         for pi=1:paraLen
             vec = UUs(pi,:);
             mUUs(pi,1) = mean(nonZo(vec));
         end
-        
-        
+
+
         for n=1:unitLen
             tudp(:,:,n) = u(n).udp;
             unitNames{n}=u(n).name;
         end
         k=1;
         for prev=1:3
-            
-            
+            if unitLen > 1
+                proMat = tudp(:,prev,:)
+            else
+                proMat = tudp(:,prev);
+            end
+
             for uagr=1:3
-                
-                [tidp{k}, tsum{k}] = doWeight(tudp(:,prev,:),uagr,3,paraNames,unitNames);
+
+
+                [tidp{k}, tsum{k}] = doWeight(proMat,uagr,3,paraNames,unitNames);
                 tidp{k} = tidp{k} + mUUs;
                 tsum{k}{3,1}=['Chem weight: ' agroType{prev} '| Unit weight: ' agroType{uagr}];
-                
+
                 k=k+1;
-                
+
             end
         end
         if iscell(W)
@@ -132,12 +136,12 @@ else
                 tudp(:,prev,n) = u(n).cdp(:,4)+W{5}(:,n).*u(n).HotSpot;
             end
             tidp{k} = sum(W{6}.*tcdp(:,4,n),3) + W{7}.*mUUs + u(n).HotSpot;
-                 
+
         end
-        
-        
+
+
         out = tidp;
-        
+
     end
 
 end
@@ -147,20 +151,24 @@ end
 
 function [val,smry] = doWeight(mat,agro,dm,stNames,chNames)
 staLen=size(mat,1);
+if dm > length(size(mat))
+  %just return
+  val = mat;
+  smry{1,1} = ones(staLen,1);
+else
+  comLen = size(mat,dm);
 
-comLen = size(mat,dm);
-
-nonZo =@(v)v(logical(v));
-switch agro
-    case 1
-        %average
-        val = mean(mat,dm);
-    case 2
-        %Best case
-        [val, smry{1,1}] = min(mat,[],dm);
-    case 3
-        %worse case
-        [val smry{1,1}]= max(mat,[],dm);
+  switch agro
+      case 1
+          %average
+          val = mean(mat,dm);
+      case 2
+          %Best case
+          [val, smry{1,1}] = min(mat,[],dm);
+      case 3
+          %worse case
+          [val smry{1,1}]= max(mat,[],dm);
+  end
 end
 
 nval = nonZo(val);
@@ -176,7 +184,7 @@ smry{2,2}(3) = stNames(ind);
 % get the names of the values to make sense of them
 if agro~=1
     for s=1:staLen
-        
+
         smry{1,2}{s,1} = chNames{smry{1,1}(s)};
     end %do outside maybe
 end
@@ -196,10 +204,9 @@ worse=zeros(parLen,secLen);
         worse(p,worInd(p))=1;
     end
 if type ==1;
-    
+
     weight = avg/secLen;
 else
     weight = worse;
 end
 end
-

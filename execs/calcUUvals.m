@@ -22,12 +22,12 @@ for vind = 1:length(devVars)
         end
         upsetTime = upsetTotTime; %min
         uup = u(:,1);
-        
+
         upsetSet = [];
         upsetSetRes = [];
         orgRes = [];
         perSet = [];
-        
+
         while upsetTime>0
 %             if upsetTime<15
 %                 upsetTime = upsetTime;
@@ -38,52 +38,52 @@ for vind = 1:length(devVars)
             else
                 sdev = s(u(badU).out(1));
                 upType = badUnit2badStream(u(badU), sdev);
-                
+
 %                 sdev = s(u(badU).out(1));
-                
+
             end
-            
+
             badU = sdev.to;
-            
+
             %break if the upsets made a loop to the same unit
             %break if you hit a product flow cause there isn't a unit to
             %upset
             if (ismember(badU,upsetSet)) || badU==999
                 break;
             end
-            
+
             upsetSet = [upsetSet badU];
-            
+
             indvUpsetTime = min(u(badU).tau,upsetTime);
-            
+
             [uBlock, percent] = makeUpset(uup,sdev,...
                 devVars{vind},upType,indvUpsetTime);
             perSet = [perSet percent];
             
-            if ((length(fields(uBlock)))-(length(fields(u(1)))) ~=0)
+            if ((length(fieldnames(uBlock)))-(length(fieldnames(u(1)))) ~=0)
                 disp('Upset added fields, abandon ship')
             end
-            
+
             uup(badU) = uBlock;
-            
+
             [uup, junk] = calcIntVal(uup,chem,badU,1,p,j);
             [out, junk] = aggregate('quick',uup,badU,p);
             upsetSetRes = [upsetSetRes out{3}(:,1)];
             orgRes = [orgRes u(badU).cdp(:,1)];
-            
+
             upsetTime = upsetTime - indvUpsetTime;
-            
+
         end
 
-        
+
 
         %percent change between the upset and the original
         change = (upsetSetRes-orgRes);
 %         change = abs(out{3}(:,1)-u(n).cdp(:,1))./abs(u(n).cdp(:,1));
 
-        
+
         change = chVal(change);
-        
+
         %Add up all the different units that were effected
         %Use sum cause this represents the total effect of 1 upset
         %(para x units) -> (para x 1)
@@ -129,14 +129,14 @@ for hf = 1:length(chFields)
     sout.(chFields{hf}) = uin.(chFields{hf});
 end
 end
-               
+
 function val =chVal (varargin)
 if length(varargin)>1
     lowThres = -1;
     lowVal = lowThres;
 else
     lowThres = 0;
-    lowVal = 10^-10; 
+    lowVal = 10^-10;
 end
 
 val=real(varargin{1});
