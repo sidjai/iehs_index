@@ -23,6 +23,14 @@ for w = 1:length(s)
     if estVar(s(w),'MW')
         s(w).MW= s(w).x(1,chemNums) * [chem(chemNums).MW]';
     end
+    
+    if estVar(s(w), 'Activity')
+        badVals = isnan(s(w).Activity);
+        goodAmt = length(find(~badVals));
+        if (goodAmt > 0)
+            s(w).Activity(badVals) = 1;
+        end
+    end
 
     if estVar(s(w),'CP')
         if s(w).Phase(1)>0
