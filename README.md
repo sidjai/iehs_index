@@ -2,6 +2,14 @@
 
 This is a design tool for chemical factory designers in the process flowsheet and conceptual design phase in the larger phase of Front End Engineering and Design (FEED). It can be used throughout the stage from an Input-Output structure to the final flowsheet alongside a rigorous technoeconmic study. It runs on MatLab and Octave with minimal system requirements. This is a redesigned index from the original EHS index by Koller et al. (2000). The index is broken up into 13 different scenarios, called parameters, that are tested for hazards. These are queried at different scales in a plant from the chemistry to the plant structure. These calculations are grouped by scale and calculation type in different "methods".
 
+##Install
+
+Maneuver to the directory that you want the source code to reside in through the command line. Then use git to clone the repository as so.
+
+<code> git clone https://sidjai@bitbucket.org/greentown/iehs_index.git </code>
+
+The config file location is changed in the script "EHSexe.m". A template for a config file is given in "case_studies/DME/config.txt" Here is where all the file locations and calculation parameters are given to the program. After the input files are given, the program can run using MatLab/Octave by running this "EHSexe.m" script.
+
 ##Inputs
 
 ###Required
@@ -43,9 +51,9 @@ This is a design tool for chemical factory designers in the process flowsheet an
 
 1. Unit Alternatives
 
-  What: A list of differences between the actual design and what is inputed in the design information report. There could be anything from end of the pipe technologies, to process control, to physical mitigation, to novel equipment.
+  What: A list of differences between the actual design and what is inputted in the design information report. There could be anything from end of the pipe technologies, to process control, to physical mitigation, to novel equipment.
   
-  Where: A filled out rubric looking at the addition using a semi-quanitative risk ranking with three categories: Strength, Maintainability, and Reliability.
+  Where: A filled out rubric looking at the addition using a semi-quantitative risk ranking with three categories: Strength, Maintainability, and Reliability.
   
   Format: .xls
   
