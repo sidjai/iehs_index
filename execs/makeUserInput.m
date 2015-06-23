@@ -30,7 +30,8 @@ for i=1:3
         filled(i)=0;
     else
         %look into the file and see if it hasn't been filled
-        raw = xlsReadPretty(name{i},1){1};
+        raw = xlsReadPretty(name{i},1);
+        raw = raw{1};
         switch i
           case 1
             %Criteria for filled: Safety info
@@ -86,7 +87,10 @@ for i=1:3
 
             rawWeight = xlsReadPretty(name{i}, 3);
             for ws=1:3
-                fillTemp(ws,1)=~isempty(find(rawWeight{ws}~=1,1));
+                fillTemp(ws,1) = ~isnan(rawWeight{ws}{1});
+                if(fillTemp(ws,1))
+                    fillTemp(ws,1) = ~isempty(find(rawWeight{ws}~=1,1));
+                end
             end
 
             if cfg.weightFlag

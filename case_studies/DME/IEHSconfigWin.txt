@@ -1,0 +1,28 @@
+InfoWkstFile=DME safetyInfo.xlsx
+UnitAlterations=DME unit alts.xlsx
+%StreamTable=DME streams 1_2.xlsx
+StreamTable=DME ConStream.xlsx
+AspenPredictReport=DME chem.txt
+AspenBlocksName=DME blocks 1_1.txt
+CRWreport=DME CRW.txt
+outName=DME EHS3_1conOct.xlsx
+weightFile=DME weights.xlsx
+ TESToutput = TESToutput/
+ConceptBlock = DME ConBlock.xlsx
+
+direc=G:\IEHS/case_studies/DME/
+
+%Flags for analysis type
+
+conceptDesFlag = 1
+
+%do you want to output the excel sheet (lots of time)
+xsFlag=1
+%want to output the plot?
+plotFlag=0
+altFlag=0
+%user defined weights
+weightFlag=0
+
+%want to just output the TEST input
+TESTonlyFlag=1

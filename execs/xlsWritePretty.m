@@ -11,7 +11,9 @@ inddir = regexp(fullfile,'[/]');
 begdir = fullfile(1:(inddir(end)));
 
 if (~isunix())
-  csvFile = [beg '.csv'];
+    beg = strrep(beg, '/','\');
+    fullfile = strrep(fullfile, '/','\');
+    csvFile = [beg '.csv'];
 end
 
 realWd = strrep(pwd,'\','/');
@@ -31,7 +33,7 @@ for sh = 1: length(sheets)
 
     %make the csv
     convertCell = cellfun(@(x)~(ischar(x) || isempty(x)),sheets{sh});
-    sheets{sh}(convertCell) = cellfun(@(x)num2str(x, "%2.4f"),...
+    sheets{sh}(convertCell) = cellfun(@(x)num2str(x, '%2.4f'),...
         sheets{sh}(convertCell),'UniformOutput',false);
     %sheets{sh} = cellfun(@(x)[x ','],sheets{sh},'UniformOutput',false);
 
@@ -70,13 +72,11 @@ end
 if (isunix())
   %combine all the produced csv files
   csvArgs = sprintf(' "%s" ',csvList{:});
-  comd = ['ssconvert --merge-to "' fullfile '" ' csvArgs]
+  comd = ['ssconvert --merge-to "' fullfile '" ' csvArgs];
   [ranTest(sh+1)] = system(comd);
   for sh = 1: length(sheets)
     delete(csvList{sh})
   end
-else
-  delete(csvFile)
 end
 confirm = max(ranTest);
 

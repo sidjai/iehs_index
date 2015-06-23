@@ -6,6 +6,10 @@ function [ dat ] = xlsReadPretty(varargin)
 %   if linux/mac, searches for libreoffice using unoconv --format  xls
 %   example.csv
 fullpath = varargin{1};
+if (ispc())
+    fullpath = strrep(fullpath, '/', '\');
+end
+
 argLen = length(varargin);
 if argLen == 1
     numSheetsParsed = 9999;
@@ -71,6 +75,10 @@ function [out] = csvReadPretty(csvPath, hd)
     parse = textscan(fid, '%s','delimiter','\n');
     parse = parse{1};
     fclose(fid);
+    if(isempty(parse) || isempty(parse{1}))
+        out = parse;
+    end
+    
     for (row = (hd+1):length(parse))
         line = [parse{row} ','];
         commas = regexp(line,',');
@@ -99,10 +107,12 @@ end
 
 function [cin] = doOption(cin,optionTag)
 
+charSet = cellfun(@(x)ischar(x),cin);
+emptSet = cellfun(@(x)~isempty(x),cin);
+
 switch optionTag
     case 'trim'
-        badSet = cellfun(@(x)ischar(x),cin);
-        cin(badSet) = strtrim(cin(badSet));
+        cin(charSet) = strtrim(cin(charSet));
 
     case 'NumsNotStrings'
         badSet = cellfun(@(x)...
@@ -112,16 +122,18 @@ switch optionTag
         cin(badSet) = cellfun(@(x)str2double(x),...
             cin(badSet),'UniformOutput',false);
     case 'EmptyisNaN'
-        badSet = cellfun(@(x)isempty(x),cin);
-        cin(badSet) = {NaN};
+        cin(~emptSet) = {NaN};
     case 'OneSpaceIsEmpty'
         oneSet = cellfun(@(x)( length(x) == 1 && ~isnan(x)),cin);
         cin(oneSet) = strrep(cin(oneSet),' ','');
 
     case 'NoLiteralQuote'
-        badSet = cellfun(@(x)...
-          ischar(x) && regexp(x, """"),cin);
-        cin(badSet) = regexprep(cin(badSet), """", '');
+        
+        badSetD = cellfun(@(x)~isempty(regexp(x, '"')),cin(charSet));
+        cin(charSet(badSetD)) = regexprep(cin(charSet(badSetD)), '"', '');
+        badSetS = cellfun(@(x)~isempty(regexp(x, '''')),cin(charSet));
+        cin(charSet(badSetS)) = regexprep(cin(charSet(badSetS)), '''', '');
+        
 end
 
 

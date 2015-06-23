@@ -16,7 +16,7 @@ comSet = findLine(raw,'%');
 
 useSet = useSet(~ismember(useSet,comSet));
 dirSet = findLine(raw,'direc');
-direc = regexprep(raw{dirSet}, '\\', '/')
+direc = regexprep(raw{dirSet}, '\\', '/');
 direc = direc(strfind(direc,'=')+1:end);
 input.direc = direc;
 useSet = useSet(~ismember(useSet, dirSet));

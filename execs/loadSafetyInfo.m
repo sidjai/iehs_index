@@ -215,7 +215,7 @@ end
 matNames={chem.altName};
 %check to see if all the names don't have literal quotes
 
-if (max(cellfun(@(x)isempty(regexp(x, """")), matNames))) ~= 1
+if (max(cellfun(@(x)isempty(regexp(x, '''')), matNames))) ~= 1
   error(['Did not remove literal strings from chem names' matNames])
 end
 % Go through CRW report
