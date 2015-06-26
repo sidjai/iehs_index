@@ -10,6 +10,17 @@ Maneuver to the directory that you want the source code to reside in through the
 
 The config file location is changed in the script "EHSexe.m". A template for a config file is given in "case_studies/DME/config.txt" Here is where all the file locations and calculation parameters are given to the program. After the input files are given, the program can run using MatLab/Octave by running this "EHSexe.m" script.
 
+##System Requirements
+
+###Linux / Unix
+
+unoconv from gnumeric
+Spreadsheet viewer to look at output
+
+###Windows
+
+Microsoft Excel (uses vba script)
+
 ##Inputs
 
 ###Required
@@ -17,52 +28,52 @@ The config file location is changed in the script "EHSexe.m". A template for a c
 1. Chemical Process Safety Sheet
 
   What: Basic safety properties of all the chemicals that appear in the design.
-  
+
   Where: SDS sheets, Literature, Online databases
-  
+
   Format: .txt
-  
+
 2. Design information report
 
   What: Process unit information for process conditions and functions
-  
+
   Where: A simulator (e.g. Aspen Plus) or Rough hand calculations
-  
+
   Format: .txt / .xls
-  
+
 3. Stream Table
 
   What: A table of the properties of all the streams in the process.
-  
+
   Where: A simulator (e.g. Aspen Plus) / Rough hand calculations
-  
+
   Format: .xls
-  
+
 4. Chemical Reactivity Worksheet (CRW) Report
 
   What: A government program that simulates a solution to tell if there will be any evolved gases or side reactions
-  
+
   Where: The report of the program with all the chemicals in one solution
-  
+
   Format: .txt
-  
+
 
 ###Additional documents
 
 1. Unit Alternatives
 
   What: A list of differences between the actual design and what is inputted in the design information report. There could be anything from end of the pipe technologies, to process control, to physical mitigation, to novel equipment.
-  
+
   Where: A filled out rubric looking at the addition using a semi-quantitative risk ranking with three categories: Strength, Maintainability, and Reliability.
-  
+
   Format: .xls
-  
+
 2. QSAR prediction reports (TEST)
 
   What: Predictions of chemical properties from their molecular structure. Many techniques can be used but for this procedure, USEPA's software TEST is automatically parsed.
-  
+
   Where: The TEST output of a batch run of all the chemicals in the plant.
-  
+
   Format: .txt
 
 ###IEHS specific databases
