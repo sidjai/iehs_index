@@ -14,7 +14,12 @@ clear all; close all;tic
 % CRWreport = 'proofofconcept crw.txt';
 % outName = 'ProofEHS3_4.xlsx';
 
-configFile = 'F:\EHSI\Aspen reports\DME\IEHSconfig.txt';
+%configFile = 'F:\EHSI\Aspen reports\DME\IEHSconfig.txt';
+configFile = '/home/computer/Documents/IEHS/iehs_index/case_studies/DME/IEHSconfig.txt';
+configFile = 'G:/IEHS/case_studies/DME/IEHSconfigWin.txt';
+if(~exist(configFile, 'file'))
+  error(['File: ' configFile ' does not exist'])
+end
 cfg = grabConfig(configFile);
 
 %Global

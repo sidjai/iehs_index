@@ -10,7 +10,7 @@ weightFile=DME weights.xlsx
  TESToutput = TESToutput/
 ConceptBlock = DME ConBlock.xlsx
 
-direc=/home/computer/Documents/IEHS/iehs_index/case_studies/DME/
+direc=G:\IEHS/case_studies/DME/
 
 %Flags for analysis type
 
