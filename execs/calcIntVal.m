@@ -232,11 +232,14 @@ pa=3;
 
 pa=4;
 
-%     valAdTime= sdfdsf; %Add the calorimetery input
+    if ~estVar(chem(c),'Tdecomp')
+      potVal{pa,1}(2,k)=chVal(1-(chem(c).Tdecomp-T)/200);
+    end
+    
     if ~estVar(chem(c),'AIT')
-        potVal{pa,1}(3,k)=chVal(1-(chem(c).AIT-T)/200);
+        potVal{pa,1}(4,k)=chVal(1-(chem(c).AIT-T)/200);
     elseif chem(c).hflag==1
-        potVal{pa,1}(2,k)=chem(c).hval(pa);
+        potVal{pa,1}(3,k)=chem(c).hval(pa);
     end
 
 %     varChoice='';
@@ -303,7 +306,7 @@ pa=6;
 
      if ~estVar(chem(c),'dHexp')
          potVal{pa,1}(2,k)=chVal((1/50)*...
-            ProbTNT(TNTeq(chem,u,c,n,energy{hi})/300,15));
+            ProbTNT(TNTeq(chem,u,c,n,'dHexp')/300,15));
      end
 
 
