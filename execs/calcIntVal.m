@@ -235,7 +235,7 @@ pa=4;
     if ~estVar(chem(c),'Tdecomp')
       potVal{pa,1}(2,k)=chVal(1-(chem(c).Tdecomp-T)/200);
     end
-    
+
     if ~estVar(chem(c),'AIT')
         potVal{pa,1}(4,k)=chVal(1-(chem(c).AIT-T)/200);
     elseif chem(c).hflag==1
@@ -323,6 +323,13 @@ pa=6;
         potVal{pa,1}(5,k)=chem(c).hval(pa);
     end
 
+    if ~estVar(chem(c),'MIE')
+        potVal{pa,1}(6,k)=chVal((100 - chem(c).MIE)/80);
+    end
+
+    if ~estVar(chem(c),'hdet50')
+        potVal{pa,1}(6,k)=chVal(1-((1/log10(50)) * log10(chem(c).hdet50)));
+    end
 %HEALTH
 %Irritation
 pa=7;
